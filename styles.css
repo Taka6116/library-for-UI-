@@ -3031,3 +3031,232 @@ mark{background:rgba(139,92,246,.28);color:var(--accentb);border-radius:2px;padd
 .st20-sep{font-family:var(--font-mono);font-size:16px;font-weight:700;color:rgba(255,255,255,.3)}
 .st20-label{font-size:9px;color:rgba(255,255,255,.3);font-family:var(--font-mono);letter-spacing:.5px}
 .st20-sub{font-size:8px;color:rgba(139,92,246,.6);font-family:var(--font-mono)}
+
+/* =====================================================================
+   CTA COMPONENTS 窶・d-ca1 窶ｦ d-ca24
+   ===================================================================== */
+.cat-tag.ca-tag{background:rgba(244,63,94,.1);color:#f43f5e;border-color:rgba(244,63,94,.25)}
+.cat-tag.ca2-tag{background:rgba(251,146,60,.1);color:#fb923c;border-color:rgba(251,146,60,.25)}
+.cat-tag.ca3-tag{background:rgba(52,211,153,.1);color:#34d399;border-color:rgba(52,211,153,.25)}
+.cat-tag.ca4-tag{background:rgba(125,211,252,.1);color:#7dd3fc;border-color:rgba(125,211,252,.25)}
+
+/* 笏笏笏 SHARED demo shell 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.demo[class*="d-ca"]{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px;position:relative;overflow:hidden}
+
+/* 笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武
+   RICH / PREMIUM CTAs
+笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武 */
+
+/* CA1 窶・Shimmer Sweep Button */
+.d-ca1{background:#06060f}
+.ca1-wrap{position:relative;display:inline-block}
+.ca1-btn{position:relative;padding:11px 28px;border:none;border-radius:10px;background:linear-gradient(135deg,#6d28d9,#8b5cf6,#0ea5e9);color:white;font-family:var(--font);font-size:12px;font-weight:700;cursor:pointer;overflow:hidden;letter-spacing:.2px}
+.ca1-btn::after{content:'';position:absolute;top:-50%;left:-75%;width:50%;height:200%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.45),transparent);animation:ca1-shimmer 2.2s ease-in-out infinite;transform:skewX(-20deg)}
+@keyframes ca1-shimmer{0%{left:-75%} 100%{left:125%}}
+.ca1-sub{font-size:9px;color:rgba(255,255,255,.3);font-family:var(--font-mono)}
+
+/* CA2 窶・Glow Pulse Rings */
+.d-ca2{background:#030310}
+.ca2-pulse-wrap{position:relative;display:flex;align-items:center;justify-content:center}
+.ca2-ring{position:absolute;border-radius:50%;border:1.5px solid rgba(139,92,246,.5);animation:ca2-ring 2s ease-out infinite}
+.ca2-r1{width:52px;height:52px;animation-delay:0s}
+.ca2-r2{width:52px;height:52px;animation-delay:.66s}
+.ca2-r3{width:52px;height:52px;animation-delay:1.32s}
+@keyframes ca2-ring{0%{width:52px;height:52px;opacity:.8} 100%{width:110px;height:110px;opacity:0}}
+.ca2-btn{position:relative;z-index:1;padding:10px 26px;border-radius:50px;background:linear-gradient(135deg,#7c3aed,#6d28d9);border:none;color:white;font-family:var(--font);font-size:12px;font-weight:700;cursor:pointer;box-shadow:0 0 24px rgba(109,40,217,.6)}
+.ca2-hint{font-size:9px;color:rgba(255,255,255,.25);font-family:var(--font-mono)}
+
+/* CA3 窶・Gold Luxury */
+.d-ca3{background:#0a0802}
+.ca3-eyebrow{font-size:8px;font-family:var(--font-mono);letter-spacing:2px;text-transform:uppercase;color:rgba(201,168,112,.5)}
+.ca3-btn{padding:11px 30px;border-radius:8px;background:linear-gradient(135deg,#7c5c2e,#c9a870,#a67c45);border:none;color:#0a0802;font-family:var(--font-display);font-size:12px;font-weight:800;cursor:pointer;letter-spacing:.5px;position:relative;overflow:hidden;box-shadow:0 4px 20px rgba(166,124,69,.4),inset 0 1px 0 rgba(255,255,255,.3)}
+.ca3-btn::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);animation:ca3-shine 2.8s ease-in-out infinite}
+@keyframes ca3-shine{0%{left:-60%} 100%{left:140%}}
+.ca3-rule{width:60px;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,112,.4),transparent)}
+
+/* CA4 窶・Aurora Holographic */
+.d-ca4{background:#030308}
+.ca4-btn{padding:11px 30px;border-radius:50px;border:none;font-family:var(--font);font-size:12px;font-weight:700;cursor:pointer;color:white;position:relative;overflow:hidden;animation:ca4-hue 4s linear infinite;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+@keyframes ca4-hue{0%{background:linear-gradient(135deg,#7c3aed,#0ea5e9,#10b981)} 33%{background:linear-gradient(135deg,#f43f5e,#7c3aed,#0ea5e9)} 66%{background:linear-gradient(135deg,#f59e0b,#f43f5e,#7c3aed)} 100%{background:linear-gradient(135deg,#7c3aed,#0ea5e9,#10b981)}}
+.ca4-btn::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.25) 50%,transparent 60%);animation:ca4-shine 3s ease-in-out infinite}
+@keyframes ca4-shine{0%,100%{transform:translateX(-100%) skewX(-15deg)} 50%{transform:translateX(200%) skewX(-15deg)}}
+.ca4-badge{font-size:8.5px;font-family:var(--font-mono);color:rgba(255,255,255,.25);letter-spacing:.5px}
+
+/* CA5 窶・Glassmorphism CTA Card */
+.d-ca5{background:linear-gradient(135deg,#0d0520,#051020,#050d18)}
+.ca5-blob1{position:absolute;width:80px;height:80px;border-radius:50%;background:rgba(109,40,217,.35);filter:blur(24px);top:-10px;left:10px}
+.ca5-blob2{position:absolute;width:70px;height:70px;border-radius:50%;background:rgba(14,165,233,.3);filter:blur(20px);bottom:-10px;right:15px}
+.ca5-card{position:relative;z-index:1;background:rgba(255,255,255,.06);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px 18px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.ca5-h{font-size:12px;font-weight:700;color:white;letter-spacing:-.2px}
+.ca5-btn{padding:7px 20px;border-radius:7px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:white;font-size:11px;font-weight:700;cursor:pointer;font-family:var(--font)}
+.ca5-sub{font-size:8px;color:rgba(255,255,255,.35);font-family:var(--font-mono)}
+
+/* CA6 窶・Gradient Border */
+.d-ca6{background:#050510}
+.ca6-h{font-size:11px;color:rgba(255,255,255,.5);font-family:var(--font-mono)}
+.ca6-wrap{position:relative;border-radius:12px;padding:1.5px;background:linear-gradient(135deg,#6d28d9,#0ea5e9,#10b981,#6d28d9);background-size:300% 300%;animation:ca6-border 3s linear infinite}
+@keyframes ca6-border{0%{background-position:0% 50%} 100%{background-position:300% 50%}}
+.ca6-inner{background:#050510;border-radius:11px;padding:10px 26px;display:flex;align-items:center;gap:8px}
+.ca6-btn-txt{font-size:12px;font-weight:700;background:linear-gradient(135deg,#a78bfa,#7dd3fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ca6-arrow{font-size:14px;color:#7dd3fc;animation:ca6-arrow 1.5s ease-in-out infinite}
+@keyframes ca6-arrow{0%,100%{transform:translateX(0)} 50%{transform:translateX(4px)}}
+
+/* 笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武
+   POP / VIBRANT CTAs
+笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武 */
+
+/* CA7 窶・Brutalist Offset Shadow */
+.d-ca7{background:#f5f0e8}
+.ca7-wrap{position:relative}
+.ca7-shadow{position:absolute;top:4px;left:4px;right:-4px;bottom:-4px;background:#1a1a1a;border-radius:8px}
+.ca7-btn{position:relative;z-index:1;padding:11px 24px;border-radius:8px;background:#ffe600;border:2px solid #1a1a1a;color:#1a1a1a;font-family:var(--font);font-size:12px;font-weight:800;cursor:pointer;letter-spacing:.2px;transition:transform .12s,box-shadow .12s}
+.ca7-sub{font-size:9px;color:#666;font-family:var(--font-mono)}
+
+/* CA8 窶・Retro Y2K Shine */
+.d-ca8{background:linear-gradient(135deg,#0a0018,#180028)}
+.ca8-btn{padding:11px 28px;border-radius:50px;background:linear-gradient(180deg,#ff6ec7,#c44aff,#7c3aed);border:none;color:white;font-family:var(--font);font-size:12px;font-weight:800;cursor:pointer;position:relative;overflow:hidden;box-shadow:0 4px 20px rgba(196,74,255,.5),inset 0 1px 0 rgba(255,255,255,.35)}
+.ca8-btn::before{content:'';position:absolute;top:0;left:10%;width:30%;height:45%;background:rgba(255,255,255,.25);border-radius:50%;filter:blur(4px)}
+.ca8-btn::after{content:'';position:absolute;top:-40%;left:-75%;width:50%;height:180%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.4),transparent);animation:ca8-shine 2s ease-in-out infinite;transform:skewX(-15deg)}
+@keyframes ca8-shine{0%{left:-75%} 100%{left:125%}}
+.ca8-stars{color:rgba(255,200,255,.5);font-size:14px;letter-spacing:4px}
+
+/* CA9 窶・Sticker Style */
+.d-ca9{background:#fff9f0}
+.ca9-badge{position:absolute;top:10px;right:14px;width:28px;height:28px;border-radius:50%;background:#ff6b35;border:2px solid #1a1a1a;display:flex;align-items:center;justify-content:center;font-size:12px;animation:ca9-spin 6s linear infinite}
+@keyframes ca9-spin{to{transform:rotate(360deg)}}
+.ca9-btn{padding:11px 24px;border-radius:12px;background:#1a1a1a;border:2.5px solid #1a1a1a;color:white;font-family:var(--font);font-size:12.5px;font-weight:800;cursor:pointer;box-shadow:3px 3px 0 #ff6b35;letter-spacing:-.2px}
+.ca9-decor{display:flex;gap:6px;align-items:center;color:#1a1a1a;font-size:11px;font-weight:700}
+.ca9-star{color:#ff6b35}
+
+/* CA10 窶・Neon Electric */
+.d-ca10{background:#020208}
+.ca10-btn{padding:11px 28px;border-radius:8px;background:transparent;border:1.5px solid #0ea5e9;color:#0ea5e9;font-family:var(--font-mono);font-size:12px;font-weight:700;cursor:pointer;text-shadow:0 0 12px rgba(14,165,233,.8);box-shadow:0 0 16px rgba(14,165,233,.25),inset 0 0 16px rgba(14,165,233,.05);letter-spacing:.5px;animation:ca10-pulse 2s ease-in-out infinite}
+@keyframes ca10-pulse{0%,100%{box-shadow:0 0 16px rgba(14,165,233,.25),inset 0 0 16px rgba(14,165,233,.05)} 50%{box-shadow:0 0 28px rgba(14,165,233,.5),inset 0 0 24px rgba(14,165,233,.12)}}
+.ca10-scanline{position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(14,165,233,.02) 2px,rgba(14,165,233,.02) 4px);pointer-events:none}
+.ca10-hint{font-family:var(--font-mono);font-size:8px;color:rgba(14,165,233,.35);letter-spacing:.5px}
+
+/* CA11 窶・3D Press Button */
+.d-ca11{background:#0a0a1a}
+.ca11-wrap{position:relative;display:inline-block}
+.ca11-side{position:absolute;bottom:-5px;left:2px;right:-2px;height:calc(100% - 0px);background:#3d1f7a;border-radius:10px;z-index:0}
+.ca11-btn{position:relative;z-index:1;padding:11px 28px;border-radius:10px;background:linear-gradient(180deg,#9b6dff,#7c3aed);border:none;color:white;font-family:var(--font);font-size:12px;font-weight:700;cursor:pointer;transform:translateY(-3px);transition:transform .1s;box-shadow:inset 0 1px 0 rgba(255,255,255,.2)}
+.ca11-btn:active{transform:translateY(0)}
+.ca11-sub{font-size:9px;color:rgba(255,255,255,.25);font-family:var(--font-mono)}
+
+/* CA12 窶・Gradient Noise / Grain Texture */
+.d-ca12{background:#050510}
+.ca12-btn{padding:11px 28px;border-radius:10px;background:linear-gradient(135deg,#6d28d9,#a21caf);border:none;color:white;font-family:var(--font);font-size:12px;font-weight:700;cursor:pointer;position:relative;overflow:hidden}
+.ca12-btn::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");opacity:.4;mix-blend-mode:overlay}
+.ca12-sub{font-size:9px;color:rgba(255,255,255,.3);font-family:var(--font-mono)}
+.ca12-stars{display:flex;gap:4px;align-items:center;font-size:10px;color:rgba(255,255,255,.5)}
+.ca12-star{color:#fbbf24;font-size:9px}
+
+/* 笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武
+   CHIC / COOL CTAs
+笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武笊絶武 */
+
+/* CA13 窶・Minimal Underline Arrow */
+.d-ca13{background:#05050e}
+.ca13-eyebrow{font-size:8.5px;font-family:var(--font-mono);color:rgba(255,255,255,.2);letter-spacing:1.5px;text-transform:uppercase}
+.ca13-h{font-family:var(--font-display);font-size:16px;font-weight:800;color:white;letter-spacing:-.4px}
+.ca13-link{display:flex;align-items:center;gap:6px;color:var(--accentb);font-size:12px;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(139,92,246,.35);padding-bottom:3px;cursor:pointer;width:fit-content}
+.ca13-link-arrow{font-size:14px;animation:ca13-arrow 1.8s ease-in-out infinite}
+@keyframes ca13-arrow{0%,100%{transform:translateX(0)} 50%{transform:translateX(5px)}}
+
+/* CA14 窶・Terminal CLI Style */
+.d-ca14{background:#010a02}
+.ca14-bar{display:flex;align-items:center;gap:5px;padding:5px 10px;background:rgba(255,255,255,.04);border-radius:6px 6px 0 0;border:1px solid rgba(16,185,129,.15);border-bottom:none;width:100%}
+.ca14-dot{width:6px;height:6px;border-radius:50%}
+.ca14-d1{background:#ef4444} .ca14-d2{background:#f59e0b} .ca14-d3{background:#22c55e}
+.ca14-body{width:100%;background:rgba(0,0,0,.5);border:1px solid rgba(16,185,129,.15);border-radius:0 0 6px 6px;padding:8px 10px;display:flex;flex-direction:column;gap:3px}
+.ca14-line{font-family:var(--font-mono);font-size:9.5px}
+.ca14-prompt{color:#22c55e}
+.ca14-cmd{color:rgba(255,255,255,.8)}
+.ca14-out{color:rgba(16,185,129,.6)}
+.ca14-btn{align-self:flex-start;padding:4px 12px;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.3);border-radius:4px;color:#22c55e;font-family:var(--font-mono);font-size:9.5px;cursor:pointer;margin-top:3px}
+
+/* CA15 窶・Split Invert */
+.d-ca15{background:#080818}
+.ca15-wrap{position:relative;display:inline-flex;overflow:hidden;border-radius:10px;border:1.5px solid rgba(255,255,255,.15);cursor:pointer}
+.ca15-left{padding:10px 20px;background:white;color:#080818;font-family:var(--font);font-size:12px;font-weight:700;position:relative;z-index:1}
+.ca15-right{padding:10px 20px;background:#080818;color:white;font-family:var(--font);font-size:12px;font-weight:700;border-left:1.5px solid rgba(255,255,255,.15);position:relative;z-index:1}
+.ca15-divider-label{font-size:8px;font-family:var(--font-mono);color:rgba(255,255,255,.2);text-transform:uppercase;letter-spacing:1px}
+
+/* CA16 窶・Magnetic Hover */
+.d-ca16{background:#040410}
+.ca16-h{font-size:11px;color:rgba(255,255,255,.35);font-family:var(--font-mono)}
+.ca16-btn{padding:11px 32px;border-radius:50px;background:linear-gradient(135deg,#0f0f24,#1a1a38);border:1px solid rgba(139,92,246,.3);color:white;font-family:var(--font);font-size:12px;font-weight:700;cursor:pointer;position:relative;overflow:hidden;transition:all .3s;animation:ca16-mag 3s ease-in-out infinite}
+.ca16-btn::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(139,92,246,.15),transparent 70%);animation:ca16-glow 3s ease-in-out infinite}
+@keyframes ca16-mag{0%,100%{box-shadow:0 0 0 rgba(139,92,246,0),0 4px 20px rgba(0,0,0,.3)} 50%{box-shadow:0 8px 32px rgba(139,92,246,.35),0 4px 20px rgba(0,0,0,.3)}}
+@keyframes ca16-glow{0%,100%{opacity:0} 50%{opacity:1}}
+.ca16-badge{padding:3px 8px;background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.2);border-radius:4px;font-size:8px;font-family:var(--font-mono);color:rgba(139,92,246,.7)}
+
+/* CA17 窶・Full-width Banner CTA */
+.d-ca17{background:linear-gradient(135deg,#0d0120,#050a20,#020818);padding:0;justify-content:stretch}
+.ca17-inner{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:14px;position:relative;overflow:hidden}
+.ca17-bg-line{position:absolute;width:200%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent);transform:rotate(-8deg)}
+.ca17-eyebrow{font-size:8px;font-family:var(--font-mono);color:rgba(255,255,255,.3);letter-spacing:1.5px;text-transform:uppercase}
+.ca17-h{font-family:var(--font-display);font-size:15px;font-weight:800;color:white;letter-spacing:-.3px;text-align:center}
+.ca17-cta-row{display:flex;gap:8px;align-items:center}
+.ca17-primary{padding:8px 18px;background:white;color:#0d0120;border-radius:8px;border:none;font-family:var(--font);font-size:11px;font-weight:700;cursor:pointer}
+.ca17-secondary{padding:8px 14px;background:transparent;color:rgba(255,255,255,.6);border-radius:8px;border:1px solid rgba(255,255,255,.15);font-family:var(--font);font-size:11px;cursor:pointer}
+
+/* CA18 窶・Social Proof CTA */
+.d-ca18{background:#050514}
+.ca18-avatars{display:flex;align-items:center}
+.ca18-av{width:22px;height:22px;border-radius:50%;border:2px solid #050514;background:linear-gradient(135deg,#6d28d9,#0ea5e9);margin-left:-6px;display:flex;align-items:center;justify-content:center;font-size:9px}
+.ca18-av:first-child{margin-left:0}
+.ca18-av-count{font-size:8px;color:rgba(255,255,255,.4);font-family:var(--font-mono);margin-left:6px}
+.ca18-stars{display:flex;gap:1px;font-size:10px}
+.ca18-star-filled{color:#fbbf24}
+.ca18-rating{font-size:8.5px;color:rgba(255,255,255,.4);font-family:var(--font-mono);margin-left:4px}
+.ca18-h{font-size:11.5px;font-weight:700;color:white;text-align:center}
+.ca18-btn{padding:8px 24px;border-radius:8px;background:linear-gradient(135deg,#7c3aed,#6d28d9);border:none;color:white;font-family:var(--font);font-size:12px;font-weight:700;cursor:pointer;box-shadow:0 4px 16px rgba(109,40,217,.4)}
+.ca18-trust{font-size:8px;color:rgba(255,255,255,.25);font-family:var(--font-mono)}
+
+/* CA19 窶・Multi Button Hierarchy */
+.d-ca19{background:#040410;gap:7px}
+.ca19-primary{width:100%;max-width:180px;padding:10px 0;border-radius:9px;background:linear-gradient(135deg,#7c3aed,#6d28d9);border:none;color:white;font-family:var(--font);font-size:12px;font-weight:700;cursor:pointer;box-shadow:0 4px 16px rgba(109,40,217,.35)}
+.ca19-secondary{width:100%;max-width:180px;padding:9px 0;border-radius:9px;background:rgba(139,92,246,.1);border:1.5px solid rgba(139,92,246,.3);color:#a78bfa;font-family:var(--font);font-size:12px;font-weight:600;cursor:pointer}
+.ca19-ghost{background:transparent;border:none;color:rgba(255,255,255,.3);font-family:var(--font);font-size:11px;cursor:pointer;padding:4px 0;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px}
+.ca19-label{font-size:8px;font-family:var(--font-mono);color:rgba(255,255,255,.15);align-self:flex-start;margin-left:calc(50% - 90px)}
+
+/* CA20 窶・Elastic Spring Button */
+.d-ca20{background:#030310}
+.ca20-btn{padding:12px 30px;border-radius:50px;background:linear-gradient(135deg,#f43f5e,#ec4899,#8b5cf6);border:none;color:white;font-family:var(--font);font-size:12px;font-weight:800;cursor:pointer;box-shadow:0 6px 24px rgba(244,63,94,.4);animation:ca20-spring 1.8s cubic-bezier(0.36,0.07,0.19,0.97) infinite;letter-spacing:-.2px}
+@keyframes ca20-spring{0%,100%{transform:scale(1)} 10%{transform:scale(.93)} 40%{transform:scale(1.06)} 60%{transform:scale(.98)} 80%{transform:scale(1.02)}}
+.ca20-sub{font-size:9px;color:rgba(255,255,255,.3);font-family:var(--font-mono)}
+
+/* CA21 窶・Typewriter CTA */
+.d-ca21{background:#040414}
+.ca21-headline{font-family:var(--font-display);font-size:14px;font-weight:800;color:white;text-align:center;letter-spacing:-.3px;min-height:20px}
+.ca21-type{display:inline-block;overflow:hidden;white-space:nowrap;border-right:2px solid #8b5cf6;animation:ca21-type 2s steps(14,end) infinite,ca21-blink .5s step-end infinite}
+@keyframes ca21-type{0%,100%{width:0} 50%,80%{width:14ch}}
+@keyframes ca21-blink{50%{border-color:transparent}}
+.ca21-btn{padding:9px 22px;border-radius:8px;background:rgba(139,92,246,.15);border:1.5px solid rgba(139,92,246,.35);color:#a78bfa;font-family:var(--font);font-size:11.5px;font-weight:700;cursor:pointer}
+
+/* CA22 窶・Icon + Label Split Pill */
+.d-ca22{background:#050510}
+.ca22-pill{display:flex;align-items:stretch;border-radius:50px;overflow:hidden;border:1.5px solid rgba(139,92,246,.3)}
+.ca22-icon{width:38px;display:flex;align-items:center;justify-content:center;background:rgba(139,92,246,.2);font-size:14px;border-right:1px solid rgba(139,92,246,.2)}
+.ca22-text{padding:10px 18px;background:linear-gradient(135deg,#6d28d9,#7c3aed);color:white;font-family:var(--font);font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:6px}
+.ca22-arrow{font-size:12px;animation:ca22-arrow 1.5s ease-in-out infinite}
+@keyframes ca22-arrow{0%,100%{transform:translateX(0)} 50%{transform:translateX(4px)}}
+.ca22-sub{font-size:8.5px;font-family:var(--font-mono);color:rgba(255,255,255,.25)}
+
+/* CA23 窶・Countdown Urgency CTA */
+.d-ca23{background:#0a0304}
+.ca23-timer-row{display:flex;gap:6px;align-items:center}
+.ca23-unit{text-align:center}
+.ca23-num{font-family:var(--font-mono);font-size:18px;font-weight:700;color:#f43f5e;line-height:1;animation:ca23-tick 1s step-end infinite}
+@keyframes ca23-tick{0%,99%{opacity:1} 100%{opacity:.7}}
+.ca23-unit-label{font-size:7.5px;color:rgba(255,255,255,.3);font-family:var(--font-mono)}
+.ca23-sep{font-family:var(--font-mono);font-size:16px;font-weight:700;color:rgba(244,63,94,.4);animation:ca23-tick 1s step-end infinite}
+.ca23-h{font-size:10.5px;color:rgba(255,255,255,.6);text-align:center}
+.ca23-btn{padding:9px 22px;border-radius:8px;background:linear-gradient(135deg,#dc2626,#f43f5e);border:none;color:white;font-family:var(--font);font-size:12px;font-weight:700;cursor:pointer;box-shadow:0 4px 16px rgba(244,63,94,.4)}
+
+/* CA24 窶・Layered Shadow Depth */
+.d-ca24{background:#040408}
+.ca24-btn{padding:12px 30px;border-radius:12px;background:linear-gradient(180deg,#9b6dff 0%,#7c3aed 100%);border:none;color:white;font-family:var(--font);font-size:12.5px;font-weight:700;cursor:pointer;box-shadow:0 1px 0 rgba(255,255,255,.15) inset,0 -1px 0 rgba(0,0,0,.3) inset,0 4px 0 #3d1f7a,0 6px 0 #2d1660,0 8px 20px rgba(109,40,217,.5);transform:translateY(-4px);transition:transform .1s,box-shadow .1s;letter-spacing:-.2px}
+.ca24-sub{font-size:9px;color:rgba(255,255,255,.25);font-family:var(--font-mono)}
+.ca24-hint{font-size:8px;color:rgba(255,255,255,.15);font-family:var(--font-mono)}

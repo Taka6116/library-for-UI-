@@ -851,4 +851,27 @@
 
   setTimeout(setupFilterStagger, 100);
 
+  /* ───────────────────────────────────────────────────────────────────
+     13. CTA Countdown Timer (CA23)
+  ─────────────────────────────────────────────────────────────────── */
+  (function () {
+    var h = document.getElementById('ca23h');
+    var m = document.getElementById('ca23m');
+    var s = document.getElementById('ca23s');
+    if (!h || !m || !s) return;
+
+    var totalSec = 2 * 3600 + 47 * 60 + 33;
+
+    setInterval(function () {
+      if (totalSec <= 0) return;
+      totalSec--;
+      var hh = Math.floor(totalSec / 3600);
+      var mm = Math.floor((totalSec % 3600) / 60);
+      var ss = totalSec % 60;
+      h.textContent = String(hh).padStart(2, '0');
+      m.textContent = String(mm).padStart(2, '0');
+      s.textContent = String(ss).padStart(2, '0');
+    }, 1000);
+  })();
+
 })();
