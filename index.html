@@ -248,10 +248,20 @@
     <a class="sb-link" href="#modal-stack"><span class="sb-link-dot"></span>Stacked Modals</a>
   </div>
   <div class="sb-cat">
-    <div class="sb-cat-title">Design Tips</div>
+    <div class="sb-cat-title">Design Tips · Basics</div>
     <a class="sb-link" href="#color-tips"><span class="sb-link-dot"></span>Color Combinations</a>
     <a class="sb-link" href="#gradient-tips"><span class="sb-link-dot"></span>Gradient Techniques</a>
     <a class="sb-link" href="#hero-tips"><span class="sb-link-dot"></span>Hero Section Layout</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Design Tips · Advanced</div>
+    <a class="sb-link" href="#layout-tips"><span class="sb-link-dot"></span>Layout &amp; Positioning</a>
+    <a class="sb-link" href="#colortheory-tips"><span class="sb-link-dot"></span>Color Theory Deep</a>
+    <a class="sb-link" href="#texture-tips"><span class="sb-link-dot"></span>Texture &amp; Material</a>
+    <a class="sb-link" href="#typography-adv-tips"><span class="sb-link-dot"></span>Typography Advanced</a>
+    <a class="sb-link" href="#ux-tips"><span class="sb-link-dot"></span>UX Patterns</a>
+    <a class="sb-link" href="#responsive-tips"><span class="sb-link-dot"></span>Responsive / Device</a>
+    <a class="sb-link" href="#designsystem-tips"><span class="sb-link-dot"></span>Design System</a>
   </div>
 </nav>
 
@@ -270,14 +280,14 @@
   <!-- DASHBOARD STATS -->
   <div class="dash-stats">
     <div class="dash-stat">
-      <div class="dash-num" id="stat-total">209</div>
+      <div class="dash-num" id="stat-total">236</div>
       <div class="dash-lbl">Total Components</div>
-      <div class="dash-delta up">↑ +60 tips</div>
+      <div class="dash-delta up">↑ +87 tips</div>
     </div>
     <div class="dash-stat">
-      <div class="dash-num">27</div>
+      <div class="dash-num">34</div>
       <div class="dash-lbl">Categories</div>
-      <div class="dash-delta up">↑ +3 new</div>
+      <div class="dash-delta up">↑ +10 new</div>
     </div>
     <div class="dash-stat">
       <div class="dash-num">100%</div>
@@ -301,6 +311,13 @@
     <a class="chip" href="#color-tips">Color Tips</a>
     <a class="chip" href="#gradient-tips">Gradients</a>
     <a class="chip" href="#hero-tips">Hero Layout</a>
+    <a class="chip" href="#layout-tips">Layout</a>
+    <a class="chip" href="#colortheory-tips">Color Theory</a>
+    <a class="chip" href="#texture-tips">Texture</a>
+    <a class="chip" href="#typography-adv-tips">Typography+</a>
+    <a class="chip" href="#ux-tips">UX Patterns</a>
+    <a class="chip" href="#responsive-tips">Responsive</a>
+    <a class="chip" href="#designsystem-tips">Design System</a>
   </div>
 
   <!-- ======================== BACKGROUNDS ======================== -->
@@ -4253,6 +4270,763 @@
         <div class="cinfo">
           <div class="cname">CTAボタン階層</div>
           <div class="cdesc">Primary → Secondary → Ghost の3段階。視覚的重みで行動の優先度をユーザーに伝える。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== LAYOUT TIPS ======================== -->
+  <section class="cat-section tip-section" id="layout-tips">
+    <div class="cat-hdr">
+      <div class="cat-tag lt-tag">Design Tips · Layout</div>
+      <div class="cat-title">レイアウト・配置 Tips</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" data-name="visual hierarchy size weight color whitespace hierarchy">
+        <div class="demo d-lt1">
+          <div class="vh-h">Visual Hierarchy</div>
+          <div class="vh-rule"></div>
+          <div class="vh-sub">This is the sub-headline</div>
+          <div class="vh-body">Body copy sits here — supporting text with reduced weight and opacity.</div>
+          <div class="vh-caption">CAPTION · METADATA · TIMESTAMP</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Visual Hierarchy（視覚的階層設計）</div>
+          <div class="cdesc">サイズ・太さ・色・余白で「何を最初に見せるか」を決める。H1は圧倒的に大きく、本文は落ち着いた色で。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="grid system 12 column span layout structure">
+        <div class="demo d-lt2">
+          <div class="glabel">12 COLUMN GRID</div>
+          <div class="gcols">
+            <div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div>
+            <div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div>
+            <div class="gcol"></div><div class="gcol"></div><div class="gcol"></div><div class="gcol"></div>
+          </div>
+          <div class="gspans">
+            <div class="gs-a">span 8</div>
+            <div class="gs-b">span 4</div>
+          </div>
+          <div class="gspans">
+            <div class="gs-c"></div>
+            <div class="gs-d"></div>
+            <div class="gs-e"></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">グリッドシステム / 12カラム</div>
+          <div class="cdesc">12列は2・3・4・6分割すべてに対応できる。ベントグリッドはこの上に乗るアイデアであって、グリッド設計の代替ではない。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="reading flow F Z pattern eye scan natural">
+        <div class="demo d-lt3">
+          <div class="rf-side">
+            <div class="rf-title">F パターン</div>
+            <div class="rf-row">
+              <div class="rf-block hi rf-b-full"></div>
+            </div>
+            <div class="rf-row">
+              <div class="rf-arrow">→</div>
+              <div class="rf-block hi rf-b-half"></div>
+            </div>
+            <div class="rf-row">
+              <div class="rf-block mid" style="width:15%"></div>
+            </div>
+            <div class="rf-row">
+              <div class="rf-block mid" style="width:15%"></div>
+            </div>
+            <div class="rf-row">
+              <div class="rf-block mid" style="width:15%"></div>
+            </div>
+          </div>
+          <div class="rf-divider"></div>
+          <div class="rf-side">
+            <div class="rf-title">Z パターン</div>
+            <div class="rf-row">
+              <div class="rf-block hi rf-b-full"></div>
+            </div>
+            <div class="rf-row" style="justify-content:flex-end">
+              <div class="rf-arrow">↙</div>
+            </div>
+            <div class="rf-row">
+              <div class="rf-block hi rf-b-full"></div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Reading Flow（F字・Z字パターン）</div>
+          <div class="cdesc">ユーザーの目はFまたはZ字に動く。重要情報を左上・最初の行・左端に配置する。ヒーローはZ型が多い。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="whitespace negative space breathing room padding margin">
+        <div class="demo d-lt4">
+          <div class="ws-panel">
+            <div class="ws-label">詰め込みすぎ</div>
+            <div class="ws-tight">
+              <div class="ws-item tight">Item A</div>
+              <div class="ws-item tight">Item B</div>
+              <div class="ws-item tight">Item C</div>
+              <div class="ws-item tight">Item D</div>
+              <div class="ws-item tight">Item E</div>
+            </div>
+          </div>
+          <div class="ws-divider"></div>
+          <div class="ws-panel">
+            <div class="ws-label">余白を活かす</div>
+            <div class="ws-spacious">
+              <div class="ws-item">Item A</div>
+              <div class="ws-item">Item B</div>
+              <div class="ws-item">Item C</div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Whitespace as Design（余白はデザイン）</div>
+          <div class="cdesc">「何もない領域」は空白ではなくデザインの一部。余白が多いほど各要素の重要度が上がる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="pinned fixed sidebar dashboard layout SaaS navigation">
+        <div class="demo d-lt5">
+          <div class="psb">
+            <div class="psb-logo"></div>
+            <div class="psb-ico active">⊞</div>
+            <div class="psb-ico">◈</div>
+            <div class="psb-ico">⚙</div>
+            <div class="psb-ico">⌀</div>
+          </div>
+          <div class="pcontent">
+            <div class="pc-hdr"></div>
+            <div class="pc-row">
+              <div class="pc-card"></div>
+              <div class="pc-card2"></div>
+            </div>
+            <div class="pc-bar"></div>
+            <div class="pc-bar" style="width:70%"></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Fixed Sidebar Layout（固定サイドナビ）</div>
+          <div class="cdesc">左サイドバー固定・右コンテンツスクロールはSaaSダッシュボードの最頻出パターン。LinearやVercelが採用。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="card grid list view toggle switch layout display mode">
+        <div class="demo d-lt6">
+          <div class="cv-toggle">
+            <div class="cv-btn cv-active">⊞</div>
+            <div class="cv-btn">☰</div>
+          </div>
+          <div class="cv-cards">
+            <div class="cv-card"></div>
+            <div class="cv-card"></div>
+            <div class="cv-card"></div>
+            <div class="cv-card"></div>
+            <div class="cv-card"></div>
+            <div class="cv-card"></div>
+          </div>
+          <div class="cv-list" style="display:none">
+            <div class="cv-li"><div class="cv-li-dot"></div><div class="cv-li-bar cv-li-b1"></div><div class="cv-li-bar cv-li-b2"></div></div>
+            <div class="cv-li"><div class="cv-li-dot"></div><div class="cv-li-bar cv-li-b1"></div><div class="cv-li-bar cv-li-b2"></div></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Card Grid ↔ List View トグル</div>
+          <div class="cdesc">GitHub・Notion・Vercelが採用するビュー切り替えUI。カードは視覚的把握、リストは高密度スキャンに向く。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="masonry layout pinterest varying height column cards">
+        <div class="demo d-lt7">
+          <div class="ms-row">
+            <div class="ms-col">
+              <div class="ms-cell ms-c1"></div>
+              <div class="ms-cell ms-c2"></div>
+            </div>
+            <div class="ms-col">
+              <div class="ms-cell ms-c3"></div>
+              <div class="ms-cell ms-c4"></div>
+            </div>
+            <div class="ms-col">
+              <div class="ms-cell ms-c5"></div>
+              <div class="ms-cell ms-c6"></div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Masonry Layout（Pinterest型）</div>
+          <div class="cdesc">高さが不揃いのカードを詰め込んで並べるレイアウト。ベントグリッドと別物。CSS columns か JS Masonry で実装。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== COLOR THEORY TIPS ======================== -->
+  <section class="cat-section tip-section" id="colortheory-tips">
+    <div class="cat-hdr">
+      <div class="cat-tag cl-tag">Design Tips · Color Theory</div>
+      <div class="cat-title">色彩理論 深掘り Tips</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" data-name="oklch oklab perceptual color space uniform lightness">
+        <div class="demo d-cl1">
+          <div class="ok-row">
+            <div class="ok-label">oklch</div>
+            <div class="ok-swatches">
+              <div class="ok-sw sw-ok1"></div>
+              <div class="ok-sw sw-ok2"></div>
+              <div class="ok-sw sw-ok3"></div>
+              <div class="ok-sw sw-ok4"></div>
+              <div class="ok-sw sw-ok5"></div>
+            </div>
+          </div>
+          <div class="ok-row">
+            <div class="ok-label">hsl</div>
+            <div class="ok-swatches">
+              <div class="ok-sw sw-hsl1"></div>
+              <div class="ok-sw sw-hsl2"></div>
+              <div class="ok-sw sw-hsl3"></div>
+              <div class="ok-sw sw-hsl4"></div>
+              <div class="ok-sw sw-hsl5"></div>
+            </div>
+          </div>
+          <div class="ok-note">同じ L=60% / L=50% でも hsl は知覚的に不均一</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">oklch / oklab カラースペース</div>
+          <div class="cdesc">HEXやHSLは知覚的に不均一。oklchなら同じ明度値で色相が変わっても実際の明るさが揃う。Tailwind v4採用。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color token design system primitive semantic component">
+        <div class="demo d-cl2">
+          <div class="ct-tier ct-t1">
+            <div class="ct-tier-dot td1"></div>
+            <div class="ct-tier-text">Primitive: purple-500 → #8b5cf6</div>
+          </div>
+          <div class="ct-arrow">↓</div>
+          <div class="ct-tier ct-t2">
+            <div class="ct-tier-dot td2"></div>
+            <div class="ct-tier-text">Semantic: --color-brand-primary</div>
+          </div>
+          <div class="ct-arrow">↓</div>
+          <div class="ct-tier ct-t3">
+            <div class="ct-tier-dot td3"></div>
+            <div class="ct-tier-text">Component: --button-background</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Color Token 設計（3層構造）</div>
+          <div class="cdesc">Primitive（生の値）→ Semantic（役割名）→ Component（用途名）の3段階。これがないとダークモード対応が崩壊する。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="accessible color blindness NG pattern red green deuteranopia">
+        <div class="demo d-cl3">
+          <div class="ng-row">
+            <div class="ng-badge ng-bad">NG</div>
+            <div class="ng-box ng1">赤地に緑テキスト — 色覚多様性の方が判別不能</div>
+          </div>
+          <div class="ng-row">
+            <div class="ng-badge ng-bad">NG</div>
+            <div class="ng-box ng2">緑地に赤テキスト — 同上</div>
+          </div>
+          <div class="ng-row">
+            <div class="ng-badge ng-ok">OK</div>
+            <div class="ng-box ng3">青地に白テキスト — 安全な組み合わせ</div>
+          </div>
+          <div class="ng-row">
+            <div class="ng-badge ng-ok">OK</div>
+            <div class="ng-box ng4">ダーク地に薄白テキスト — 安全</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">アクセシブルNGパターン集</div>
+          <div class="cdesc">赤×緑は2色覚（Deuteranopia）の方が区別できない。色だけで意味を伝えず、形・アイコン・テキストを併用する。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="tint shade tone color mixing white black gray modifier">
+        <div class="demo d-cl4">
+          <div class="tst-row">
+            <div class="tst-label">Tint</div>
+            <div class="tst-swatches">
+              <div class="tst-sw tin1"></div>
+              <div class="tst-sw tin2"></div>
+              <div class="tst-sw tin3"></div>
+              <div class="tst-sw tin4"></div>
+              <div class="tst-sw tin5"></div>
+            </div>
+          </div>
+          <div class="tst-row">
+            <div class="tst-label">Shade</div>
+            <div class="tst-swatches">
+              <div class="tst-sw shd1"></div>
+              <div class="tst-sw shd2"></div>
+              <div class="tst-sw shd3"></div>
+              <div class="tst-sw shd4"></div>
+              <div class="tst-sw shd5"></div>
+            </div>
+          </div>
+          <div class="tst-row">
+            <div class="tst-label">Tone</div>
+            <div class="tst-swatches">
+              <div class="tst-sw ton1"></div>
+              <div class="tst-sw ton2"></div>
+              <div class="tst-sw ton3"></div>
+              <div class="tst-sw ton4"></div>
+              <div class="tst-sw ton5"></div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Tint / Shade / Tone の違い</div>
+          <div class="cdesc">白を混ぜる=Tint（明色化）、黒を混ぜる=Shade（暗色化）、グレーを混ぜる=Tone（彩度低下）。ホバー状態にどれを使うかで印象が変わる。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== TEXTURE & MATERIAL TIPS ======================== -->
+  <section class="cat-section tip-section" id="texture-tips">
+    <div class="cat-hdr">
+      <div class="cat-tag tx-tag">Design Tips · Texture</div>
+      <div class="cat-title">質感・マテリアル Tips</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" data-name="micro texture grain paper dot lines pattern CSS subtle">
+        <div class="demo d-tx1">
+          <div class="tex-panel">
+            <div class="tex-swatch tex-paper"></div>
+            <div class="tex-lbl">Paper grain</div>
+          </div>
+          <div class="tex-divider"></div>
+          <div class="tex-panel">
+            <div class="tex-swatch tex-dots"></div>
+            <div class="tex-lbl">Dot grid</div>
+          </div>
+          <div class="tex-divider"></div>
+          <div class="tex-panel">
+            <div class="tex-swatch tex-lines"></div>
+            <div class="tex-lbl">Diagonal</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Micro-texture（微細テクスチャ）</div>
+          <div class="cdesc">SVG feTurbulence・background-image のradial/repeating-linearで素材感を追加。5%以下の不透明度が上品さのコツ。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="surface elevation light source shadow direction material">
+        <div class="demo d-tx2">
+          <div class="lsrc">
+            <div class="lsrc-label">光源 ✓</div>
+            <div class="lsrc-cards">
+              <div class="lsrc-card lc-correct"></div>
+              <div class="lsrc-card lc-correct"></div>
+              <div class="lsrc-card lc-correct"></div>
+            </div>
+            <div class="lsrc-icon">☀️</div>
+          </div>
+          <div class="lsrc-hint">左上に光源 → 右下にシャドウが落ちる</div>
+          <div class="lsrc">
+            <div class="lsrc-label">光源 ✗</div>
+            <div class="lsrc-cards">
+              <div class="lsrc-card lc-wrong"></div>
+              <div class="lsrc-card lc-correct"></div>
+              <div class="lsrc-card lc-wrong"></div>
+            </div>
+            <div class="lsrc-icon">❌</div>
+          </div>
+          <div class="lsrc-hint">向きが混在するとリアリティが失われる</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">光源方向の統一（Surface & Elevation）</div>
+          <div class="cdesc">光源を画面左上に固定しシャドウ方向を揃える。box-shadowは右下・上のhighlightは border-top で演出。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="frosted glass colored tint backdrop blur accent glass Vision Pro">
+        <div class="demo d-tx3">
+          <div class="cf-bg1"></div>
+          <div class="cf-bg2"></div>
+          <div class="cf-panel cf-p1">Purple</div>
+          <div class="cf-panel cf-p2">Blue</div>
+          <div class="cf-panel cf-p3">Neutral</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">カラードフロストガラス</div>
+          <div class="cdesc">rgba背景色にアクセント色を混ぜた「色付きガラス」。Apple Vision Proが多用。背景グラデと組み合わせると映える。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== TYPOGRAPHY ADVANCED TIPS ======================== -->
+  <section class="cat-section tip-section" id="typography-adv-tips">
+    <div class="cat-hdr">
+      <div class="cat-tag tp-tag">Design Tips · Typography Advanced</div>
+      <div class="cat-title">タイポグラフィ 深掘り Tips</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" data-name="type scale h1 h2 body caption size ratio golden major third">
+        <div class="demo d-tp1">
+          <div class="ts-row"><div class="ts-label">H1</div><div class="ts-h1">Heading 1</div></div>
+          <div class="ts-row"><div class="ts-label">H2</div><div class="ts-h2">Heading 2</div></div>
+          <div class="ts-row"><div class="ts-label">H3</div><div class="ts-h3">Heading 3</div></div>
+          <div class="ts-row"><div class="ts-label">Body</div><div class="ts-body">Body text paragraph</div></div>
+          <div class="ts-row"><div class="ts-label">Small</div><div class="ts-small">Small / helper</div></div>
+          <div class="ts-row"><div class="ts-label">Caption</div><div class="ts-caption">CAPTION LABEL</div></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Type Scale（タイプスケール）</div>
+          <div class="cdesc">H1〜キャプションまでのサイズ比率を体系化。Major Third（1.25×）や黄金比（1.618×）を使うと自然なリズムになる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="line length measure characters 45 75 ch max-width column">
+        <div class="demo d-tp2">
+          <div class="ll-panel ll-wide">
+            <div class="ll-title">Too wide（100%幅）</div>
+            <div class="ll-block"></div>
+            <div class="ll-block"></div>
+            <div class="ll-block"></div>
+            <div class="ll-block last"></div>
+            <div class="ll-hint ll-bad-hint">行が長すぎると目線の折り返しが辛い</div>
+          </div>
+          <div class="ll-divider"></div>
+          <div class="ll-panel ll-ideal">
+            <div class="ll-title">Ideal（max-width:65ch）</div>
+            <div class="ll-block"></div>
+            <div class="ll-block"></div>
+            <div class="ll-block"></div>
+            <div class="ll-block last shorter"></div>
+            <div class="ll-hint ll-good-hint">45〜75文字が最も読みやすい</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Line Length（適切な行長）</div>
+          <div class="cdesc">1行は45〜75文字が最適。CSSで max-width: 65ch を指定するだけ。長い行は目線の折り返しが疲れる原因に。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="variable font weight axis width optical size Inter Geist">
+        <div class="demo d-tp3">
+          <div class="vf-row"><div class="vf-lbl">100</div><div class="vf-text vf-w100">Variable</div></div>
+          <div class="vf-row"><div class="vf-lbl">300</div><div class="vf-text vf-w300">Variable</div></div>
+          <div class="vf-row"><div class="vf-lbl">500</div><div class="vf-text vf-w500">Variable</div></div>
+          <div class="vf-row"><div class="vf-lbl">700</div><div class="vf-text vf-w700">Variable</div></div>
+          <div class="vf-row"><div class="vf-lbl">900</div><div class="vf-text vf-w900">Variable</div></div>
+          <div class="vf-axis">
+            <div class="vf-axis-txt">wght</div>
+            <div class="vf-axis-bar"></div>
+            <div class="vf-axis-txt">100—900</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Variable Font（可変フォント）</div>
+          <div class="cdesc">1ファイルで全ウェイトを提供。font-variation-settings で weight・width・optical-sizeを制御。InterやGeistが対応済み。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== UX PATTERN TIPS ======================== -->
+  <section class="cat-section tip-section" id="ux-tips">
+    <div class="cat-hdr">
+      <div class="cat-tag ux-tag">Design Tips · UX Patterns</div>
+      <div class="cat-title">UX パターン Tips</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" data-name="empty state design first time error filter zero results">
+        <div class="demo d-ux1">
+          <div class="es-panel">
+            <div class="es-icon">🌱</div>
+            <div class="es-title">初回ユーザー</div>
+            <div class="es-body">はじめましょう</div>
+            <div class="es-cta">作成する</div>
+            <div class="es-label">Onboarding</div>
+          </div>
+          <div class="es-divider"></div>
+          <div class="es-panel">
+            <div class="es-icon">⚠️</div>
+            <div class="es-title">エラー起因</div>
+            <div class="es-body">取得に失敗しました</div>
+            <div class="es-cta es-cta-err">再試行</div>
+            <div class="es-label">Error State</div>
+          </div>
+          <div class="es-divider"></div>
+          <div class="es-panel">
+            <div class="es-icon">🔍</div>
+            <div class="es-title">0件ヒット</div>
+            <div class="es-body">条件を変えてみて</div>
+            <div class="es-label">No Results</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Empty State Design（3パターン）</div>
+          <div class="cdesc">「初回」「エラー」「フィルター0件」は原因が異なりコピーも変える。エラーには再試行CTA、初回には誘導CTAを置く。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="onboarding flow checklist progress wizard tour guide">
+        <div class="demo d-ux2">
+          <div class="ob-title">はじめましょう</div>
+          <div class="ob-progress"><div class="ob-prog-fill"></div></div>
+          <div class="ob-step ob-active-row">
+            <div class="ob-check ob-active-c">→</div>
+            <div class="ob-text">プロフィールを設定する</div>
+          </div>
+          <div class="ob-step done">
+            <div class="ob-check ob-done-c">✓</div>
+            <div class="ob-text">アカウントを作成する</div>
+          </div>
+          <div class="ob-step done">
+            <div class="ob-check ob-done-c">✓</div>
+            <div class="ob-text">メール認証を完了する</div>
+          </div>
+          <div class="ob-step">
+            <div class="ob-check ob-todo-c">○</div>
+            <div class="ob-text">チームに招待する</div>
+          </div>
+          <div class="ob-step">
+            <div class="ob-check ob-todo-c">○</div>
+            <div class="ob-text">最初のプロジェクトを作成</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Onboarding Flow（チェックリスト型）</div>
+          <div class="cdesc">初回ユーザーにやることをチェックリストで示す。完了率とengagementが大幅に向上する実証済みのパターン。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="destructive action confirm delete dangerous irreversible modal">
+        <div class="demo d-ux3">
+          <div class="dest-modal">
+            <div class="dest-icon">🗑️</div>
+            <div class="dest-title">本当に削除しますか？</div>
+            <div class="dest-body">この操作は取り消せません。プロジェクト名を入力して確認してください。</div>
+            <div class="dest-input" contenteditable="false">my-project</div>
+            <div class="dest-btns">
+              <div class="dest-cancel">キャンセル</div>
+              <div class="dest-confirm">削除する</div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Destructive Action Confirmation</div>
+          <div class="cdesc">削除・解約などの取り消し不可操作にはテキスト入力確認を挟む。GitHubのリポジトリ削除が代表例。誤操作を防ぐ最も強力な手法。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="keyboard shortcut hints tooltip kbd key binding command">
+        <div class="demo d-ux4">
+          <div class="ks-row">
+            <div class="ks-action">新しいファイル</div>
+            <div class="ks-keys">
+              <div class="kbd">⌘</div>
+              <div class="kbd">N</div>
+            </div>
+          </div>
+          <div class="ks-row">
+            <div class="ks-action">コマンドパレット</div>
+            <div class="ks-keys">
+              <div class="kbd">⌘</div>
+              <div class="kbd">K</div>
+            </div>
+          </div>
+          <div class="ks-row">
+            <div class="ks-action">検索</div>
+            <div class="ks-keys">
+              <div class="kbd">⌘</div>
+              <div class="kbd">F</div>
+            </div>
+          </div>
+          <div class="ks-row">
+            <div class="ks-action">設定を開く</div>
+            <div class="ks-keys">
+              <div class="kbd">⌘</div>
+              <div class="kbd">,</div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Keyboard Shortcut Hints</div>
+          <div class="cdesc">&lt;kbd&gt;タグとborder-bottom:2px のCSS「押し込み感」で自然なキーUI。メニューやツールチップに常時表示する。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== RESPONSIVE / DEVICE TIPS ======================== -->
+  <section class="cat-section tip-section" id="responsive-tips">
+    <div class="cat-hdr">
+      <div class="cat-tag rp-tag">Design Tips · Responsive</div>
+      <div class="cat-title">レスポンシブ・デバイス対応 Tips</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" data-name="breakpoint strategy mobile tablet desktop 768 1024 1440">
+        <div class="demo d-rp1">
+          <div class="bp-bar">
+            <div class="bp-seg bp-sm"><div class="bp-name">SM</div><div class="bp-px">320+</div></div>
+            <div class="bp-seg bp-md"><div class="bp-name">MD</div><div class="bp-px">768+</div></div>
+            <div class="bp-seg bp-lg"><div class="bp-name">LG</div><div class="bp-px">1024+</div></div>
+            <div class="bp-seg bp-xl"><div class="bp-name">XL</div><div class="bp-px">1440+</div></div>
+          </div>
+          <div class="bp-devices">
+            <div class="bp-dev"><div class="bp-icon">📱</div>Mobile</div>
+            <div class="bp-dev"><div class="bp-icon">📱</div>Tablet</div>
+            <div class="bp-dev"><div class="bp-icon">💻</div>Laptop</div>
+            <div class="bp-dev"><div class="bp-icon">🖥️</div>Desktop</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Breakpoint Strategy（ブレークポイント設計）</div>
+          <div class="cdesc">320 / 768 / 1024 / 1440px の4段階が基本。デバイス起点ではなくコンテンツが崩れる点を基準に設定するのが正しい。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="container query responsive parent width component CSS modern">
+        <div class="demo d-rp2">
+          <div class="cq-label">Container Query — 親の幅で変化</div>
+          <div class="cq-containers">
+            <div class="cq-container cq-small">
+              <div class="cq-inner-sm">
+                <div class="cq-card"></div>
+                <div class="cq-card"></div>
+                <div class="cq-card"></div>
+              </div>
+              <div class="cq-hint">narrow → stack</div>
+            </div>
+            <div class="cq-container cq-large">
+              <div class="cq-inner-lg">
+                <div class="cq-card"></div>
+                <div class="cq-card"></div>
+                <div class="cq-card"></div>
+              </div>
+              <div class="cq-hint">wide → row</div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Container Query（コンテナクエリ）</div>
+          <div class="cdesc">@container で親コンテナの幅に応じてスタイルを切り替える。media queryより柔軟でコンポーネント単位のレスポンシブが可能。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="touch target size 44px minimum mobile button link tap">
+        <div class="demo d-rp3">
+          <div class="tt-group">
+            <div class="tt-label tt-bad-lbl">NG: 20px</div>
+            <div class="tt-area">
+              <div class="tt-bad-outline"></div>
+              <div class="tt-bad">×</div>
+            </div>
+            <div class="tt-size">実タップ領域が小さすぎ</div>
+          </div>
+          <div class="tt-group">
+            <div class="tt-label tt-good-lbl">OK: 44px</div>
+            <div class="tt-area">
+              <div class="tt-good">Tap</div>
+            </div>
+            <div class="tt-size">Apple/Google推奨最低サイズ</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Touch Target Size（44×44px最低限）</div>
+          <div class="cdesc">AppleもGoogleも最低44×44pxを推奨。視覚的に小さいボタンでも padding を使って実際のタップ領域を確保する。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== DESIGN SYSTEM TIPS ======================== -->
+  <section class="cat-section tip-section" id="designsystem-tips">
+    <div class="cat-hdr">
+      <div class="cat-tag ds-tag">Design Tips · Design System</div>
+      <div class="cat-title">デザインシステム概念 Tips</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" data-name="design token CSS variable JSON spacing color border radius">
+        <div class="demo d-ds1">
+          <div class="dt-level">
+            <div class="dt-badge dt-prim">Primitive</div>
+            <div class="dt-value">purple-500: #8b5cf6</div>
+          </div>
+          <div class="dt-arrow dt-arrow-row">↓ alias</div>
+          <div class="dt-level">
+            <div class="dt-badge dt-sem">Semantic</div>
+            <div class="dt-value">--color-brand-primary</div>
+          </div>
+          <div class="dt-arrow dt-arrow-row">↓ alias</div>
+          <div class="dt-level">
+            <div class="dt-badge dt-comp">Component</div>
+            <div class="dt-value">--button-bg-default</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Design Token（デザイントークン）</div>
+          <div class="cdesc">色・スペーシング・角丸などをCSS変数やJSONで一元管理。「なんとなく」の値をなくしてチームの共通言語になる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="component anatomy label icon container state layer button">
+        <div class="demo d-ds2">
+          <div class="ca-btn">
+            <div class="ca-icon">⚡</div>
+            <div class="ca-label">Button Label</div>
+          </div>
+          <div class="ca-annotations">
+            <div class="ca-ann"><div class="ca-dot ca-dot-c"></div><div class="ca-ann-txt">Container</div></div>
+            <div class="ca-ann"><div class="ca-dot ca-dot-i"></div><div class="ca-ann-txt">Icon</div></div>
+            <div class="ca-ann"><div class="ca-dot ca-dot-l"></div><div class="ca-ann-txt">Label</div></div>
+            <div class="ca-ann"><div class="ca-dot ca-dot-s"></div><div class="ca-ann-txt">State Layer</div></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Component Anatomy（コンポーネント解剖図）</div>
+          <div class="cdesc">ボタン1つを Container / Icon / Label / State Layer に分解する。Figmaのコンポーネント設計と直結し、バリアントの定義が明確になる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="8pt grid system spacing multiples 4 8 16 24 32 48 consistent">
+        <div class="demo d-ds3">
+          <div class="eg-title">8pt GRID — すべて8の倍数</div>
+          <div class="eg-row">
+            <div class="eg-space sp4">4</div>
+            <div class="eg-space sp8">8</div>
+            <div class="eg-space sp16">16</div>
+            <div class="eg-space sp24">24</div>
+            <div class="eg-space sp32">32</div>
+            <div class="eg-space sp48">48</div>
+          </div>
+          <div class="eg-note">padding: 8 / 16 / 24 / 32 / 48 / 64px</div>
+          <div class="eg-note">gap: 4 / 8 / 12 / 16 / 24 / 32px</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">8pt Grid System（8の倍数ルール）</div>
+          <div class="cdesc">余白・サイズをすべて4か8の倍数に統一する。「なんかズレてる感」がなくなり、デバイス間でもpixel-perfectに揃う。</div>
         </div>
       </div>
 
