@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="v2-lp-lib.css">
 </head><body>
 
 <header class="hdr">
@@ -26,6 +27,7 @@
       <button class="view-toggle-btn" id="viewList" title="リスト表示">☰</button>
     </div>
     <span class="hdr-count" id="count">269 エフェクト</span>
+    <button class="hdr-btn" id="lpLibBtn"><span class="lpl-btn-icon">📋</span> LP Library</button>
     <button class="hdr-btn" id="themeBtn">🌙 ダーク</button>
   </div>
 </header>
@@ -6585,7 +6587,63 @@
 <!-- ======================== PROGRESS DOTS ======================== -->
 <nav class="progress-dots" id="progressDots" aria-label="セクションナビゲーション"></nav>
 
+<!-- LP Library Overlay -->
+<div id="lpLibOverlay"></div>
+
+<!-- LP Library Panel -->
+<div id="lpLibPanel" role="dialog" aria-label="LP ライブラリ">
+  <div class="lpl-header">
+    <div class="lpl-header-left">
+      <div class="lpl-logo-mark">📋</div>
+      <div>
+        <div class="lpl-title">LP Library</div>
+        <div class="lpl-subtitle">実績パターン集 — 再利用可能なセクション</div>
+      </div>
+    </div>
+    <div class="lpl-search-wrap">
+      <span class="lpl-search-ico">⌕</span>
+      <input type="text" id="lpLibSearch" placeholder="セクション名・カテゴリ・タグで検索...">
+    </div>
+    <span class="lpl-count" id="lpLibCount">20 件</span>
+    <button class="lpl-close" id="lpLibClose" title="閉じる">×</button>
+  </div>
+
+  <div class="lpl-filters">
+    <span class="lpl-filter-label">カテゴリ</span>
+    <div class="lpl-filter-group" id="lpLibCats"></div>
+    <div class="lpl-filter-divider"></div>
+    <span class="lpl-filter-label">ステータス</span>
+    <div class="lpl-filter-group" id="lpLibStatuses"></div>
+  </div>
+
+  <div class="lpl-body">
+    <aside class="lpl-sidebar" id="lpLibSidebar"></aside>
+    <div class="lpl-content">
+      <div id="lpLibResults"></div>
+    </div>
+  </div>
+</div>
+
+<!-- LP Library Detail Panel -->
+<div id="lpLibDetail" role="dialog" aria-label="セクション詳細">
+  <div class="lpl-detail-header">
+    <div class="lpl-detail-header-info">
+      <div class="lpl-detail-name" id="lplDetailName"></div>
+      <div class="lpl-detail-meta" id="lplDetailMeta"></div>
+    </div>
+    <button class="lpl-detail-close" id="lpLibDetailClose" title="詳細を閉じる">×</button>
+  </div>
+  <div class="lpl-tabs" id="lplTabs">
+    <div class="lpl-tab active" data-tab="readme">README</div>
+    <div class="lpl-tab" data-tab="prompt">Prompt</div>
+    <div class="lpl-tab" data-tab="checks">Checks</div>
+    <div class="lpl-tab" data-tab="usage">Usage</div>
+  </div>
+  <div class="lpl-detail-body" id="lplDetailBody"></div>
+</div>
+
 <script src="script.js"></script>
 <script src="script-v2.js"></script>
+<script src="script-lp-lib.js"></script>
 </body>
 </html>
