@@ -247,6 +247,12 @@
     <a class="sb-link" href="#modal-flip"><span class="sb-link-dot"></span>Flip Card Modal</a>
     <a class="sb-link" href="#modal-stack"><span class="sb-link-dot"></span>Stacked Modals</a>
   </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Design Tips</div>
+    <a class="sb-link" href="#color-tips"><span class="sb-link-dot"></span>Color Combinations</a>
+    <a class="sb-link" href="#gradient-tips"><span class="sb-link-dot"></span>Gradient Techniques</a>
+    <a class="sb-link" href="#hero-tips"><span class="sb-link-dot"></span>Hero Section Layout</a>
+  </div>
 </nav>
 
 <main class="main">
@@ -259,6 +265,42 @@
       <span>CSS / JS / Canvas</span>
       <span>all interactive</span>
     </div>
+  </div>
+
+  <!-- DASHBOARD STATS -->
+  <div class="dash-stats">
+    <div class="dash-stat">
+      <div class="dash-num" id="stat-total">209</div>
+      <div class="dash-lbl">Total Components</div>
+      <div class="dash-delta up">↑ +60 tips</div>
+    </div>
+    <div class="dash-stat">
+      <div class="dash-num">27</div>
+      <div class="dash-lbl">Categories</div>
+      <div class="dash-delta up">↑ +3 new</div>
+    </div>
+    <div class="dash-stat">
+      <div class="dash-num">100%</div>
+      <div class="dash-lbl">Interactive</div>
+      <div class="dash-delta up">✓ CSS / JS</div>
+    </div>
+    <div class="dash-stat">
+      <div class="dash-num">0</div>
+      <div class="dash-lbl">Dependencies</div>
+      <div class="dash-delta up">✓ Vanilla</div>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <span class="filter-lbl">Filter:</span>
+    <a class="chip chip-active" href="#bg-section">All</a>
+    <a class="chip" href="#bg-section">Backgrounds</a>
+    <a class="chip" href="#motion-section">Motion</a>
+    <a class="chip" href="#button-section">Buttons</a>
+    <a class="chip" href="#color-tips">Color Tips</a>
+    <a class="chip" href="#gradient-tips">Gradients</a>
+    <a class="chip" href="#hero-tips">Hero Layout</a>
   </div>
 
   <!-- ======================== BACKGROUNDS ======================== -->
@@ -3332,6 +3374,885 @@
         <div class="cinfo">
           <div class="cname">Drag & Drop Reorder</div>
           <div class="cdesc">HTML5 Drag & Drop APIでリストアイテムを直感的に並び替えるインタラクション。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== COLOR COMBINATION TIPS ======================== -->
+  <section class="cat-section tip-section" id="color-tips">
+    <div class="cat-hdr">
+      <div class="cat-tag ct-tag">Design Tips · Colors</div>
+      <div class="cat-title">色の組み合わせ Tips</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" data-name="color 60-30-10 rule palette proportion">
+        <div class="demo d-ct1">
+          <div class="ct-band b60">60%</div>
+          <div class="ct-band b30">30%</div>
+          <div class="ct-band b10">10%</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">60-30-10 ルール</div>
+          <div class="cdesc">背景に60%、サブカラーに30%、アクセントに10%。この比率がカラーバランスの黄金律。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color contrast hierarchy text typography">
+        <div class="demo d-ct2">
+          <div class="ch1">Primary Text</div>
+          <div class="ch2">Secondary Text</div>
+          <div class="ch3">Muted / Disabled</div>
+          <div class="ch-bar"></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">コントラスト階層</div>
+          <div class="cdesc">テキストは3段階（100% / 65% / 35%不透明度）で階層化。重要度が視覚的に伝わる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color semantic system success error warning info status">
+        <div class="demo d-ct3">
+          <div class="sc sc-g">SUCCESS</div>
+          <div class="sc sc-r">ERROR</div>
+          <div class="sc sc-y">WARNING</div>
+          <div class="sc sc-b">INFO</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">セマンティックカラー</div>
+          <div class="cdesc">緑=成功、赤=エラー、黄=警告、青=情報。ユーザーが直感で理解できる色の意味付け。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color monochromatic scale shades tints">
+        <div class="demo d-ct4">
+          <div class="mc mc1">100</div>
+          <div class="mc mc2">200</div>
+          <div class="mc mc3">300</div>
+          <div class="mc mc4">400</div>
+          <div class="mc mc5">500</div>
+          <div class="mc mc6">600</div>
+          <div class="mc mc7">700</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">モノクロマティックスケール</div>
+          <div class="cdesc">1色を明度でスケール展開。ボタン・ホバー・押下・無効など状態表現に使う。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color complementary pair contrast opposite hue">
+        <div class="demo d-ct5">
+          <div class="cp-l"><span class="cp-lbl">PURPLE</span><span style="font-size:8px;color:rgba(255,255,255,.5);font-family:var(--font-mono)">#7C3AED</span></div>
+          <div class="cp-r"><span class="cp-lbl">AMBER</span><span style="font-size:8px;color:rgba(255,255,255,.6);font-family:var(--font-mono)">#F59E0B</span></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">補色コンビネーション</div>
+          <div class="cdesc">色相環の対面色を組み合わせる。紫×黄金は最大コントラストで視線を集める。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color analogous adjacent harmony palette">
+        <div class="demo d-ct6">
+          <div class="an-row">
+            <div class="an-swatch as1"></div>
+            <div class="an-swatch as2"></div>
+            <div class="an-swatch as3"></div>
+            <div class="an-swatch as4"></div>
+            <div class="an-swatch as5"></div>
+          </div>
+          <div class="an-row an-row2">
+            <div class="an-swatch as1"></div>
+            <div class="an-swatch as2"></div>
+            <div class="an-swatch as3"></div>
+            <div class="an-swatch as4"></div>
+            <div class="an-swatch as5"></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">アナログ配色</div>
+          <div class="cdesc">色相環で隣接する色でグループ分け。パープル系とブルー系で役割を区別する。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color dark theme depth layers surface elevation">
+        <div class="demo d-ct7">
+          <div class="dt-layer dl1">Surface 0 — #020208</div>
+          <div class="dt-layer dl2">Surface 1 — #05050F</div>
+          <div class="dt-layer dl3">Surface 2 — #0A0A1C</div>
+          <div class="dt-layer dl4">Surface 3 — #101028</div>
+          <div class="dt-layer dl5">Surface 4 — #161635</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ダークテーマの深度レイヤー</div>
+          <div class="cdesc">背景・カード・ホバーで異なるダーク値を使い分ける。差分は5〜8%明度が適切。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color neutral accent background muted">
+        <div class="demo d-ct8">
+          <div class="na-neutral">neutral base — background</div>
+          <div class="na-accent">accent — call to action</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ニュートラル + アクセント</div>
+          <div class="cdesc">90%はモノクロ系のニュートラルで構成し、アクセントカラーはCTAのみに限定。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color border subtle hierarchy emphasis">
+        <div class="demo d-ct9">
+          <div class="bh-box bh1">border 5% — card bg</div>
+          <div class="bh-box bh2">border 10% — default card</div>
+          <div class="bh-box bh3">border 20% — hover state</div>
+          <div class="bh-box bh4">border 35% — focus / active</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ボーダー階層</div>
+          <div class="cdesc">白5%→10%→20%→35%でボーダー透明度を変えると自然なホバー・フォーカス表現になる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color text opacity white scale readable">
+        <div class="demo d-ct10">
+          <div class="tc tc1">Primary — 100% white</div>
+          <div class="tc tc2">Secondary — 75% white</div>
+          <div class="tc tc3">Tertiary — 50% white</div>
+          <div class="tc tc4">Disabled — 30% white</div>
+          <div class="tc tc5">Placeholder — 15% white</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">テキスト不透明度スケール</div>
+          <div class="cdesc">rgba(255,255,255, x)で5段階。HEXより柔軟で、テーマ切り替えにも対応しやすい。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color temperature warm cool orange blue contrast">
+        <div class="demo d-ct11">
+          <div class="warm">WARM<br><span style="font-size:7px;opacity:.7">エネルギー・情熱</span></div>
+          <div class="cool">COOL<br><span style="font-size:7px;opacity:.7">信頼・落ち着き</span></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">色温度の対比</div>
+          <div class="cdesc">ウォーム（橙・赤）は緊急・CTA向き。クール（青・紫）は情報・信頼のUIに。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color saturation vivid muted gray boring flat">
+        <div class="demo d-ct12">
+          <div class="sat-card sat-low">Low saturation<br>flat & boring</div>
+          <div class="sat-card sat-high">High saturation<br>vivid & modern</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">彩度コントラスト</div>
+          <div class="cdesc">背景はデサチュレートし、UIポイントは高彩度にする。のっぺり感を一気に解消。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color surface elevation card shadow depth z-index">
+        <div class="demo d-ct13">
+          <div class="elev e0">0</div>
+          <div class="elev e1">1</div>
+          <div class="elev e2">2</div>
+          <div class="elev e3">3</div>
+          <div class="elev e4">4</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">サーフェスエレベーション</div>
+          <div class="cdesc">Material Designの考え方。elevation(z)が上がるほど背景色を少し明るくする。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color brand functional system success error warning info">
+        <div class="demo d-ct14">
+          <div class="bf-row">
+            <div class="bf bf-brand">BRAND</div>
+          </div>
+          <div class="bf-row">
+            <div class="bf bf-success">SUCCESS</div>
+            <div class="bf bf-warn">WARN</div>
+            <div class="bf bf-error">ERROR</div>
+            <div class="bf bf-info">INFO</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ブランド色 vs 機能色</div>
+          <div class="cdesc">ブランドカラーは演出に使い、機能色（状態表現）とは分離する。混在させない。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color purple scale violet tint shade accent variant">
+        <div class="demo d-ct15">
+          <div class="pa pa1">3b0764</div>
+          <div class="pa pa2">4c1d95</div>
+          <div class="pa pa3">6d28d9</div>
+          <div class="pa pa4">8b5cf6</div>
+          <div class="pa pa5">a78bfa</div>
+          <div class="pa pa6">c4b5fd</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">パープルアクセントバリエーション</div>
+          <div class="cdesc">ダーク→ライトへのパープルスケール。背景・ボーダー・テキスト・ボタンで使い分け。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color data visualization chart bar categorical">
+        <div class="demo d-ct16">
+          <div class="dv-bar dv1">Purple — 90%</div>
+          <div class="dv-bar dv2">Blue — 72%</div>
+          <div class="dv-bar dv3">Green — 55%</div>
+          <div class="dv-bar dv4">Amber — 38%</div>
+          <div class="dv-bar dv5">Red — 22%</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">データビズ用カラー</div>
+          <div class="cdesc">カテゴリデータには色相を30°ずつずらした5色パレット。知覚的に均等に見える。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color light dark mode theme switch comparison">
+        <div class="demo d-ct17">
+          <div class="ld-l">
+            <div class="ld-h">Light Mode</div>
+            <div class="ld-s">Soft contrast</div>
+            <div class="ld-btn">Get Started</div>
+          </div>
+          <div class="ld-d">
+            <div class="ld-h">Dark Mode</div>
+            <div class="ld-s">Deep contrast</div>
+            <div class="ld-btn">Get Started</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ライト vs ダークテーマ</div>
+          <div class="cdesc">CSS変数でテーマを切り替え。ダークは #050510 基準、ライトは #f0f0f8 基準が美しい。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color glow neon light ambient shadow">
+        <div class="demo d-ct18">
+          <div class="glow-dot gd-p"></div>
+          <div class="glow-dot gd-b"></div>
+          <div class="glow-dot gd-g"></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">カラーグロウ効果</div>
+          <div class="cdesc">box-shadow に同色の rgba を設定するだけ。光源色と発光色を一致させるのがコツ。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color frosted glass transparency blur backdrop">
+        <div class="demo d-ct19">
+          <div class="fg fg1">Purple</div>
+          <div class="fg fg2">Blue</div>
+          <div class="fg fg3">Green</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">フロストグラスパレット</div>
+          <div class="cdesc">backdrop-filter: blur() + rgba背景色で色付きガラス効果。色はアクセント系を12%程度。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color accessible contrast WCAG AA ratio readable">
+        <div class="demo d-ct20">
+          <div class="acc acc1">Purple on dark <span class="aa aa1">AA ✓</span></div>
+          <div class="acc acc2">Blue on dark <span class="aa aa2">AA ✓</span></div>
+          <div class="acc acc3">Green on dark <span class="aa aa3">AA ✓</span></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">アクセシブルなコントラスト比</div>
+          <div class="cdesc">WCAG AA基準はコントラスト比4.5:1以上。薄い色×白は危険。必ずチェックを。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== GRADIENT TECHNIQUE TIPS ======================== -->
+  <section class="cat-section tip-section" id="gradient-tips">
+    <div class="cat-hdr">
+      <div class="cat-tag gt-tag">Design Tips · Gradients</div>
+      <div class="cat-title">グラデーション テクニック Tips</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" data-name="gradient linear angle direction custom degree">
+        <div class="demo d-gt1">
+          <span class="gt-label">linear-gradient(127deg, …)</span>
+        </div>
+        <div class="cinfo">
+          <div class="cname">カスタム角度リニアグラデ</div>
+          <div class="cdesc">45°や90°を避けて127°など非対称な角度にする。動きが出てのっぺり感が消える。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient radial glow center spotlight light">
+        <div class="demo d-gt2">
+          <span class="gt-label">radial-gradient(ellipse …)</span>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ラジアルグロウセンター</div>
+          <div class="cdesc">中央から外に向かって透明になるラジアルグラデで光源感を演出。スポットライト効果。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient conic sweep pie wheel angular">
+        <div class="demo d-gt3">
+          <div class="conic"></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">コニックグラデーション</div>
+          <div class="cdesc">conic-gradient()で円形に色を展開。カラーホイールやデータ比率の可視化に使える。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient mesh multiple radial blob organic">
+        <div class="demo d-gt4">
+          <span class="gt-label">Mesh Gradient</span>
+        </div>
+        <div class="cinfo">
+          <div class="cname">メッシュグラデーション</div>
+          <div class="cdesc">複数のradial-gradientを重ねてFigmaのMesh Gradient風に。::before ::afterで手軽に実現。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient animated moving background-size keyframe shift">
+        <div class="demo d-gt5">
+          <span class="gt-label" style="color:rgba(255,255,255,.9)">Animated Gradient</span>
+        </div>
+        <div class="cinfo">
+          <div class="cname">アニメーションブラシグラデ</div>
+          <div class="cdesc">background-size:600% + keyframeでpositionをシフト。CDN不要でSaaS感MAX。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient border outline glow ring stroke">
+        <div class="demo d-gt6">
+          <div class="gb">
+            <div class="gb-inner">Gradient Border</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">グラデーションボーダー</div>
+          <div class="cdesc">::before に inset:-1.5px + background:gradient でボーダー風に。border-imageより扱いやすい。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient text clip background webkit fill transparent">
+        <div class="demo d-gt7">
+          <div class="tg1">Gradient</div>
+          <div class="tg2">TEXT GRADIENT</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">テキストグラデーション</div>
+          <div class="cdesc">background-clip:text + -webkit-text-fill-color:transparent。見出しに1行だけ使うのがコツ。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient noise grain texture organic subtle">
+        <div class="demo d-gt8">
+          <span class="gt-label">Gradient + Noise Texture</span>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ノイズ + グラデーション</div>
+          <div class="cdesc">SVG feTurbulenceフィルターをグラデ上に重ねる。4%の粒子感でデジタルの硬さが和らぐ。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient glass frosted blur backdrop transparent">
+        <div class="demo d-gt9">
+          <div class="glass">Glassmorphism</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">グラスモーフィズム</div>
+          <div class="cdesc">rgba背景 + backdrop-filter:blur(16px) + 白12%ボーダー。グラデ背景の上で使う。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient depth layers far mid near parallax atmosphere">
+        <div class="demo d-gt10">
+          <div class="dl-far"></div>
+          <div class="dl-mid"></div>
+          <div class="dl-near"></div>
+          <span class="gt-label">Layered Depth</span>
+        </div>
+        <div class="cinfo">
+          <div class="cname">奥行きレイヤーグラデ</div>
+          <div class="cdesc">遠・中・近の3レイヤーでradial gradientを重ねる。背景に奥行きと光の雰囲気が生まれる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient fade overlay directional text readable dark bottom">
+        <div class="demo d-gt11">
+          <div class="fade-img"></div>
+          <span class="fade-content">Fade-to-dark overlay</span>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ディレクショナルフェード</div>
+          <div class="cdesc">画像上のテキスト可読性を確保する「下→透明」グラデオーバーレイ。写真ヒーローで必須。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient duotone two-color image filter monotone">
+        <div class="demo d-gt12">
+          <div class="dt dt1"></div>
+          <div class="dt dt2"></div>
+          <div class="dt dt3"></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">デュオトーン</div>
+          <div class="cdesc">2色グラデで写真やイラストに統一感を与えるテクニック。各カラム別色でも映える。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient multi-stop midpoint smooth progression">
+        <div class="demo d-gt13">
+          <span class="gt-label">6-stop gradient</span>
+        </div>
+        <div class="cinfo">
+          <div class="cname">マルチストップグラデ</div>
+          <div class="cdesc">中間カラーストップを追加して曲線的な色変化を作る。2色だと直線的になりすぎる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient vignette dark edge center focus spotlight">
+        <div class="demo d-gt14">
+          <span class="gt-label">Vignette Effect</span>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ビネット効果</div>
+          <div class="cdesc">中心→外周にかけて暗くするradial gradient。映画的な雰囲気と視線誘導の両方を実現。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient diagonal card surface background panel">
+        <div class="demo d-gt15">
+          <div class="dg-card dgc1">Purple → Blue (135°)</div>
+          <div class="dg-card dgc2">Teal → Indigo (225°)</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">対角グラデカード</div>
+          <div class="cdesc">135°と225°の方向を組み合わせると自然なリズムが生まれる。ベンとグリッドと相性良い。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient neon glow inner shadow box">
+        <div class="demo d-gt16">
+          <div class="neon-box">NEON GLOW</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ネオングロウボーダー</div>
+          <div class="cdesc">box-shadow に同色を外→内の二重指定。発光しているように見えるエフェクト。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient transparency stack multiply layer blend subtle">
+        <div class="demo d-gt17">
+          <div class="tg-s1"></div>
+          <div class="tg-s2"></div>
+          <div class="tg-s3"></div>
+          <span class="gt-label">Stacked Transparent Layers</span>
+        </div>
+        <div class="cinfo">
+          <div class="cname">透明グラデ重ね</div>
+          <div class="cdesc">各方向から10%以下の薄いグラデを複数重ねる。単一グラデより複雑で有機的な背景に。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient inner glow card inset shadow highlight">
+        <div class="demo d-gt18">
+          <div class="ig-card">Inner Glow Card</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">インナーグロウカード</div>
+          <div class="cdesc">linear-gradient背景 + box-shadow(外部) + inset(内部ハイライト)の組み合わせ。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient hue rotate animation shift color cycling">
+        <div class="demo d-gt19">
+          <span class="gt-label">Hue-rotate Animation</span>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ヒューシフトアニメーション</div>
+          <div class="cdesc">filter:hue-rotate() をkeyframeで360°回す。1つのグラデが全色を巡る省コストアニメ。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient prismatic rainbow spectrum vivid color">
+        <div class="demo d-gt20">
+          <span class="gt-label">Prismatic Gradient</span>
+        </div>
+        <div class="cinfo">
+          <div class="cname">プリズマティックグラデ</div>
+          <div class="cdesc">虹色グラデ + filter:saturate(.65) で派手すぎず洗練された感じに。ヒーローBGに映える。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== HERO SECTION LAYOUT TIPS ======================== -->
+  <section class="cat-section tip-section" id="hero-tips">
+    <div class="cat-hdr">
+      <div class="cat-tag ht-tag">Design Tips · Hero</div>
+      <div class="cat-title">ヒーローセクション Layout Tips</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" data-name="hero center aligned layout text cta centered">
+        <div class="demo d-ht1">
+          <div class="ht-badge">✦ NEW RELEASE</div>
+          <div class="ht-h">Build Faster<br>Ship Better</div>
+          <div class="ht-sub">The modern UI toolkit for SaaS products.</div>
+          <div class="ht-cta">
+            <div class="ht-btn ht-btn-p">Get Started</div>
+            <div class="ht-btn ht-btn-s">View Demo</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">センター揃えヒーロー</div>
+          <div class="cdesc">テキストを中央揃え。ブランドへの期待感を高めるシンプルなスタート地点。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero left aligned copy right visual illustration image">
+        <div class="demo d-ht2">
+          <div class="ht2-copy">
+            <div class="ht2-h">Left Copy +<br>Right Visual</div>
+            <div class="ht2-s">Product description here.</div>
+            <div class="ht2-btn">Start Free →</div>
+          </div>
+          <div class="ht2-visual">📊</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">左コピー + 右ビジュアル</div>
+          <div class="cdesc">F字の視線導線に沿う配置。コピーを先に読ませ、ビジュアルで補強する王道レイアウト。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero split 50 50 half product mockup screenshot">
+        <div class="demo d-ht3">
+          <div class="ht3-l">
+            <div class="ht3-h">50/50 Split</div>
+            <div class="ht3-s">Equal visual weight.</div>
+            <div class="ht3-btn">Learn More</div>
+          </div>
+          <div class="ht3-r">
+            <div class="ht3-mockup"></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">50/50 スプリット</div>
+          <div class="cdesc">コピーとビジュアルに等しい重みを持たせる。製品のスクリーンショットと好相性。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero fullscreen background overlay navigation navbar">
+        <div class="demo d-ht4">
+          <div class="ht4-nav">
+            <div class="ht4-logo"></div>
+            <div class="ht4-links">
+              <div class="ht4-link"></div>
+              <div class="ht4-link"></div>
+              <div class="ht4-link"></div>
+            </div>
+          </div>
+          <div class="ht4-h">Full Screen<br>Hero BG</div>
+          <div class="ht4-s">Immersive experience</div>
+          <div class="ht4-btn">Enter</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">フルスクリーン背景ヒーロー</div>
+          <div class="cdesc">ナビゲーションを透明にして背景に溶け込ませる。高没入感のランディング向け。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero badge headline gradient text cta two line">
+        <div class="demo d-ht5">
+          <div class="ht5-badge">★ v2.0 — Now Live</div>
+          <div class="ht5-h1">Design Systems</div>
+          <div class="ht5-h2">Reimagined.</div>
+          <div class="ht5-s">Zero config. Maximum impact.</div>
+          <div class="ht5-cta">
+            <div class="ht5-btn">Get Started</div>
+            <div class="ht5-link">View docs →</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">バッジ + グラデ見出し</div>
+          <div class="cdesc">バッジで最新情報→大見出し→サブコピー→CTAの順番が最も読まれる構造。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero announcement bar banner top strip notification">
+        <div class="demo d-ht6">
+          <div class="ht6-announce">
+            <div class="ht6-an-badge">NEW</div>
+            <span>v3 just launched — see what's new</span>
+          </div>
+          <div class="ht6-hero">
+            <div class="ht6-h">Announcement<br>Bar + Hero</div>
+            <div class="ht6-s">Top strip draws the eye first.</div>
+            <div class="ht6-btn">Read More</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">アナウンスバー + ヒーロー</div>
+          <div class="cdesc">ヒーローの上にアナウンスバーを置く。最新情報を最初に見せるSaaSの標準パターン。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero features icons benefits grid below CTA">
+        <div class="demo d-ht7">
+          <div class="ht7-top">
+            <div class="ht7-h">Feature Icons<br>Below CTA</div>
+            <div class="ht7-s">Reinforce the value prop.</div>
+          </div>
+          <div class="ht7-feats">
+            <div class="ht7-feat"><div class="ht7-fi">⚡</div><div class="ht7-fn">Fast</div></div>
+            <div class="ht7-feat"><div class="ht7-fi">🔒</div><div class="ht7-fn">Secure</div></div>
+            <div class="ht7-feat"><div class="ht7-fi">♾️</div><div class="ht7-fn">Scalable</div></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">特徴アイコンロウ</div>
+          <div class="cdesc">CTAの直下に3つのキーベネフィットを並べる。ヒーローの説得力を補強する定番手法。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero social proof users trust avatars count testimonial">
+        <div class="demo d-ht8">
+          <div class="ht8-h">Trusted by<br>50,000+ teams</div>
+          <div class="ht8-btn">Start for Free</div>
+          <div class="ht8-social">
+            <div class="ht8-avatars">
+              <div class="ht8-av ht8-av1"></div>
+              <div class="ht8-av ht8-av2"></div>
+              <div class="ht8-av ht8-av3"></div>
+              <div class="ht8-av ht8-av4"></div>
+            </div>
+            <div class="ht8-sp-text">★★★★★ 4.9/5 rating</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ソーシャルプルーフ付きCTA</div>
+          <div class="cdesc">アバター+評価をCTAの直下に配置。「他の人も使ってる」という安心感がコンバージョン向上。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero product screenshot mockup browser window preview">
+        <div class="demo d-ht9">
+          <div class="ht9-top">
+            <div class="ht9-h">Product Screenshot</div>
+          </div>
+          <div class="ht9-screen">
+            <div class="ht9-screen-body"></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">プロダクトスクリーンショット</div>
+          <div class="cdesc">ヒーロー下にブラウザ風のモックアップを配置。「何を作れるか」を即視覚化。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero minimal large typography display font bold statement">
+        <div class="demo d-ht10">
+          <div class="ht10-eyebrow">INTRODUCING</div>
+          <div class="ht10-h">Think<br>Different.</div>
+          <div class="ht10-rule"></div>
+          <div class="ht10-s">Less is more. Typography does the work.</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ミニマル + 超大見出し</div>
+          <div class="cdesc">フォントサイズと余白だけで世界観を作る。余計な装飾を削ぎ落とした高級感の演出。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero metrics numbers stats social proof counter data">
+        <div class="demo d-ht11">
+          <div class="ht11-h">Backed by Numbers</div>
+          <div class="ht11-metrics">
+            <div class="ht11-m">
+              <div class="ht11-mn">99.9%</div>
+              <div class="ht11-ml">Uptime</div>
+            </div>
+            <div class="ht11-m">
+              <div class="ht11-mn">2ms</div>
+              <div class="ht11-ml">Latency</div>
+            </div>
+            <div class="ht11-m">
+              <div class="ht11-mn">50K+</div>
+              <div class="ht11-ml">Users</div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">メトリクスショーケース</div>
+          <div class="cdesc">信頼性を数値で提示するヒーロー。B2B SaaSで特に効果的。tabular-numsで揃えると美しい。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero navigation relationship header transparent blur sticky">
+        <div class="demo d-ht12">
+          <div class="ht12-nav">
+            <div class="ht12-logo"></div>
+            <div class="ht12-links">
+              <div class="ht12-link"></div>
+              <div class="ht12-link"></div>
+              <div class="ht12-link"></div>
+            </div>
+            <div class="ht12-cta-nav"></div>
+          </div>
+          <div class="ht12-hero">
+            <div class="ht12-h">Nav + Hero<br>Relationship</div>
+            <div class="ht12-s">Backdrop blur on scroll</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ナビ + ヒーローの関係</div>
+          <div class="cdesc">ナビは透明→スクロールで backdrop-filter:blur に変化。ヒーローとのシームレスな接続感。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero two column copy features comparison side by side">
+        <div class="demo d-ht13">
+          <div class="ht13-l">
+            <div class="ht13-h">The Problem<br>Today</div>
+            <div class="ht13-b">Too many tools. Too little time.</div>
+          </div>
+          <div class="ht13-r">
+            <div class="ht13-item"><div class="ht13-dot"></div>Unified workflow</div>
+            <div class="ht13-item"><div class="ht13-dot"></div>10× faster setup</div>
+            <div class="ht13-item"><div class="ht13-dot"></div>No vendor lock-in</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">2カラムコピー</div>
+          <div class="cdesc">左に課題、右に解決策。Problem → Solution の対比構造がコンバージョンを高める。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero logo cloud trusted brands companies partners">
+        <div class="demo d-ht14">
+          <div class="ht14-h">Your Stack,<br>Our Platform</div>
+          <div class="ht14-s">Integrates with tools you love</div>
+          <div class="ht14-btn">See All Integrations</div>
+          <div class="ht14-logos-lbl">Trusted by teams at</div>
+          <div class="ht14-logos">
+            <div class="ht14-logo"></div>
+            <div class="ht14-logo"></div>
+            <div class="ht14-logo"></div>
+            <div class="ht14-logo"></div>
+            <div class="ht14-logo"></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ロゴクラウド</div>
+          <div class="cdesc">CTAの下に有名企業ロゴを並べる。「〇〇社も使ってる」は最強のソーシャルプルーフ。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero asymmetric layout golden ratio balance offset">
+        <div class="demo d-ht15">
+          <div class="ht15-l">
+            <div class="ht15-h">Asymmetric<br>Layout</div>
+            <div class="ht15-s">55/45 creates tension.</div>
+            <div class="ht15-btn">Explore →</div>
+          </div>
+          <div class="ht15-r">
+            <div class="ht15-card"></div>
+            <div class="ht15-card2"></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">非対称レイアウト</div>
+          <div class="cdesc">55/45の分割でゴールデンレシオを意識。完全対称より緊張感があり視線が動く。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero gradient mesh background blob radial organic purple">
+        <div class="demo d-ht16">
+          <div class="ht16-blob1"></div>
+          <div class="ht16-blob2"></div>
+          <div class="ht16-h">Gradient<br>Mesh Hero</div>
+          <div class="ht16-s">Organic energy behind the copy.</div>
+          <div class="ht16-btn">Get Started</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">グラデメッシュヒーロー</div>
+          <div class="cdesc">Blobをfilter:blurで滲ませて背景に。コピーの後ろにエネルギーが感じられる背景演出。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero video background scanlines cinematic overlay dark">
+        <div class="demo d-ht17">
+          <div class="ht17-bg"></div>
+          <div class="ht17-scanlines"></div>
+          <div class="ht17-vignette"></div>
+          <div class="ht17-h">Video BG Hero</div>
+          <div class="ht17-s">Cinematic atmosphere.</div>
+          <div class="ht17-btn">▶ Watch Now</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">動画背景ヒーロー</div>
+          <div class="cdesc">ビデオBG上にスキャンライン + ビネットを重ねる。映像感を保ちながらテキストを読みやすく。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero mobile first responsive phone small screen portrait">
+        <div class="demo d-ht18">
+          <div class="ht18-phone">
+            <div class="ht18-phone-content">
+              <div class="ht18-pc-h"></div>
+              <div class="ht18-pc-s"></div>
+              <div class="ht18-pc-s2"></div>
+              <div class="ht18-pc-btn"></div>
+            </div>
+          </div>
+          <div class="ht18-copy">
+            <div class="ht18-h">Mobile<br>First Hero</div>
+            <div class="ht18-s">Design the small screen first, then expand.</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">モバイルファーストヒーロー</div>
+          <div class="cdesc">スマホ縦表示を先にデザイン。コンテンツの優先順位が自然に決まり、拡張も容易。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero bento grid visual layout showcase features card">
+        <div class="demo d-ht19">
+          <div class="ht19-h">Bento Grid CTA</div>
+          <div class="ht19-bento">
+            <div class="ht19-cell hc1">Main Headline Area</div>
+            <div class="ht19-cell hc2">Feature A</div>
+            <div class="ht19-cell hc3">Feature B</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ベントグリッドCTA</div>
+          <div class="cdesc">ヒーローをベントグリッドで構成する現代的アプローチ。Appleが多用し一気に広まった。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero CTA button primary secondary ghost hierarchy action">
+        <div class="demo d-ht20">
+          <div class="ht20-h">Clear CTA<br>Hierarchy</div>
+          <div class="ht20-s">Guide users with button visual weight.</div>
+          <div class="ht20-btns">
+            <div class="ht20-primary">Primary CTA</div>
+            <div class="ht20-secondary">Secondary</div>
+          </div>
+          <div class="ht20-ghost">or learn more →</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">CTAボタン階層</div>
+          <div class="cdesc">Primary → Secondary → Ghost の3段階。視覚的重みで行動の優先度をユーザーに伝える。</div>
         </div>
       </div>
 
