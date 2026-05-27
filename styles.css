@@ -2790,3 +2790,244 @@ mark{background:rgba(139,92,246,.28);color:var(--accentb);border-radius:2px;padd
   animation:staggerIn .35s ease forwards;
   animation-delay:var(--stagger-delay,0ms);
 }
+
+/* =====================================================================
+   SCROLL TRIGGERS 窶・d-st1 窶ｦ d-st20
+   ===================================================================== */
+.cat-tag.st-tag{background:rgba(16,185,129,.1);color:#10b981;border-color:rgba(16,185,129,.25)}
+
+/* 笏笏 ST shared: scroll-trigger utility 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.st-trigger{opacity:0;transition:opacity .6s ease,transform .6s ease,filter .6s ease,clip-path .6s ease}
+.st-trigger.st-visible{opacity:1;transform:none!important;filter:none!important;clip-path:none!important}
+.st-fade-up{transform:translateY(30px)}
+.st-fade-scale{transform:translateY(20px) scale(.9)}
+.st-slide-left{transform:translateX(-40px)}
+.st-slide-right{transform:translateX(40px)}
+.st-blur{filter:blur(10px)}
+.st-rotate{transform:rotate(-8deg) translateY(20px)}
+.st-clip{clip-path:inset(0 100% 0 0)}
+
+/* 笏笏 ST1: Scroll Progress Bar 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st1{background:#07071a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:20px}
+.st1-bar-track{width:100%;height:6px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden}
+.st1-bar-fill{height:100%;background:linear-gradient(90deg,#6d28d9,#0ea5e9);border-radius:3px;width:0%;transition:width .1s linear;animation:st1-demo 2s ease-in-out infinite alternate}
+@keyframes st1-demo{0%{width:15%}100%{width:88%}}
+.st1-label{font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.5px}
+.st1-pct{font-family:var(--font-mono);font-size:20px;font-weight:700;color:#8b5cf6;animation:st1-pct 2s ease-in-out infinite alternate}
+@keyframes st1-pct{0%{content:'15%'} 100%{content:'88%'}}
+.st1-numbers{display:flex;gap:20px}
+.st1-num-item{text-align:center}
+.st1-n{font-family:var(--font-mono);font-size:16px;font-weight:700;color:#e4e4f4}
+.st1-u{font-size:9px;color:rgba(255,255,255,.3);font-family:var(--font-mono)}
+
+/* 笏笏 ST2: Fade Up Reveal 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st2{background:#06061a;display:flex;flex-direction:column;gap:8px;padding:20px;justify-content:center;overflow:hidden}
+.st2-row{display:flex;flex-direction:column;gap:5px}
+.st2-item{padding:8px 12px;border-radius:7px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:8px;font-size:11px;color:rgba(255,255,255,.7);animation:st2-anim 2.4s ease infinite}
+.st2-item:nth-child(2){animation-delay:.15s}
+.st2-item:nth-child(3){animation-delay:.3s}
+@keyframes st2-anim{0%,60%{opacity:1;transform:translateY(0)} 70%{opacity:0;transform:translateY(-12px)} 71%{opacity:0;transform:translateY(20px)} 100%{opacity:1;transform:translateY(0)}}
+.st2-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.st2-d1{background:#8b5cf6} .st2-d2{background:#0ea5e9} .st2-d3{background:#10b981}
+
+/* 笏笏 ST3: Parallax Depth Layers 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st3{background:#04040f;position:relative;overflow:hidden}
+.st3-layer{position:absolute;left:0;right:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;letter-spacing:-.5px;animation:st3-float linear infinite}
+.st3-l1{bottom:20px;font-size:9px;color:rgba(109,40,217,.25);animation-duration:6s;animation-name:st3-f1}
+.st3-l2{bottom:40px;font-size:13px;color:rgba(139,92,246,.45);animation-duration:4s;animation-name:st3-f2}
+.st3-l3{bottom:65px;font-size:20px;color:rgba(167,139,250,.8);animation-duration:2.5s;animation-name:st3-f3}
+@keyframes st3-f1{0%{transform:translateY(0)} 50%{transform:translateY(-6px)} 100%{transform:translateY(0)}}
+@keyframes st3-f2{0%{transform:translateY(0)} 50%{transform:translateY(-10px)} 100%{transform:translateY(0)}}
+@keyframes st3-f3{0%{transform:translateY(0)} 50%{transform:translateY(-16px)} 100%{transform:translateY(0)}}
+.st3-hint{position:absolute;bottom:6px;right:8px;font-family:var(--font-mono);font-size:7px;color:rgba(255,255,255,.15)}
+.st3-scroll-ico{position:absolute;top:12px;left:50%;transform:translateX(-50%);font-size:10px;color:rgba(255,255,255,.15)}
+
+/* 笏笏 ST4: Count Up on Scroll 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st4{background:#050512;display:flex;align-items:center;justify-content:center;gap:0;padding:16px}
+.st4-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
+.st4-cell{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:10px 8px;text-align:center}
+.st4-num{font-family:var(--font-mono);font-size:20px;font-weight:700;color:#a78bfa;letter-spacing:-1px;line-height:1}
+.st4-label{font-size:8px;color:rgba(255,255,255,.3);margin-top:4px;font-family:var(--font-mono)}
+.st4-cell.counting .st4-num{animation:st4-count .6s ease-out forwards}
+@keyframes st4-count{0%{opacity:.2;transform:translateY(8px)} 100%{opacity:1;transform:translateY(0)}}
+
+/* 笏笏 ST5: SVG Line Draw 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st5{background:#040410;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px}
+.st5-svg{width:100%;height:60px;overflow:visible}
+.st5-path{fill:none;stroke:url(#st5-grad);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:320;stroke-dashoffset:320;animation:st5-draw 2.5s ease forwards .3s}
+@keyframes st5-draw{to{stroke-dashoffset:0}}
+.st5-nodes{display:flex;justify-content:space-between;width:100%;padding:0 4px}
+.st5-node{width:8px;height:8px;border-radius:50%;border:2px solid #7c3aed;background:#050512;animation:st5-node-in .3s ease forwards}
+.st5-node:nth-child(1){animation-delay:.3s;opacity:0}
+.st5-node:nth-child(2){animation-delay:.9s;opacity:0}
+.st5-node:nth-child(3){animation-delay:1.5s;opacity:0}
+.st5-node:nth-child(4){animation-delay:2.1s;opacity:0}
+@keyframes st5-node-in{to{opacity:1;background:#8b5cf6}}
+.st5-label{font-family:var(--font-mono);font-size:9px;color:rgba(255,255,255,.25)}
+
+/* 笏笏 ST6: Horizontal Scroll Strip 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st6{background:#06060f;overflow:hidden;position:relative}
+.st6-track{display:flex;gap:8px;padding:20px 16px;animation:st6-scroll 8s linear infinite}
+@keyframes st6-scroll{0%{transform:translateX(0)} 100%{transform:translateX(-50%)}}
+.st6-card{min-width:80px;height:90px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.07)}
+.st6-c1{background:rgba(109,40,217,.25)} .st6-c2{background:rgba(14,165,233,.2)} .st6-c3{background:rgba(16,185,129,.2)} .st6-c4{background:rgba(245,158,11,.2)} .st6-c5{background:rgba(244,63,94,.2)} .st6-c6{background:rgba(139,92,246,.2)}
+.st6-fade-l{position:absolute;left:0;top:0;bottom:0;width:30px;background:linear-gradient(90deg,#06060f,transparent);pointer-events:none}
+.st6-fade-r{position:absolute;right:0;top:0;bottom:0;width:30px;background:linear-gradient(-90deg,#06060f,transparent);pointer-events:none}
+
+/* 笏笏 ST7: Scale In on Scroll 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st7{background:#050510;display:flex;flex-direction:column;gap:6px;padding:18px;justify-content:center;overflow:hidden}
+.st7-item{padding:9px 12px;border-radius:7px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);font-size:10px;color:rgba(255,255,255,.65);animation:st7-scale 2.8s ease infinite}
+.st7-item:nth-child(2){animation-delay:.2s}
+.st7-item:nth-child(3){animation-delay:.4s}
+.st7-item:nth-child(4){animation-delay:.6s}
+@keyframes st7-scale{0%,50%{opacity:1;transform:scale(1)} 60%{opacity:0;transform:scale(.85)} 61%{opacity:0;transform:scale(1.08)} 80%,100%{opacity:1;transform:scale(1)}}
+
+/* 笏笏 ST8: Staggered List Reveal 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st8{background:#060618;display:flex;flex-direction:column;gap:5px;padding:18px;justify-content:center}
+.st8-item{display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:6px;background:rgba(255,255,255,.03);border-left:2px solid transparent;font-size:10px;color:rgba(255,255,255,.6);opacity:0;animation:st8-in .5s ease forwards}
+.st8-item:nth-child(1){animation-delay:.1s;border-left-color:#8b5cf6}
+.st8-item:nth-child(2){animation-delay:.25s;border-left-color:#0ea5e9}
+.st8-item:nth-child(3){animation-delay:.4s;border-left-color:#10b981}
+.st8-item:nth-child(4){animation-delay:.55s;border-left-color:#f59e0b}
+.st8-item:nth-child(5){animation-delay:.7s;border-left-color:#f43f5e}
+@keyframes st8-in{from{opacity:0;transform:translateX(-16px)} to{opacity:1;transform:translateX(0)}}
+.st8-icon{font-size:12px;flex-shrink:0}
+
+/* 笏笏 ST9: Blur to Sharp 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st9{background:#03030c;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:20px;text-align:center}
+.st9-title{font-family:var(--font-display);font-size:22px;font-weight:800;color:white;letter-spacing:-1px;animation:st9-blur 3s ease-in-out infinite alternate}
+.st9-sub{font-size:9px;color:rgba(255,255,255,.3);font-family:var(--font-mono);animation:st9-blur 3s ease-in-out infinite alternate;animation-delay:.4s}
+@keyframes st9-blur{0%{filter:blur(8px);opacity:.3} 100%{filter:blur(0);opacity:1}}
+.st9-badge{padding:3px 8px;background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.25);border-radius:4px;font-family:var(--font-mono);font-size:8px;color:#a78bfa}
+
+/* 笏笏 ST10: Slide from Sides 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st10{background:#050518;display:flex;flex-direction:column;gap:5px;padding:18px;justify-content:center;overflow:hidden}
+.st10-row{display:flex;gap:6px;align-items:center}
+.st10-left{padding:7px 10px;border-radius:6px;background:rgba(109,40,217,.2);border:1px solid rgba(109,40,217,.25);font-size:9.5px;color:#a78bfa;animation:st10-from-left 2.4s ease-in-out infinite}
+.st10-right{padding:7px 10px;border-radius:6px;background:rgba(14,165,233,.15);border:1px solid rgba(14,165,233,.2);font-size:9.5px;color:#7dd3fc;animation:st10-from-right 2.4s ease-in-out infinite}
+.st10-left:nth-child(3){animation-delay:.2s} .st10-right:nth-child(4){animation-delay:.2s}
+.st10-arrow{font-size:11px;color:rgba(255,255,255,.2);flex-shrink:0}
+@keyframes st10-from-left{0%,50%{opacity:1;transform:translateX(0)} 60%{opacity:0;transform:translateX(-20px)} 61%{opacity:0;transform:translateX(-20px)} 75%,100%{opacity:1;transform:translateX(0)}}
+@keyframes st10-from-right{0%,50%{opacity:1;transform:translateX(0)} 60%{opacity:0;transform:translateX(20px)} 61%{opacity:0;transform:translateX(20px)} 75%,100%{opacity:1;transform:translateX(0)}}
+
+/* 笏笏 ST11: Typewriter on Scroll 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st11{background:#030312;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:8px;padding:20px}
+.st11-line{font-family:var(--font-mono);font-size:12px;color:rgba(255,255,255,.8);white-space:nowrap;overflow:hidden;border-right:2px solid #8b5cf6}
+.st11-l1{animation:st11-type1 1.8s steps(18,end) infinite,st11-blink .6s step-end infinite}
+.st11-l2{animation:st11-type2 1.8s steps(24,end) infinite,st11-blink .6s step-end infinite;animation-delay:.3s;width:0;border-right-color:transparent}
+.st11-l3{font-size:10px;color:rgba(255,255,255,.35);border-right:none;overflow:visible}
+@keyframes st11-type1{0%,100%{width:0} 50%,80%{width:18ch}}
+@keyframes st11-type2{0%,100%{width:0} 50%,80%{width:24ch}}
+@keyframes st11-blink{50%{border-color:transparent}}
+.st11-prompt{color:#10b981}
+
+/* 笏笏 ST12: Background Hue Shift 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st12{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:20px;animation:st12-bg 6s ease infinite;text-align:center}
+@keyframes st12-bg{0%{background:linear-gradient(135deg,#0a041f,#1a0633)} 33%{background:linear-gradient(135deg,#04101f,#082033)} 66%{background:linear-gradient(135deg,#041f0e,#082008)} 100%{background:linear-gradient(135deg,#0a041f,#1a0633)}}
+.st12-h{font-family:var(--font-display);font-size:18px;font-weight:800;color:white;animation:st12-color 6s ease infinite}
+@keyframes st12-color{0%,100%{color:#a78bfa} 33%{color:#7dd3fc} 66%{color:#34d399}}
+.st12-sub{font-size:9px;font-family:var(--font-mono);animation:st12-color 6s ease infinite;animation-delay:.5s}
+.st12-swatch-row{display:flex;gap:5px;margin-top:4px}
+.st12-sw{width:14px;height:14px;border-radius:50%;animation:st12-sw 6s ease infinite}
+.st12-sw1{animation-name:st12-sw1} .st12-sw2{animation-name:st12-sw2} .st12-sw3{animation-name:st12-sw3}
+@keyframes st12-sw1{0%,100%{background:#6d28d9} 33%{background:#0369a1} 66%{background:#065f46}}
+@keyframes st12-sw2{0%,100%{background:#8b5cf6} 33%{background:#0ea5e9} 66%{background:#10b981}}
+@keyframes st12-sw3{0%,100%{background:#a78bfa} 33%{background:#7dd3fc} 66%{background:#34d399}}
+
+/* 笏笏 ST13: Clip-path Wipe Reveal 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st13{background:#040414;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;overflow:hidden}
+.st13-wipe-wrap{position:relative;width:100%;height:40px;overflow:hidden;border-radius:6px;background:rgba(255,255,255,.04)}
+.st13-wipe-fill{position:absolute;inset:0;background:linear-gradient(90deg,#6d28d9,#0ea5e9);animation:st13-wipe 2s cubic-bezier(.4,0,.2,1) infinite;transform-origin:left}
+@keyframes st13-wipe{0%{clip-path:inset(0 100% 0 0)} 60%,100%{clip-path:inset(0 0% 0 0)}}
+.st13-wipe-txt{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:13px;font-weight:800;color:white;letter-spacing:-.3px;z-index:1}
+.st13-row{display:flex;gap:6px;width:100%}
+.st13-block{flex:1;height:10px;border-radius:3px;animation:st13-wipe 2s cubic-bezier(.4,0,.2,1) infinite}
+.st13-b1{background:rgba(109,40,217,.5);animation-delay:.1s}
+.st13-b2{background:rgba(14,165,233,.5);animation-delay:.25s}
+.st13-b3{background:rgba(16,185,129,.5);animation-delay:.4s}
+
+/* 笏笏 ST14: Rotate + Float In 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st14{background:#05050f;display:flex;align-items:center;justify-content:center;padding:20px;gap:14px}
+.st14-card{width:52px;height:68px;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);animation:st14-float 2.8s ease infinite}
+.st14-card:nth-child(1){animation-delay:0s;border-color:rgba(109,40,217,.3)}
+.st14-card:nth-child(2){animation-delay:.3s;border-color:rgba(14,165,233,.3)}
+.st14-card:nth-child(3){animation-delay:.6s;border-color:rgba(16,185,129,.3)}
+.st14-lbl{font-size:7.5px;font-family:var(--font-mono);color:rgba(255,255,255,.35)}
+@keyframes st14-float{0%,100%{transform:translateY(0) rotate(0deg)} 25%{transform:translateY(-6px) rotate(-3deg)} 75%{transform:translateY(-4px) rotate(2deg)}}
+
+/* 笏笏 ST15: Scroll-driven Rotation 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st15{background:#040408;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px}
+.st15-wheel{width:64px;height:64px;border-radius:50%;border:2px dashed rgba(139,92,246,.35);position:relative;animation:st15-spin 8s linear infinite}
+.st15-inner{position:absolute;inset:8px;border-radius:50%;border:2px dashed rgba(14,165,233,.3);animation:st15-spin 5s linear infinite reverse}
+.st15-dot{position:absolute;top:4px;left:50%;transform:translateX(-50%);width:6px;height:6px;border-radius:50%;background:#8b5cf6;box-shadow:0 0 8px rgba(139,92,246,.8)}
+@keyframes st15-spin{to{transform:rotate(360deg)}}
+.st15-label{font-family:var(--font-mono);font-size:9px;color:rgba(255,255,255,.3);letter-spacing:.5px;text-align:center}
+.st15-scroll-bar{width:80px;height:4px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden}
+.st15-scroll-fill{height:100%;background:linear-gradient(90deg,#6d28d9,#0ea5e9);border-radius:2px;animation:st15-fill 3s ease-in-out infinite alternate}
+@keyframes st15-fill{0%{width:10%} 100%{width:90%}}
+
+/* 笏笏 ST16: Sticky Progress 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st16{background:#050514;display:flex;flex-direction:column;gap:0;padding:0;overflow:hidden}
+.st16-sticky{position:relative;background:rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.06);padding:10px 14px;display:flex;align-items:center;justify-content:space-between}
+.st16-title{font-size:11px;font-weight:700;color:rgba(255,255,255,.8)}
+.st16-pct{font-family:var(--font-mono);font-size:11px;color:#8b5cf6;animation:st16-pct 3s ease-in-out infinite alternate}
+@keyframes st16-pct{0%{content:'12%'} 100%{content:'75%'}}
+.st16-prog{height:3px;background:rgba(255,255,255,.05)}
+.st16-prog-fill{height:100%;background:linear-gradient(90deg,#6d28d9,#a78bfa);animation:st16-prog 3s ease-in-out infinite alternate}
+@keyframes st16-prog{0%{width:12%} 100%{width:75%}}
+.st16-content{padding:14px;display:flex;flex-direction:column;gap:5px}
+.st16-line{height:6px;border-radius:2px;background:rgba(255,255,255,.06)}
+.st16-line:nth-child(1){width:85%}
+.st16-line:nth-child(2){width:68%}
+.st16-line:nth-child(3){width:55%}
+
+/* 笏笏 ST17: Scroll Timeline 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st17{background:#040412;padding:16px;display:flex;gap:10px;justify-content:center}
+.st17-line{width:2px;background:rgba(255,255,255,.08);position:relative;flex-shrink:0;margin-top:8px}
+.st17-line::before{content:'';position:absolute;top:0;left:0;width:100%;background:linear-gradient(to bottom,#8b5cf6,rgba(139,92,246,0));animation:st17-line 3s ease-in-out infinite alternate}
+@keyframes st17-line{0%{height:0%} 100%{height:100%}}
+.st17-events{display:flex;flex-direction:column;gap:12px;flex:1}
+.st17-event{display:flex;align-items:flex-start;gap:8px;opacity:.3;animation:st17-event 3s ease infinite}
+.st17-event:nth-child(1){animation-delay:.1s}
+.st17-event:nth-child(2){animation-delay:.5s}
+.st17-event:nth-child(3){animation-delay:.9s}
+.st17-event:nth-child(4){animation-delay:1.3s}
+@keyframes st17-event{0%,30%{opacity:.3} 50%,80%{opacity:1} 100%{opacity:.3}}
+.st17-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.2);flex-shrink:0;margin-top:2px;transition:all .3s}
+.st17-event:nth-child(1) .st17-dot{background:#8b5cf6;border-color:#8b5cf6;box-shadow:0 0 6px rgba(139,92,246,.6)}
+.st17-txt{font-size:10px;color:rgba(255,255,255,.6);font-family:var(--font-mono)}
+.st17-time{font-size:8px;color:rgba(255,255,255,.25)}
+
+/* 笏笏 ST18: Ripple Reveal 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st18{background:#030310;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:20px;position:relative;overflow:hidden}
+.st18-ripple{position:absolute;top:50%;left:50%;width:20px;height:20px;border-radius:50%;transform:translate(-50%,-50%);border:1.5px solid rgba(139,92,246,.6);animation:st18-ripple 2.4s ease-out infinite}
+.st18-r2{animation-delay:.8s;border-color:rgba(14,165,233,.5)}
+.st18-r3{animation-delay:1.6s;border-color:rgba(16,185,129,.4)}
+@keyframes st18-ripple{0%{width:0;height:0;opacity:.8} 100%{width:180px;height:180px;opacity:0}}
+.st18-center{position:relative;z-index:1;text-align:center}
+.st18-icon{font-size:24px}
+.st18-lbl{font-size:10px;color:rgba(255,255,255,.5);font-family:var(--font-mono);margin-top:4px}
+
+/* 笏笏 ST19: Image Parallax 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st19{background:#030310;position:relative;overflow:hidden}
+.st19-bg{position:absolute;inset:-20%;background:
+  radial-gradient(circle at 30% 40%, rgba(109,40,217,.35) 0%, transparent 50%),
+  radial-gradient(circle at 70% 60%, rgba(14,165,233,.25) 0%, transparent 50%),
+  #030310;animation:st19-parallax 4s ease-in-out infinite alternate}
+@keyframes st19-parallax{0%{transform:translateY(-8%)} 100%{transform:translateY(8%)}}
+.st19-fg{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:20px;text-align:center;gap:6px}
+.st19-h{font-family:var(--font-display);font-size:16px;font-weight:800;color:white;letter-spacing:-.5px}
+.st19-s{font-size:9px;color:rgba(255,255,255,.4);font-family:var(--font-mono)}
+.st19-badge{padding:3px 8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:4px;font-size:8px;color:rgba(255,255,255,.5);font-family:var(--font-mono)}
+
+/* 笏笏 ST20: Number Ticker 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-st20{background:#040410;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px}
+.st20-ticker-row{display:flex;gap:4px;align-items:center}
+.st20-digit{width:22px;height:30px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:5px;overflow:hidden;position:relative}
+.st20-digit-inner{display:flex;flex-direction:column;animation:st20-roll 4s ease-in-out infinite}
+.st20-d1{animation-delay:0s} .st20-d2{animation-delay:.15s} .st20-d3{animation-delay:.3s} .st20-d4{animation-delay:.45s}
+@keyframes st20-roll{0%,20%{transform:translateY(0)} 60%,80%{transform:translateY(-270px)} 90%,100%{transform:translateY(-270px)}}
+.st20-digit-num{width:22px;height:30px;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:14px;font-weight:700;color:#a78bfa;flex-shrink:0}
+.st20-sep{font-family:var(--font-mono);font-size:16px;font-weight:700;color:rgba(255,255,255,.3)}
+.st20-label{font-size:9px;color:rgba(255,255,255,.3);font-family:var(--font-mono);letter-spacing:.5px}
+.st20-sub{font-size:8px;color:rgba(139,92,246,.6);font-family:var(--font-mono)}

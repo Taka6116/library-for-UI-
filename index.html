@@ -275,6 +275,10 @@
     <a class="sb-link" href="#texture-extra"><span class="sb-link-dot"></span>Texture Advanced</a>
     <a class="sb-link" href="#color-extra"><span class="sb-link-dot"></span>Color Advanced</a>
   </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Scroll Triggers</div>
+    <a class="sb-link" href="#scroll-triggers"><span class="sb-link-dot"></span>スクロールトリガー</a>
+  </div>
   <div class="sb-search-wrap">
     <input id="sidebarSearch" class="sb-search" placeholder="カテゴリを絞り込む...">
   </div>
@@ -341,6 +345,7 @@
     <a class="chip" href="#layout-extra">Layout+</a>
     <a class="chip" href="#texture-extra">Texture+</a>
     <a class="chip" href="#color-extra">Color+</a>
+    <a class="chip" href="#scroll-triggers">Scroll Triggers</a>
   </div>
 
   <!-- SEARCH EMPTY STATE -->
@@ -5767,6 +5772,362 @@
         <div class="cinfo">
           <div class="cname">色温度とブランドの感情設計</div>
           <div class="cdesc">ウォームは行動喚起・緊急性、クールは信頼・落ち着き。ブランドが届けたい感情から背景色のベーストーンを決める。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== SCROLL TRIGGERS ======================== -->
+  <section class="cat-section" id="scroll-triggers">
+    <div class="cat-hdr">
+      <div class="cat-tag st-tag">Scroll Triggers</div>
+      <div class="cat-title">スクロールトリガー アニメーション</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" data-name="scroll progress bar reading position indicator top fixed">
+        <div class="demo d-st1">
+          <div class="st1-label">SCROLL PROGRESS</div>
+          <div class="st1-bar-track"><div class="st1-bar-fill"></div></div>
+          <div class="st1-numbers">
+            <div class="st1-num-item"><div class="st1-n">64%</div><div class="st1-u">read</div></div>
+            <div class="st1-num-item"><div class="st1-n">3m</div><div class="st1-u">left</div></div>
+            <div class="st1-num-item"><div class="st1-n">1,240</div><div class="st1-u">words</div></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">スクロール進捗バー</div>
+          <div class="cdesc">ページ上部に固定したプログレスバーでスクロール位置を表示。読み進め率や残り時間の表示にも応用できる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="fade up reveal entrance animation scroll trigger viewport">
+        <div class="demo d-st2">
+          <div class="st2-row">
+            <div class="st2-item"><span class="st2-dot st2-d1"></span>Component revealed ✓</div>
+            <div class="st2-item"><span class="st2-dot st2-d2"></span>Fading up into view</div>
+            <div class="st2-item"><span class="st2-dot st2-d3"></span>IntersectionObserver</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">フェードアップ リビール</div>
+          <div class="cdesc">viewport に入ったタイミングで下からふわりと現れる。最もよく使われるスクロールトリガーの基本形。IntersectionObserver で実装。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="parallax depth layers foreground background speed scroll depth">
+        <div class="demo d-st3">
+          <div class="st3-scroll-ico">↕ scroll</div>
+          <div class="st3-layer st3-l1">— — — DEPTH — — —</div>
+          <div class="st3-layer st3-l2">— PARALLAX —</div>
+          <div class="st3-layer st3-l3">LAYERS</div>
+          <div class="st3-hint">translateY × speed</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">パララックス 奥行きレイヤー</div>
+          <div class="cdesc">各レイヤーに異なるスクロール速度を設定。手前の要素は速く、奥の要素は遅く動かすことで自然な奥行きが生まれる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="count up number animation stats metrics scroll trigger odometer">
+        <div class="demo d-st4">
+          <div class="st4-grid">
+            <div class="st4-cell counting"><div class="st4-num" id="st4n1">24,891</div><div class="st4-label">USERS</div></div>
+            <div class="st4-cell counting"><div class="st4-num" id="st4n2">99.9%</div><div class="st4-label">UPTIME</div></div>
+            <div class="st4-cell counting"><div class="st4-num" id="st4n3">4.2ms</div><div class="st4-label">LATENCY</div></div>
+            <div class="st4-cell counting"><div class="st4-num" id="st4n4">$12M</div><div class="st4-label">RAISED</div></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">カウントアップ 数値アニメ</div>
+          <div class="cdesc">スクロールで見えた瞬間に数値が0から目標値までカウント。社会的証明・実績数値の表示に絶大な効果。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="SVG line draw stroke dashoffset path animation scroll trigger">
+        <div class="demo d-st5">
+          <svg class="st5-svg" viewBox="0 0 300 60" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="st5-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#6d28d9"/>
+                <stop offset="50%" stop-color="#0ea5e9"/>
+                <stop offset="100%" stop-color="#10b981"/>
+              </linearGradient>
+            </defs>
+            <path class="st5-path" d="M 10,30 C 50,10 80,50 120,30 S 180,10 220,30 S 270,50 290,30"/>
+          </svg>
+          <div class="st5-nodes">
+            <div class="st5-node"></div>
+            <div class="st5-node"></div>
+            <div class="st5-node"></div>
+            <div class="st5-node"></div>
+          </div>
+          <div class="st5-label">stroke-dashoffset: 320 → 0</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">SVGライン描画</div>
+          <div class="cdesc">stroke-dashoffset を 320 → 0 にアニメートしてパスを「描く」演出。フロー図・接続線・ロゴアニメに活用できる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="horizontal scroll gallery strip carousel overflow auto scroll">
+        <div class="demo d-st6">
+          <div class="st6-track">
+            <div class="st6-card st6-c1">UI Kit</div>
+            <div class="st6-card st6-c2">Motion</div>
+            <div class="st6-card st6-c3">Icons</div>
+            <div class="st6-card st6-c4">Colors</div>
+            <div class="st6-card st6-c5">Type</div>
+            <div class="st6-card st6-c6">Layout</div>
+            <div class="st6-card st6-c1">UI Kit</div>
+            <div class="st6-card st6-c2">Motion</div>
+            <div class="st6-card st6-c3">Icons</div>
+            <div class="st6-card st6-c4">Colors</div>
+          </div>
+          <div class="st6-fade-l"></div>
+          <div class="st6-fade-r"></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">オートスクロール ストリップ</div>
+          <div class="cdesc">縦スクロール中に横スクロールが自動進行するカルーセル。Trustバッジやロゴウォールに最適。左右フェードで奥行きが出る。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="scale in zoom entrance animation scroll viewport trigger">
+        <div class="demo d-st7">
+          <div class="st7-item">⚡ Feature one activated</div>
+          <div class="st7-item">🔒 Security enabled</div>
+          <div class="st7-item">📊 Analytics running</div>
+          <div class="st7-item">✓ All systems go</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">スケールイン アニメ</div>
+          <div class="cdesc">要素がスケール .85 → 1 で現れる。フェードアップより少しエネルギッシュな印象。カード・モーダル・パネルの登場演出に。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="stagger list reveal sequential delay animation scroll trigger">
+        <div class="demo d-st8">
+          <div class="st8-item"><span class="st8-icon">⚡</span>Instant deployment</div>
+          <div class="st8-item"><span class="st8-icon">🔒</span>End-to-end encryption</div>
+          <div class="st8-item"><span class="st8-icon">📡</span>Global CDN network</div>
+          <div class="st8-item"><span class="st8-icon">📊</span>Real-time analytics</div>
+          <div class="st8-item"><span class="st8-icon">✦</span>99.9% uptime SLA</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">スタガーリスト リビール</div>
+          <div class="cdesc">リストアイテムが左からずれ込んで順番に現れる。機能一覧・メリット列挙のセクションで「読ませる」リズムを作る。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="blur to sharp focus reveal scroll trigger gaussian">
+        <div class="demo d-st9">
+          <div class="st9-badge">scroll to focus</div>
+          <div class="st9-title">Clarity</div>
+          <div class="st9-sub">blur(8px) → blur(0px) on enter</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ブラー → シャープ リビール</div>
+          <div class="cdesc">ぼかし状態から鮮明になるアニメーション。神秘的・高級感のある演出。filter:blur() をトランジションで解除するだけで実装。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="slide from left right sides horizontal entrance scroll trigger">
+        <div class="demo d-st10">
+          <div class="st10-row">
+            <div class="st10-left">← Left panel</div>
+            <div class="st10-arrow">↔</div>
+            <div class="st10-right">Right panel →</div>
+          </div>
+          <div class="st10-row">
+            <div class="st10-left">← Feature A</div>
+            <div class="st10-arrow">↔</div>
+            <div class="st10-right">Feature B →</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">左右スライドイン</div>
+          <div class="cdesc">左・右の要素が対称にスライドして中央で出会う演出。比較セクション・対話型UI・2カラムレイアウトに効果的。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="typewriter scroll reveal typing text cursor effect">
+        <div class="demo d-st11">
+          <div class="st11-line st11-l1"><span class="st11-prompt">$ </span>npm install @ui/lib</div>
+          <div class="st11-line st11-l2"><span class="st11-prompt">✓ </span>Ready in 1.2s</div>
+          <div class="st11-line st11-l3">// scroll trigger → typing starts</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">タイプライター スクロール発火</div>
+          <div class="cdesc">スクロールでターミナルのタイピングが始まる演出。CLI系プロダクトやコード系のヒーローで強い没入感を与える。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="background color shift hue change scroll trigger section mood">
+        <div class="demo d-st12">
+          <div class="st12-swatch-row">
+            <div class="st12-sw st12-sw1"></div>
+            <div class="st12-sw st12-sw2"></div>
+            <div class="st12-sw st12-sw3"></div>
+          </div>
+          <div class="st12-h">Mood Shift</div>
+          <div class="st12-sub">scroll → color transition</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">スクロール連動 背景色変化</div>
+          <div class="cdesc">セクションをまたぐたびにページのアクセントカラーが変わる。ストーリーテリング型LPで各章に異なる感情を演出できる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="clip-path wipe reveal left right scroll animation entrance">
+        <div class="demo d-st13">
+          <div class="st13-wipe-wrap">
+            <div class="st13-wipe-fill"></div>
+            <div class="st13-wipe-txt">Wipe Reveal →</div>
+          </div>
+          <div class="st13-row">
+            <div class="st13-block st13-b1"></div>
+            <div class="st13-block st13-b2"></div>
+            <div class="st13-block st13-b3"></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">クリップパス ワイプリビール</div>
+          <div class="cdesc">clip-path:inset(0 100% 0 0) → inset(0 0 0 0) で左から右へ「ふき取る」ように現れる。見出し・画像・CTAに強いインパクト。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="rotate float animation 3d cards scroll tilt appear">
+        <div class="demo d-st14">
+          <div class="st14-card"><span>🎨</span><span class="st14-lbl">Design</span></div>
+          <div class="st14-card"><span>⚡</span><span class="st14-lbl">Speed</span></div>
+          <div class="st14-card"><span>🔒</span><span class="st14-lbl">Secure</span></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ローテート & フロート イン</div>
+          <div class="cdesc">カードが微妙な回転とともに浮き上がる。単純なフェードより有機的・立体的な印象。特徴カードのアピールに有効。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="rotation spin scroll driven rotate transform wheel gyroscope">
+        <div class="demo d-st15">
+          <div class="st15-wheel">
+            <div class="st15-inner">
+              <div class="st15-dot"></div>
+            </div>
+          </div>
+          <div class="st15-scroll-bar"><div class="st15-scroll-fill"></div></div>
+          <div class="st15-label">rotate( scrollY × 0.3deg )</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">スクロール連動 回転</div>
+          <div class="cdesc">scrollY の値をそのまま回転角に変換。歯車・コンパス・ロゴなど円形要素をスクロールで動かすと「制御している感」が増す。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="sticky section progress fill reading bar panel">
+        <div class="demo d-st16">
+          <div class="st16-sticky">
+            <div class="st16-title">Section Progress</div>
+            <span style="font-family:var(--font-mono);font-size:11px;color:#8b5cf6;animation:st16-pct 3s ease-in-out infinite alternate">42%</span>
+          </div>
+          <div class="st16-prog"><div class="st16-prog-fill"></div></div>
+          <div class="st16-content">
+            <div class="st16-line"></div>
+            <div class="st16-line"></div>
+            <div class="st16-line"></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">セクション内プログレス</div>
+          <div class="cdesc">固定ヘッダーにそのセクション内のスクロール進行度を表示。長い記事・ドキュメント・ストーリー型ページで「読み進め感」を可視化。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="timeline vertical scroll reveal events history sequential">
+        <div class="demo d-st17">
+          <div class="st17-line"></div>
+          <div class="st17-events">
+            <div class="st17-event">
+              <div class="st17-dot"></div>
+              <div><div class="st17-txt">v1.0 — Launch</div><div class="st17-time">2023 Q1</div></div>
+            </div>
+            <div class="st17-event">
+              <div class="st17-dot"></div>
+              <div><div class="st17-txt">v2.0 — Scale</div><div class="st17-time">2023 Q3</div></div>
+            </div>
+            <div class="st17-event">
+              <div class="st17-dot"></div>
+              <div><div class="st17-txt">Series A</div><div class="st17-time">2024 Q1</div></div>
+            </div>
+            <div class="st17-event">
+              <div class="st17-dot"></div>
+              <div><div class="st17-txt">v3.0 — AI</div><div class="st17-time">2024 Q4</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">スクロールタイムライン</div>
+          <div class="cdesc">縦ラインに沿ってイベントが順番に現れる。企業の歴史・製品ロードマップ・ユーザーストーリーに。左ラインを伸ばしながらドットを点灯。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="ripple reveal concentric circles entrance scroll animation">
+        <div class="demo d-st18">
+          <div class="st18-ripple"></div>
+          <div class="st18-ripple st18-r2"></div>
+          <div class="st18-ripple st18-r3"></div>
+          <div class="st18-center">
+            <div class="st18-icon">✦</div>
+            <div class="st18-lbl">Ripple on enter</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">リップル リビール</div>
+          <div class="cdesc">要素が見えた瞬間に波紋が広がる。クリックではなくスクロールで発動させることで「発見した」ような感覚を演出。CTAアイコンに使用すると効果的。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="parallax image background translate Y scroll depth hero">
+        <div class="demo d-st19">
+          <div class="st19-bg"></div>
+          <div class="st19-fg">
+            <div class="st19-badge">↕ backgroundPositionY</div>
+            <div class="st19-h">Parallax BG</div>
+            <div class="st19-s">背景が前景より遅く動く</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">パララックス 背景</div>
+          <div class="cdesc">背景画像をスクロール速度の 0.5 倍で移動。background-attachment:fixed より柔軟。section ごとに独立した視差効果を作れる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="number ticker flip counter slot machine scroll trigger odometer">
+        <div class="demo d-st20">
+          <div class="st20-label">LIVE USERS</div>
+          <div class="st20-ticker-row">
+            <div class="st20-digit"><div class="st20-digit-inner st20-d1">
+              <div class="st20-digit-num">2</div><div class="st20-digit-num">3</div><div class="st20-digit-num">4</div><div class="st20-digit-num">5</div><div class="st20-digit-num">6</div><div class="st20-digit-num">7</div><div class="st20-digit-num">8</div><div class="st20-digit-num">9</div><div class="st20-digit-num">0</div><div class="st20-digit-num">1</div>
+            </div></div>
+            <div class="st20-digit"><div class="st20-digit-inner st20-d2">
+              <div class="st20-digit-num">4</div><div class="st20-digit-num">5</div><div class="st20-digit-num">6</div><div class="st20-digit-num">7</div><div class="st20-digit-num">8</div><div class="st20-digit-num">9</div><div class="st20-digit-num">0</div><div class="st20-digit-num">1</div><div class="st20-digit-num">2</div><div class="st20-digit-num">3</div>
+            </div></div>
+            <div class="st20-sep">,</div>
+            <div class="st20-digit"><div class="st20-digit-inner st20-d3">
+              <div class="st20-digit-num">8</div><div class="st20-digit-num">9</div><div class="st20-digit-num">0</div><div class="st20-digit-num">1</div><div class="st20-digit-num">2</div><div class="st20-digit-num">3</div><div class="st20-digit-num">4</div><div class="st20-digit-num">5</div><div class="st20-digit-num">6</div><div class="st20-digit-num">7</div>
+            </div></div>
+            <div class="st20-digit"><div class="st20-digit-inner st20-d4">
+              <div class="st20-digit-num">9</div><div class="st20-digit-num">0</div><div class="st20-digit-num">1</div><div class="st20-digit-num">2</div><div class="st20-digit-num">3</div><div class="st20-digit-num">4</div><div class="st20-digit-num">5</div><div class="st20-digit-num">6</div><div class="st20-digit-num">7</div><div class="st20-digit-num">8</div>
+            </div></div>
+          </div>
+          <div class="st20-sub">↑ rolling on scroll trigger</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ナンバーティッカー</div>
+          <div class="cdesc">スロットマシンのように数字が回転しながら目標値に到達。カウントアップより視覚的インパクトが強く、ライブ指標・リアルタイム数値に最適。</div>
         </div>
       </div>
 

@@ -7,18 +7,8 @@
 
   /* ───────────────────────────────────────────────────────────────────
      0. Wait for DOM + script.js to settle
+     (init() is defined near the Boot section below)
   ─────────────────────────────────────────────────────────────────── */
-  function init() {
-    buildIndex();
-    setupViewToggle();
-    setupDrawer();
-    setupCommandPalette();
-    setupSidebar();
-    setupProgressDots();
-    setupFavorites();
-    setupEnhancedSearch();
-    setupHistoryAPI();
-  }
 
   /* ───────────────────────────────────────────────────────────────────
      1. Index — flat array of all component cards
@@ -747,8 +737,110 @@
   }
 
   /* ───────────────────────────────────────────────────────────────────
+     12. Scroll Trigger — IntersectionObserver for .st-trigger elements
+         Also: scroll progress bar, scroll-driven rotation/parallax
+  ─────────────────────────────────────────────────────────────────── */
+  function setupScrollTriggers() {
+    if (!('IntersectionObserver' in window)) return;
+
+    // Generic entrance triggers: .st-trigger elements get .st-visible on enter
+    var triggers = document.querySelectorAll('.st-trigger');
+    if (triggers.length > 0) {
+      var entranceObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('st-visible');
+            // Optionally unobserve after first trigger
+            entranceObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      triggers.forEach(function (el) { entranceObserver.observe(el); });
+    }
+
+    // Scroll progress bar (fixed top bar)
+    var progressBar = document.getElementById('scrollProgressBar');
+    if (progressBar) {
+      window.addEventListener('scroll', function () {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var pct = docHeight > 0 ? Math.round((scrollTop / docHeight) * 100) : 0;
+        progressBar.style.width = pct + '%';
+      }, { passive: true });
+    }
+
+    // Scroll-driven rotation for .st15-wheel
+    window.addEventListener('scroll', function () {
+      var scrollY = window.scrollY || 0;
+      document.querySelectorAll('.st15-scroll-fill').forEach(function (el) {
+        var parent = el.closest('.demo');
+        if (!parent) return;
+        var rect = parent.getBoundingClientRect();
+        var inView = rect.top < window.innerHeight && rect.bottom > 0;
+        if (inView) {
+          var pct = Math.min(100, Math.max(0, (window.innerHeight - rect.top) / (window.innerHeight * 1.5) * 100));
+          el.style.width = pct + '%';
+        }
+      });
+    }, { passive: true });
+
+    // Count up when ST4 cards enter viewport
+    var st4 = document.querySelector('.d-st4');
+    if (st4) {
+      var st4Triggered = false;
+      var st4Observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !st4Triggered) {
+            st4Triggered = true;
+            animateCountUps(st4);
+          }
+        });
+      }, { threshold: 0.4 });
+      st4Observer.observe(st4);
+    }
+  }
+
+  function animateCountUps(container) {
+    var targets = [
+      { el: document.getElementById('st4n1'), end: 24891, prefix: '', suffix: '' },
+      { el: document.getElementById('st4n2'), end: 99.9, prefix: '', suffix: '%', decimals: 1 },
+      { el: document.getElementById('st4n3'), end: 4.2, prefix: '', suffix: 'ms', decimals: 1 },
+      { el: document.getElementById('st4n4'), end: 12, prefix: '$', suffix: 'M' }
+    ];
+    targets.forEach(function (t) {
+      if (!t.el) return;
+      var startTime = null;
+      var duration = 1200;
+      var start = 0;
+      function step(ts) {
+        if (!startTime) startTime = ts;
+        var progress = Math.min((ts - startTime) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var current = start + (t.end - start) * eased;
+        var formatted = t.decimals ? current.toFixed(t.decimals) : Math.round(current).toLocaleString();
+        t.el.textContent = t.prefix + formatted + t.suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  /* ───────────────────────────────────────────────────────────────────
      Boot
   ─────────────────────────────────────────────────────────────────── */
+  function init() {
+    buildIndex();
+    setupViewToggle();
+    setupDrawer();
+    setupCommandPalette();
+    setupSidebar();
+    setupProgressDots();
+    setupFavorites();
+    setupEnhancedSearch();
+    setupHistoryAPI();
+    setupScrollTriggers();
+  }
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () {
       setTimeout(init, 0);
