@@ -1,0 +1,3339 @@
+﻿<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern UI Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head><body>
+
+<header class="hdr">
+  <div class="hdr-logo">Modern UI<span>Library</span></div>
+  <div class="hdr-search">
+    <span class="hdr-search-ico">⌕</span>
+    <input type="text" id="search" placeholder="エフェクトを検索... (例: aurora, glass)">
+  </div>
+  <div class="hdr-right">
+    <span class="hdr-count" id="count">36 エフェクト</span>
+    <button class="hdr-btn" id="themeBtn">🌙 ダーク</button>
+  </div>
+</header>
+
+<nav class="sidebar" id="sidebar">
+  <div class="sb-cat">
+    <div class="sb-cat-title">Backgrounds</div>
+    <a class="sb-link" href="#aurora"><span class="sb-link-dot"></span>Aurora Background</a>
+    <a class="sb-link" href="#spot-old"><span class="sb-link-dot"></span>Spotlight (旧)</a>
+    <a class="sb-link" href="#spot-new"><span class="sb-link-dot"></span>Spotlight New</a>
+    <a class="sb-link" href="#card-spot"><span class="sb-link-dot"></span>Card Spotlight</a>
+    <a class="sb-link" href="#mesh"><span class="sb-link-dot"></span>Mesh Gradient</a>
+    <a class="sb-link" href="#beams"><span class="sb-link-dot"></span>Background Beams</a>
+    <a class="sb-link" href="#meteors"><span class="sb-link-dot"></span>Meteors</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Texture & Glass</div>
+    <a class="sb-link" href="#glass"><span class="sb-link-dot"></span>Glassmorphism</a>
+    <a class="sb-link" href="#noise"><span class="sb-link-dot"></span>Noise / Grain</a>
+    <a class="sb-link" href="#darkmode"><span class="sb-link-dot"></span>Dark Mode</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Typography</div>
+    <a class="sb-link" href="#fonts"><span class="sb-link-dot"></span>Modern Fonts</a>
+    <a class="sb-link" href="#headings"><span class="sb-link-dot"></span>Bold Headings</a>
+    <a class="sb-link" href="#tracking"><span class="sb-link-dot"></span>Letter Spacing</a>
+    <a class="sb-link" href="#tabular"><span class="sb-link-dot"></span>Tabular Numbers</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Layout</div>
+    <a class="sb-link" href="#bento"><span class="sb-link-dot"></span>Bento Grid</a>
+    <a class="sb-link" href="#spacing"><span class="sb-link-dot"></span>Bold Spacing</a>
+    <a class="sb-link" href="#asym"><span class="sb-link-dot"></span>Asymmetric Layout</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Navigation</div>
+    <a class="sb-link" href="#dock"><span class="sb-link-dot"></span>Floating Dock</a>
+    <a class="sb-link" href="#cmd"><span class="sb-link-dot"></span>⌘K Command Palette</a>
+    <a class="sb-link" href="#playground"><span class="sb-link-dot"></span>Interactive Playground</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Interaction</div>
+    <a class="sb-link" href="#magnetic"><span class="sb-link-dot"></span>Magnetic Button</a>
+    <a class="sb-link" href="#hbg"><span class="sb-link-dot"></span>Hover Border Gradient</a>
+    <a class="sb-link" href="#stateful"><span class="sb-link-dot"></span>Stateful Button</a>
+    <a class="sb-link" href="#micro"><span class="sb-link-dot"></span>Micro Scale / Shadow</a>
+    <a class="sb-link" href="#press"><span class="sb-link-dot"></span>Press Animation</a>
+    <a class="sb-link" href="#card3d"><span class="sb-link-dot"></span>3D Card Effect</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Animation</div>
+    <a class="sb-link" href="#textgen"><span class="sb-link-dot"></span>Text Generate</a>
+    <a class="sb-link" href="#scroll-reveal"><span class="sb-link-dot"></span>Scroll Text Reveal</a>
+    <a class="sb-link" href="#marquee"><span class="sb-link-dot"></span>Infinite Marquee</a>
+    <a class="sb-link" href="#beam"><span class="sb-link-dot"></span>Border Beam</a>
+    <a class="sb-link" href="#set"><span class="sb-link-dot"></span>Shared Element</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Visual & UI</div>
+    <a class="sb-link" href="#tb"><span class="sb-link-dot"></span>Transparent Borders</a>
+    <a class="sb-link" href="#icons"><span class="sb-link-dot"></span>Unified Iconography</a>
+    <a class="sb-link" href="#shadows"><span class="sb-link-dot"></span>Layered Shadows</a>
+    <a class="sb-link" href="#skel"><span class="sb-link-dot"></span>Skeleton UI</a>
+    <a class="sb-link" href="#toast"><span class="sb-link-dot"></span>Stacked Toasts</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Text Animations</div>
+    <a class="sb-link" href="#scramble"><span class="sb-link-dot"></span>Scramble Text</a>
+    <a class="sb-link" href="#wordflip"><span class="sb-link-dot"></span>Word Flip</a>
+    <a class="sb-link" href="#splitchar"><span class="sb-link-dot"></span>Split Char Stagger</a>
+    <a class="sb-link" href="#gradflow"><span class="sb-link-dot"></span>Gradient Text Shine</a>
+    <a class="sb-link" href="#blurreveal"><span class="sb-link-dot"></span>Blur Reveal</a>
+    <a class="sb-link" href="#glitch"><span class="sb-link-dot"></span>Glitch Text</a>
+    <a class="sb-link" href="#wavetext"><span class="sb-link-dot"></span>Wave Text</a>
+    <a class="sb-link" href="#countup"><span class="sb-link-dot"></span>Count Up</a>
+    <a class="sb-link" href="#highlight"><span class="sb-link-dot"></span>Highlight Sweep</a>
+    <a class="sb-link" href="#slidestack"><span class="sb-link-dot"></span>Slide Up Stack</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">JS Interactive</div>
+    <a class="sb-link" href="#particles"><span class="sb-link-dot"></span>Particle Field</a>
+    <a class="sb-link" href="#customcursor"><span class="sb-link-dot"></span>Custom Cursor</a>
+    <a class="sb-link" href="#ripple"><span class="sb-link-dot"></span>Ripple Effect</a>
+    <a class="sb-link" href="#confetti"><span class="sb-link-dot"></span>Confetti Burst</a>
+    <a class="sb-link" href="#mousefollower"><span class="sb-link-dot"></span>Mouse Follower</a>
+    <a class="sb-link" href="#springdrag"><span class="sb-link-dot"></span>Spring Drag</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Motion & Anim</div>
+    <a class="sb-link" href="#kinetic"><span class="sb-link-dot"></span>Kinetic Typography</a>
+    <a class="sb-link" href="#liquid"><span class="sb-link-dot"></span>Liquid Motion</a>
+    <a class="sb-link" href="#morphshape"><span class="sb-link-dot"></span>Morphing Shapes</a>
+    <a class="sb-link" href="#elastic"><span class="sb-link-dot"></span>Elastic Hover</a>
+    <a class="sb-link" href="#springease"><span class="sb-link-dot"></span>Spring Easing</a>
+    <a class="sb-link" href="#overshoot"><span class="sb-link-dot"></span>Overshoot Anim</a>
+    <a class="sb-link" href="#staggerrev"><span class="sb-link-dot"></span>Staggered Reveal</a>
+    <a class="sb-link" href="#ambient"><span class="sb-link-dot"></span>Ambient Motion</a>
+    <a class="sb-link" href="#sectionwipe"><span class="sb-link-dot"></span>Section Wipe</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Scroll & Parallax</div>
+    <a class="sb-link" href="#scrollstory"><span class="sb-link-dot"></span>Scroll Storytelling</a>
+    <a class="sb-link" href="#parallax"><span class="sb-link-dot"></span>Parallax Layers</a>
+    <a class="sb-link" href="#stickyscroll"><span class="sb-link-dot"></span>Sticky Scroll</a>
+    <a class="sb-link" href="#hscroll"><span class="sb-link-dot"></span>Horizontal Scroll</a>
+    <a class="sb-link" href="#snapscroll"><span class="sb-link-dot"></span>Scroll Snap</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Gradients & Glow</div>
+    <a class="sb-link" href="#blobgrad"><span class="sb-link-dot"></span>Blob Gradient</a>
+    <a class="sb-link" href="#fluidgrad"><span class="sb-link-dot"></span>Fluid Gradient</a>
+    <a class="sb-link" href="#lightsweep"><span class="sb-link-dot"></span>Light Sweep</a>
+    <a class="sb-link" href="#bloom"><span class="sb-link-dot"></span>Soft Bloom Glow</a>
+    <a class="sb-link" href="#depthblur"><span class="sb-link-dot"></span>Depth Blur</a>
+    <a class="sb-link" href="#iridescent"><span class="sb-link-dot"></span>Iridescent</a>
+    <a class="sb-link" href="#chrome"><span class="sb-link-dot"></span>Chrome Metallic</a>
+    <a class="sb-link" href="#shader"><span class="sb-link-dot"></span>Shader Gradient</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Reveal & Transition</div>
+    <a class="sb-link" href="#maskreveal"><span class="sb-link-dot"></span>Mask Reveal</a>
+    <a class="sb-link" href="#cliptrans"><span class="sb-link-dot"></span>Clip-path Transition</a>
+    <a class="sb-link" href="#pagetrans"><span class="sb-link-dot"></span>Page Transition</a>
+    <a class="sb-link" href="#tilt3d"><span class="sb-link-dot"></span>3D Tilt</a>
+    <a class="sb-link" href="#cinematic"><span class="sb-link-dot"></span>Cinematic Fade</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Cursor & Spatial</div>
+    <a class="sb-link" href="#cursorspot"><span class="sb-link-dot"></span>Cursor Spotlight</a>
+    <a class="sb-link" href="#noisedisp"><span class="sb-link-dot"></span>Noise Displacement</a>
+    <a class="sb-link" href="#maggrid"><span class="sb-link-dot"></span>Magnetic Grid</a>
+    <a class="sb-link" href="#radialmenu"><span class="sb-link-dot"></span>Radial Menu</a>
+    <a class="sb-link" href="#floattoolbar"><span class="sb-link-dot"></span>Floating Toolbar</a>
+    <a class="sb-link" href="#spatnav"><span class="sb-link-dot"></span>Spatial Navigation</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">AI & Data UI</div>
+    <a class="sb-link" href="#aicopilot"><span class="sb-link-dot"></span>AI Copilot Panel</a>
+    <a class="sb-link" href="#dataglow"><span class="sb-link-dot"></span>Data Glow Viz</a>
+    <a class="sb-link" href="#livefeed"><span class="sb-link-dot"></span>Live Activity Feed</a>
+    <a class="sb-link" href="#aithink"><span class="sb-link-dot"></span>AI Thinking State</a>
+    <a class="sb-link" href="#cmdcenter"><span class="sb-link-dot"></span>Command Center</a>
+    <a class="sb-link" href="#presence"><span class="sb-link-dot"></span>Realtime Presence</a>
+    <a class="sb-link" href="#emptystate"><span class="sb-link-dot"></span>Animated Empty State</a>
+    <a class="sb-link" href="#lottie"><span class="sb-link-dot"></span>Lottie Micro Anim</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Product UI</div>
+    <a class="sb-link" href="#progdisc"><span class="sb-link-dot"></span>Progressive Disclosure</a>
+    <a class="sb-link" href="#expbento"><span class="sb-link-dot"></span>Expandable Bento</a>
+    <a class="sb-link" href="#inspector"><span class="sb-link-dot"></span>Docked Inspector</a>
+    <a class="sb-link" href="#adaptcard"><span class="sb-link-dot"></span>Adaptive Cards</a>
+    <a class="sb-link" href="#pillnav"><span class="sb-link-dot"></span>Pill Navigation</a>
+    <a class="sb-link" href="#segment"><span class="sb-link-dot"></span>Segmented Control</a>
+    <a class="sb-link" href="#inlineedit"><span class="sb-link-dot"></span>Inline Editing</a>
+    <a class="sb-link" href="#optimistic"><span class="sb-link-dot"></span>Optimistic UI</a>
+    <a class="sb-link" href="#ctxbar"><span class="sb-link-dot"></span>Contextual Action Bar</a>
+    <a class="sb-link" href="#sharedlayout"><span class="sb-link-dot"></span>Shared Layout Anim</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Design Styles</div>
+    <a class="sb-link" href="#tactile"><span class="sb-link-dot"></span>Tactile UI</a>
+    <a class="sb-link" href="#editorial"><span class="sb-link-dot"></span>Editorial Layout</a>
+    <a class="sb-link" href="#brutalist"><span class="sb-link-dot"></span>Brutalist Accent</a>
+    <a class="sb-link" href="#neomin"><span class="sb-link-dot"></span>Neo-Minimalism</a>
+    <a class="sb-link" href="#neumorphism"><span class="sb-link-dot"></span>Neumorphism 2.0</a>
+    <a class="sb-link" href="#diagonal"><span class="sb-link-dot"></span>Diagonal Split</a>
+    <a class="sb-link" href="#layeredstack"><span class="sb-link-dot"></span>Layered Card Stack</a>
+    <a class="sb-link" href="#cmduux"><span class="sb-link-dot"></span>Command Menu UX</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Forms & Input</div>
+    <a class="sb-link" href="#float-label"><span class="sb-link-dot"></span>Floating Label</a>
+    <a class="sb-link" href="#input-valid"><span class="sb-link-dot"></span>Input Validation</a>
+    <a class="sb-link" href="#toggle-sw"><span class="sb-link-dot"></span>Toggle Switch</a>
+    <a class="sb-link" href="#range-slider"><span class="sb-link-dot"></span>Range Slider</a>
+    <a class="sb-link" href="#otp-input"><span class="sb-link-dot"></span>OTP Input</a>
+    <a class="sb-link" href="#checkbox-anim"><span class="sb-link-dot"></span>Checkbox Anim</a>
+    <a class="sb-link" href="#multi-tag"><span class="sb-link-dot"></span>Multi-tag Input</a>
+    <a class="sb-link" href="#pw-strength"><span class="sb-link-dot"></span>Password Strength</a>
+    <a class="sb-link" href="#file-drop"><span class="sb-link-dot"></span>File Drop Zone</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Pricing & CTA</div>
+    <a class="sb-link" href="#pricing-card"><span class="sb-link-dot"></span>Pricing Cards</a>
+    <a class="sb-link" href="#pricing-toggle"><span class="sb-link-dot"></span>Pricing Toggle</a>
+    <a class="sb-link" href="#cta-variants"><span class="sb-link-dot"></span>CTA Variants</a>
+    <a class="sb-link" href="#social-proof"><span class="sb-link-dot"></span>Social Proof</a>
+    <a class="sb-link" href="#testimonial"><span class="sb-link-dot"></span>Testimonial</a>
+    <a class="sb-link" href="#countdown"><span class="sb-link-dot"></span>Countdown Timer</a>
+    <a class="sb-link" href="#trust-badge"><span class="sb-link-dot"></span>Trust Badges</a>
+    <a class="sb-link" href="#compare-table"><span class="sb-link-dot"></span>Comparison Table</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Feedback & Status</div>
+    <a class="sb-link" href="#alert-banner"><span class="sb-link-dot"></span>Alert / Banner</a>
+    <a class="sb-link" href="#tooltip-ui"><span class="sb-link-dot"></span>Tooltip</a>
+    <a class="sb-link" href="#notif-badge"><span class="sb-link-dot"></span>Notification Badge</a>
+    <a class="sb-link" href="#status-dot"><span class="sb-link-dot"></span>Status Indicator</a>
+    <a class="sb-link" href="#announce-bar"><span class="sb-link-dot"></span>Announcement Bar</a>
+    <a class="sb-link" href="#cookie-ui"><span class="sb-link-dot"></span>Cookie Consent</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Loading & Progress</div>
+    <a class="sb-link" href="#progress-bar"><span class="sb-link-dot"></span>Progress Bar</a>
+    <a class="sb-link" href="#spinner"><span class="sb-link-dot"></span>Spinner Variants</a>
+    <a class="sb-link" href="#step-wizard"><span class="sb-link-dot"></span>Step Wizard</a>
+    <a class="sb-link" href="#upload-prog"><span class="sb-link-dot"></span>Upload Progress</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Interactions</div>
+    <a class="sb-link" href="#copy-clip"><span class="sb-link-dot"></span>Copy to Clipboard</a>
+    <a class="sb-link" href="#hover-card"><span class="sb-link-dot"></span>Hover Card</a>
+    <a class="sb-link" href="#drag-drop"><span class="sb-link-dot"></span>Drag & Drop Reorder</a>
+  </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Modal & Overlay</div>
+    <a class="sb-link" href="#modal-scale"><span class="sb-link-dot"></span>Scale In Modal</a>
+    <a class="sb-link" href="#modal-slide"><span class="sb-link-dot"></span>Slide Up Modal</a>
+    <a class="sb-link" href="#modal-elastic"><span class="sb-link-dot"></span>Elastic Pop Modal</a>
+    <a class="sb-link" href="#modal-blur"><span class="sb-link-dot"></span>Blur Reveal Modal</a>
+    <a class="sb-link" href="#modal-drawer"><span class="sb-link-dot"></span>Side Drawer</a>
+    <a class="sb-link" href="#modal-sheet"><span class="sb-link-dot"></span>Bottom Sheet</a>
+    <a class="sb-link" href="#modal-flip"><span class="sb-link-dot"></span>Flip Card Modal</a>
+    <a class="sb-link" href="#modal-stack"><span class="sb-link-dot"></span>Stacked Modals</a>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="page-hdr">
+    <div class="page-title">Modern UI Library</div>
+    <div class="page-sub">現代のおしゃれなUIを構成する149種類のエフェクト・パターン集</div>
+    <div class="page-meta">
+      <span>149 エフェクト</span>
+      <span>24 カテゴリ</span>
+      <span>全デモ インタラクティブ</span>
+    </div>
+  </div>
+
+  <!-- ======================== BACKGROUNDS ======================== -->
+  <section class="cat-section" id="bg-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Backgrounds</div>
+      <div class="cat-title">背景エフェクト</div>
+    </div>
+    <div class="grid">
+
+      <!-- 1. Aurora -->
+      <div class="ecard" id="aurora" data-name="aurora background オーロラ">
+        <div class="demo d-aurora">
+          <div class="aurora-b aurora-b1"></div>
+          <div class="aurora-b aurora-b2"></div>
+          <div class="aurora-b aurora-b3"></div>
+          <div class="aurora-txt">Aurora Background</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Aurora Background</div>
+          <div class="cdesc">複数の半透明グラデーションブロブを重ね、ゆっくり動かすことで北極光のような幻想的な背景を生成。Dark mode の Hero セクションに最適。</div>
+        </div>
+      </div>
+
+      <!-- 2. Spotlight 旧 -->
+      <div class="ecard" id="spot-old" data-name="spotlight スポットライト mouse cursor">
+        <div class="demo d-spot" id="spotDemo">
+          <div class="spot-over" id="spotOver"></div>
+          <div class="spot-grid">
+            <div class="spot-cell"></div><div class="spot-cell"></div><div class="spot-cell"></div><div class="spot-cell"></div><div class="spot-cell"></div><div class="spot-cell"></div>
+            <div class="spot-cell"></div><div class="spot-cell"></div><div class="spot-cell"></div><div class="spot-cell"></div><div class="spot-cell"></div><div class="spot-cell"></div>
+            <div class="spot-cell"></div><div class="spot-cell"></div><div class="spot-cell"></div><div class="spot-cell"></div><div class="spot-cell"></div><div class="spot-cell"></div>
+            <div class="spot-cell"></div><div class="spot-cell"></div><div class="spot-cell"></div><div class="spot-cell"></div><div class="spot-cell"></div><div class="spot-cell"></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Spotlight Effect (旧)</div>
+          <div class="cdesc">マウスの位置に追従する単一の radial-gradient を使い、カーソル周辺だけを照らすライト効果。暗背景のグリッドやカードに重ねて使用。</div>
+        </div>
+      </div>
+
+      <!-- 3. Spotlight New -->
+      <div class="ecard" id="spot-new" data-name="spotlight new 左右 dual">
+        <div class="demo d-spotlr">
+          <div class="spotlr-l"></div>
+          <div class="spotlr-r"></div>
+          <div class="spotlr-c">
+            <div class="spotlr-div"></div>
+            <div class="spotlr-txt">Dual Spotlight</div>
+            <div class="spotlr-sub">左右から照らす新しいスタイル</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Spotlight New (左右)</div>
+          <div class="cdesc">左右の端から中央に向かう2つのスポットライトを配置。ページの主役コンテンツを中央に際立たせる演出。Hero や Landing に。</div>
+        </div>
+      </div>
+
+      <!-- 4. Card Spotlight -->
+      <div class="ecard" id="card-spot" data-name="card spotlight カード ホバー">
+        <div class="demo d-cspot">
+          <div class="cs-card" data-cs>
+            <div class="cs-glow" style="background:radial-gradient(circle at var(--cx,50%) var(--cy,50%),rgba(139,92,246,.35),transparent 60%)"></div>
+            <div class="cs-body">
+              <div class="cs-icon" style="background:rgba(139,92,246,.2)"></div>
+              <div><div class="cs-name">Analytics</div><div class="cs-val">+24%</div></div>
+            </div>
+          </div>
+          <div class="cs-card" data-cs>
+            <div class="cs-glow" style="background:radial-gradient(circle at var(--cx,50%) var(--cy,50%),rgba(6,182,212,.35),transparent 60%)"></div>
+            <div class="cs-body">
+              <div class="cs-icon" style="background:rgba(6,182,212,.2)"></div>
+              <div><div class="cs-name">Revenue</div><div class="cs-val">$8.2k</div></div>
+            </div>
+          </div>
+          <div class="cs-card" data-cs>
+            <div class="cs-glow" style="background:radial-gradient(circle at var(--cx,50%) var(--cy,50%),rgba(16,185,129,.35),transparent 60%)"></div>
+            <div class="cs-body">
+              <div class="cs-icon" style="background:rgba(16,185,129,.2)"></div>
+              <div><div class="cs-name">Users</div><div class="cs-val">1.4k</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Card Spotlight</div>
+          <div class="cdesc">カード個別にマウス位置を追跡し、カーソルに追従するグローを描画。ホバーした時にそのカードだけが光る演出。カードグリッドで使用。</div>
+        </div>
+      </div>
+
+      <!-- 5. Mesh Gradient -->
+      <div class="ecard" id="mesh" data-name="mesh gradient メッシュ グラデーション">
+        <div class="demo d-mesh">
+          <div class="d-mesh-c">
+            <div class="d-mesh-txt">Mesh Gradient</div>
+            <div class="d-mesh-sub">複数のradial-gradientを合成</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Mesh Gradient</div>
+          <div class="cdesc">複数の radial-gradient を重ね合わせ、有機的でなめらかな色の流れを生成。Figma の Mesh Gradient に近い表現を CSS だけで実現。</div>
+        </div>
+      </div>
+
+      <!-- 29. Background Beams -->
+      <div class="ecard" id="beams" data-name="background beams 光線 ビーム">
+        <div class="demo d-beams">
+          <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <radialGradient id="bg1" cx="50%" cy="100%"><stop offset="0%" stop-color="#4c1d95" stop-opacity=".8"/><stop offset="100%" stop-color="#4c1d95" stop-opacity="0"/></radialGradient>
+              <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <rect width="400" height="200" fill="url(#bg1)"/>
+            <g filter="url(#glow)" opacity=".7">
+              <line x1="200" y1="200" x2="50" y2="0" stroke="#8b5cf6" stroke-width="1"><animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" repeatCount="indefinite"/></line>
+              <line x1="200" y1="200" x2="120" y2="0" stroke="#7c3aed" stroke-width="1.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.5s" repeatCount="indefinite"/></line>
+              <line x1="200" y1="200" x2="200" y2="0" stroke="#8b5cf6" stroke-width="2"><animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/></line>
+              <line x1="200" y1="200" x2="280" y2="0" stroke="#6d28d9" stroke-width="1.5"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite"/></line>
+              <line x1="200" y1="200" x2="350" y2="0" stroke="#8b5cf6" stroke-width="1"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="3.2s" repeatCount="indefinite"/></line>
+            </g>
+          </svg>
+          <div class="d-beams-c">
+            <div class="d-beams-t">Background Beams</div>
+            <div class="d-beams-s">中心から放射する光線</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Background Beams</div>
+          <div class="cdesc">中央の消失点から放射状に伸びる光の線をSVGやCSSで描画。SaaS系のランディングページや Hero セクションに使われる神秘的な背景。</div>
+        </div>
+      </div>
+
+      <!-- 30. Meteors -->
+      <div class="ecard" id="meteors" data-name="meteors shooting stars 流れ星 メテオ">
+        <div class="demo d-meteor" id="meteorDemo">
+          <div class="met-c">
+            <div class="met-t">✦ Meteors</div>
+            <div class="met-s">流れ星アニメーション</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Meteors / Shooting Stars</div>
+          <div class="cdesc">右上から左下方向へ対角線状に飛ぶ流れ星を CSS animation で生成。複数の meteor を時間差で走らせることで奥行きを表現。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== GLASS & TEXTURE ======================== -->
+  <section class="cat-section" id="glass-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Texture & Glass</div>
+      <div class="cat-title">テクスチャ・グラス</div>
+    </div>
+    <div class="grid">
+
+      <!-- 6. Glassmorphism -->
+      <div class="ecard" id="glass" data-name="glassmorphism glass frost ガラス 磨りガラス">
+        <div class="demo d-glass">
+          <div class="glass-c">
+            <div class="glass-t">Monthly ARR</div>
+            <div class="glass-v">$24.8k</div>
+            <div class="glass-s">↑ 18% from last month</div>
+          </div>
+          <div class="glass-c">
+            <div class="glass-t">Active Users</div>
+            <div class="glass-v">4,291</div>
+            <div class="glass-s">↑ 7% from last week</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Glassmorphism</div>
+          <div class="cdesc">backdrop-filter: blur() と半透明背景で「磨りガラス」風のカードを生成。カラフルな背景の上に重ねると効果が際立つ。iOS UI の影響を受けたデザイン。</div>
+        </div>
+      </div>
+
+      <!-- 7. Noise/Grain -->
+      <div class="ecard" id="noise" data-name="noise grain texture ノイズ グレイン テクスチャ">
+        <div class="demo d-noise">
+          <div class="noise-ov" id="noiseOv"></div>
+          <div class="noise-c">
+            <div class="noise-t">Grain Texture</div>
+            <div class="noise-s">SVG feTurbulence フィルター</div>
+            <div class="noise-row">
+              <button class="nbtn on" id="noiseOn">ON</button>
+              <button class="nbtn" id="noiseOff">OFF</button>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Noise / Grain Texture</div>
+          <div class="cdesc">SVG の feTurbulence フィルターや CSS の background-image で均一なフィルムグレインを合成。デジタルっぽさを和らげ温かみを加える。</div>
+        </div>
+      </div>
+
+      <!-- 8. Dark Mode -->
+      <div class="ecard" id="darkmode" data-name="dark mode ダーク ライト テーマ">
+        <div class="demo d-dark">
+          <div class="dm-prev dm-dark-p">
+            <div class="dm-bar" style="width:100%"></div>
+            <div class="dm-bar"></div>
+            <div class="dm-bar"></div>
+          </div>
+          <div class="dm-mid">
+            <button class="dm-tog" id="dmToggle"></button>
+            <div class="dm-lbl">クリックで切替</div>
+          </div>
+          <div class="dm-prev dm-light-p">
+            <div class="dm-bar" style="width:100%"></div>
+            <div class="dm-bar"></div>
+            <div class="dm-bar"></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Dark Mode 対応</div>
+          <div class="cdesc">CSS カスタムプロパティとデータ属性でライト/ダークを切り替え。prefers-color-scheme メディアクエリでOSの設定にも自動追従できる。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== TYPOGRAPHY ======================== -->
+  <section class="cat-section" id="typo-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Typography</div>
+      <div class="cat-title">タイポグラフィ</div>
+    </div>
+    <div class="grid">
+
+      <!-- 9. Modern Fonts -->
+      <div class="ecard" id="fonts" data-name="modern fonts フォント inter geist space grotesk">
+        <div class="demo d-fonts">
+          <div class="frow"><span class="flbl">Inter</span><span class="fsamp f-inter">The quick brown fox</span></div>
+          <div class="frow"><span class="flbl">Space Grotesk</span><span class="fsamp f-space">The quick brown fox</span></div>
+          <div class="frow"><span class="flbl">Monospace</span><span class="fsamp f-mono">const ui = 'modern'</span></div>
+          <div class="frow"><span class="flbl">System UI</span><span class="fsamp f-sys">-apple-system fallback</span></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Modern Fonts</div>
+          <div class="cdesc">Inter, Geist, Space Grotesk など可読性と個性を両立したモダンな欧文フォント。font-feature-settings でカーニングや合字を細かく制御する。</div>
+        </div>
+      </div>
+
+      <!-- 10. Bold Headings -->
+      <div class="ecard" id="headings" data-name="bold headings 大きな見出し タイポグラフィ">
+        <div class="demo d-head">
+          <div class="h-xl">Display</div>
+          <div class="h-lg">Section Heading</div>
+          <div class="h-md">Subheading text here</div>
+          <div class="h-sm">Body / Caption level text</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Bold & Large Headings</div>
+          <div class="cdesc">font-weight: 900 + letter-spacing: -2px の組み合わせで圧倒的な存在感のタイトルを実現。サイズのコントラストで視覚的ヒエラルキーを明確化。</div>
+        </div>
+      </div>
+
+      <!-- 11. Letter Spacing -->
+      <div class="ecard" id="tracking" data-name="letter spacing tracking カーニング 字間">
+        <div class="demo d-track">
+          <div class="trk-row"><div class="trk-l">Tight −2px</div><div class="trk-s" style="letter-spacing:-2px">MODERN INTERFACE</div></div>
+          <div class="trk-row"><div class="trk-l">Default 0</div><div class="trk-s" style="letter-spacing:0">MODERN INTERFACE</div></div>
+          <div class="trk-row"><div class="trk-l">Wide +2px</div><div class="trk-s" style="letter-spacing:2px">MODERN INTERFACE</div></div>
+          <div class="trk-row"><div class="trk-l">Label +4px</div><div class="trk-s" style="letter-spacing:4px;font-size:11px;color:var(--text2)">CATEGORY TAG</div></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Letter-spacing Tuning</div>
+          <div class="cdesc">大見出しは letter-spacing を狭くして密度感を出し、小さなラベルや ALL CAPS テキストは広げて可読性を確保。用途に合わせた字間設定が重要。</div>
+        </div>
+      </div>
+
+      <!-- 12. Tabular Numbers -->
+      <div class="ecard" id="tabular" data-name="tabular numbers 等幅数字 数字">
+        <div class="demo d-tab">
+          <div class="tab-col">
+            <div class="tab-lbl">Proportional</div>
+            <div class="tab-n prop" id="propNum">1,111.00</div>
+            <div class="tab-n prop">7,777.00</div>
+            <div class="tab-n prop">4,444.00</div>
+          </div>
+          <div class="tab-div"></div>
+          <div class="tab-col">
+            <div class="tab-lbl">Tabular</div>
+            <div class="tab-n" id="tabNum">1,111.00</div>
+            <div class="tab-n">7,777.00</div>
+            <div class="tab-n">4,444.00</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Tabular Numbers</div>
+          <div class="cdesc">font-variant-numeric: tabular-nums で全ての数字を等幅に。表や価格リストで数値が縦にガタつかず整列する。ダッシュボードの数値表示に必須。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== LAYOUT ======================== -->
+  <section class="cat-section" id="layout-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Layout</div>
+      <div class="cat-title">レイアウト</div>
+    </div>
+    <div class="grid wide">
+
+      <!-- 13. Bento Grid -->
+      <div class="ecard" id="bento" data-name="bento grid ベントー グリッド 非対称">
+        <div class="demo d-bento">
+          <div class="bento">
+            <div class="bi r2">
+              <div class="bi-t">Total Revenue</div>
+              <div class="bi-v">$48.2k</div>
+              <div class="bi-tr">↑ 12.4% this month</div>
+              <div class="bi-bars">
+                <div class="bi-bar" style="height:40%"></div>
+                <div class="bi-bar" style="height:60%"></div>
+                <div class="bi-bar" style="height:45%"></div>
+                <div class="bi-bar" style="height:80%"></div>
+                <div class="bi-bar" style="height:65%"></div>
+                <div class="bi-bar" style="height:100%"></div>
+                <div class="bi-bar" style="height:85%"></div>
+              </div>
+            </div>
+            <div class="bi">
+              <div class="bi-t">Users</div>
+              <div class="bi-mini-val">4,291</div>
+              <div class="bi-mini-lbl">↑ 7% ↑</div>
+            </div>
+            <div class="bi">
+              <div class="bi-t">Conversion</div>
+              <div class="bi-mini-val">3.8%</div>
+              <div class="bi-mini-lbl">industry avg 2.1%</div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Bento Grid</div>
+          <div class="cdesc">CSS Grid の span を使い、大小様々なサイズのカードを規則正しく美しく並べるレイアウト。Apple のイベントページが有名。情報密度と視覚的面白さを両立。</div>
+        </div>
+      </div>
+
+      <!-- 14. Bold Spacing -->
+      <div class="ecard" id="spacing" data-name="bold spacing ホワイトスペース 余白">
+        <div class="demo d-space">
+          <div class="sp-row" style="--p:6px"><div class="sp-dot"></div><div class="sp-txt">Compact — 6px padding</div><div class="sp-hint">p-1.5</div></div>
+          <div class="sp-row" style="--p:12px"><div class="sp-dot"></div><div class="sp-txt">Normal — 12px padding</div><div class="sp-hint">p-3</div></div>
+          <div class="sp-row" style="--p:20px"><div class="sp-dot"></div><div class="sp-txt">Comfortable — 20px</div><div class="sp-hint">p-5</div></div>
+          <div class="sp-row" style="--p:30px"><div class="sp-dot"></div><div class="sp-txt">Spacious — 30px</div><div class="sp-hint">p-8</div></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Bold Spacing</div>
+          <div class="cdesc">余白を大胆に取ることで各要素が呼吸し、高級感と読みやすさが生まれる。モダンな SaaS UI ではコンパクトなデザインより広い padding が主流。</div>
+        </div>
+      </div>
+
+      <!-- 15. Asymmetric Layout -->
+      <div class="ecard" id="asym" data-name="asymmetric layout 非対称 レイアウト">
+        <div class="demo d-asym">
+          <div class="asym-big">
+            <div class="asym-t">Performance Overview</div>
+            <div class="asym-bars">
+              <div class="asym-bar" style="height:50%"></div>
+              <div class="asym-bar" style="height:70%"></div>
+              <div class="asym-bar" style="height:55%"></div>
+              <div class="asym-bar" style="height:90%"></div>
+              <div class="asym-bar" style="height:75%"></div>
+              <div class="asym-bar" style="height:100%"></div>
+            </div>
+          </div>
+          <div class="asym-right">
+            <div class="asym-sm">
+              <div class="asym-l">Score</div>
+              <div class="asym-v">98</div>
+            </div>
+            <div class="asym-sm">
+              <div class="asym-l">Rank</div>
+              <div class="asym-v">#3</div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Asymmetric Layout</div>
+          <div class="cdesc">対称的な2カラムではなく 3:1 や 2:1 の比率でコンテンツを配置。意図的な非対称さが動きと洗練された印象を生み、情報の優先度も明確になる。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== NAVIGATION ======================== -->
+  <section class="cat-section" id="nav-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Navigation</div>
+      <div class="cat-title">ナビゲーション</div>
+    </div>
+    <div class="grid">
+
+      <!-- 16. Floating Dock -->
+      <div class="ecard" id="dock" data-name="floating dock sticky island ドック macOS">
+        <div class="demo d-dock">
+          <div class="dock" id="dockEl">
+            <div class="di" data-dock>🏠</div>
+            <div class="di" data-dock>💬</div>
+            <div class="di" data-dock>📊</div>
+            <div class="di" data-dock>🔔</div>
+            <div class="di" data-dock>⚙️</div>
+            <div class="di" data-dock>👤</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Floating Dock / Sticky Island</div>
+          <div class="cdesc">macOS の Dock のようにホバーしたアイコンとその隣が拡大するマグニフィケーション効果。画面端に固定して常にアクセス可能なナビを実現。</div>
+        </div>
+      </div>
+
+      <!-- 17. Interactive Playground -->
+      <div class="ecard" id="playground" data-name="interactive playground スライダー コントロール">
+        <div class="demo d-play">
+          <div class="play-ctrl">
+            <span class="play-lbl">Font Size</span>
+            <input type="range" class="play-range" id="fsSlider" min="12" max="32" value="18">
+            <span class="play-val" id="fsVal">18</span>
+          </div>
+          <div class="play-ctrl">
+            <span class="play-lbl">Weight</span>
+            <input type="range" class="play-range" id="fwSlider" min="300" max="900" step="100" value="700">
+            <span class="play-val" id="fwVal">700</span>
+          </div>
+          <div class="play-ctrl">
+            <span class="play-lbl">Spacing</span>
+            <input type="range" class="play-range" id="lsSlider" min="-3" max="6" step="0.5" value="0">
+            <span class="play-val" id="lsVal">0</span>
+          </div>
+          <div class="play-prev">
+            <div class="play-txt" id="playPreview">Hello World</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Interactive Playground</div>
+          <div class="cdesc">スライダーやトグルでリアルタイムにパラメータを変更できる体験型 UI。設定画面やデザインツールで使われ、ユーザーが結果を即座に確認できる。</div>
+        </div>
+      </div>
+
+      <!-- 18. Command Palette -->
+      <div class="ecard" id="cmd" data-name="command palette コマンドパレット cmdk 検索">
+        <div class="demo d-cmd">
+          <div class="cmd">
+            <div class="cmd-in">
+              <span class="cmd-ico">⌕</span>
+              <input class="cmd-inp" placeholder="コマンドを検索..." value="dash">
+              <span class="cmd-kd">ESC</span>
+            </div>
+            <div class="cmd-list">
+              <div class="cmd-item sel">
+                <div class="cmd-iico">📊</div>
+                <span class="cmd-itxt">Dashboard</span>
+                <span class="cmd-ish">⌘D</span>
+              </div>
+              <div class="cmd-item">
+                <div class="cmd-iico">📁</div>
+                <span class="cmd-itxt">Data Export</span>
+              </div>
+              <div class="cmd-item">
+                <div class="cmd-iico">🔔</div>
+                <span class="cmd-itxt">Dark Mode</span>
+                <span class="cmd-ish">⌘⇧D</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">⌘K Command Palette</div>
+          <div class="cdesc">⌘K で開くキーボードファーストの全機能検索UI。Linear, Vercel, GitHub などが採用。マウスなしで全ナビゲーションを高速に行えるパワーユーザー向け機能。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== INTERACTION ======================== -->
+  <section class="cat-section" id="int-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Interaction</div>
+      <div class="cat-title">インタラクション</div>
+    </div>
+    <div class="grid">
+
+      <!-- 19. Magnetic Button -->
+      <div class="ecard" id="magnetic" data-name="magnetic button マグネット ボタン">
+        <div class="demo d-mag">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
+            <div class="mag-wrap" id="magWrap">
+              <button class="mag-btn" id="magBtn">Magnetic ✦</button>
+            </div>
+            <div class="mag-lbl">カーソルを近づけてみて</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Magnetic Button</div>
+          <div class="cdesc">カーソルが近づくとボタン自体が吸い寄せられるように移動する効果。transform で X/Y をずらし、離れると spring アニメーションで戻る。視線誘導に有効。</div>
+        </div>
+      </div>
+
+      <!-- 20. Hover Border Gradient -->
+      <div class="ecard" id="hbg" data-name="hover border gradient ホバー ボーダー グラデーション">
+        <div class="demo d-hbg">
+          <div class="hbg">
+            <div class="hbg-t">Pro Plan</div>
+            <div class="hbg-s">ホバーで境界線が光る</div>
+          </div>
+          <div class="hbg">
+            <div class="hbg-t">Enterprise</div>
+            <div class="hbg-s">カードにフォーカス感</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Hover Border Gradient</div>
+          <div class="cdesc">ホバー時に conic-gradient が border をぐるりと回転するアニメーション。@property を使い CSS カスタムプロパティの角度をアニメーション化する技法。</div>
+        </div>
+      </div>
+
+      <!-- 21. Stateful Button -->
+      <div class="ecard" id="stateful" data-name="stateful button ステート ローディング 状態">
+        <div class="demo d-state">
+          <button class="state-btn idle" id="stateBtn">Deploy</button>
+          <div class="state-hint" id="stateHint">クリックしてみて</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Stateful Button</div>
+          <div class="cdesc">ボタンが idle → loading → success / error と状態遷移し、見た目も変わる UI パターン。非同期処理の進行をユーザーに明確に伝え、誤クリックも防ぐ。</div>
+        </div>
+      </div>
+
+      <!-- 24. Micro Scale/Shadow -->
+      <div class="ecard" id="micro" data-name="micro scale shadow マイクロ インタラクション ホバー">
+        <div class="demo d-micro">
+          <div class="mi">Overview</div>
+          <div class="mi">Analytics</div>
+          <div class="mi">Settings</div>
+          <div class="mi">Billing</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Micro Scale / Shadow</div>
+          <div class="cdesc">ホバー時に translateY(-3px) scale(1.03) + box-shadow を付与する微細なアニメーション。大きすぎず小さすぎない変化がインタラクティブ感を演出。</div>
+        </div>
+      </div>
+
+      <!-- 25. Press Animation -->
+      <div class="ecard" id="press" data-name="press animation クリック プレス 押し込み">
+        <div class="demo d-press">
+          <button class="press-btn">Push Me</button>
+          <button class="press-flat">Subtle</button>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Press Animation</div>
+          <div class="cdesc">クリック時に scale(0.94) translateY(2px) + shadow 縮小で「物理的に押した」感触を表現。:active 擬似クラスで CSS のみで実装可能。触覚的なフィードバック。</div>
+        </div>
+      </div>
+
+      <!-- 23. 3D Card Effect -->
+      <div class="ecard" id="card3d" data-name="3d card effect 3D カード チルト perspective">
+        <div class="demo d-3d">
+          <div class="card3d" id="card3dEl">
+            <div class="c3d-shine"></div>
+            <div class="c3d-body">
+              <div class="c3d-t">3D Card</div>
+              <div class="c3d-v">+8.6%</div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">3D Card Effect</div>
+          <div class="cdesc">マウス位置に応じて perspective + rotateX/Y でカードが傾く3Dエフェクト。光沢のシャイン演出と組み合わせると高級感が増す。ホログラムカード的な表現。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== ANIMATION ======================== -->
+  <section class="cat-section" id="anim-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Animation</div>
+      <div class="cat-title">アニメーション</div>
+    </div>
+    <div class="grid">
+
+      <!-- 22. Text Generate -->
+      <div class="ecard" id="textgen" data-name="text generate effect テキスト タイプライター アニメーション">
+        <div class="demo d-tgen">
+          <div class="tgen-out" id="tgenOut"><span class="tgen-cur"></span></div>
+          <div class="tgen-sub">文字が次々と現れるタイピング効果</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Text Generate Effect</div>
+          <div class="cdesc">文字を1文字ずつ、または単語ごとに opacity + transform でフェードインさせる演出。Hero の見出しや AI のレスポンスストリームに使われる。</div>
+        </div>
+      </div>
+
+      <!-- 26. Scroll Text Reveal -->
+      <div class="ecard" id="scroll-reveal" data-name="scroll driven text reveal スクロール テキスト 出現">
+        <div class="demo d-scroll" id="scrollDemo">
+          <div class="rev-line"><span class="rev-word">スクロール</span> <span class="rev-word">に</span> <span class="rev-word">連動して</span></div>
+          <div class="rev-line"><span class="rev-word">テキストが</span> <span class="rev-word">下から</span> <span class="rev-word">フェードイン</span></div>
+          <div class="rev-line"><span class="rev-word">IntersectionObserver</span> <span class="rev-word">または</span></div>
+          <div class="rev-line"><span class="rev-word">scroll-driven</span> <span class="rev-word">animations</span> <span class="rev-word">API</span> <span class="rev-word">を使用</span></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Scroll-driven Text Reveal</div>
+          <div class="cdesc">スクロール位置に連動して単語や行が下から浮き上がるアニメーション。IntersectionObserver または新しい scroll-driven animations CSS API で実装。</div>
+        </div>
+      </div>
+
+      <!-- 27. Infinite Marquee -->
+      <div class="ecard" id="marquee" data-name="infinite marquee マーキー 無限スクロール ループ">
+        <div class="demo d-marq">
+          <div class="marq-t" id="marqTrack">
+            <div class="marq-item"><div class="marq-dot"></div>Framer Motion</div>
+            <div class="marq-item"><div class="marq-dot"></div>Tailwind CSS</div>
+            <div class="marq-item"><div class="marq-dot"></div>shadcn/ui</div>
+            <div class="marq-item"><div class="marq-dot"></div>Radix UI</div>
+            <div class="marq-item"><div class="marq-dot"></div>Next.js</div>
+            <div class="marq-item"><div class="marq-dot"></div>Vercel</div>
+            <div class="marq-item"><div class="marq-dot"></div>TypeScript</div>
+            <div class="marq-item"><div class="marq-dot"></div>Framer Motion</div>
+            <div class="marq-item"><div class="marq-dot"></div>Tailwind CSS</div>
+            <div class="marq-item"><div class="marq-dot"></div>shadcn/ui</div>
+            <div class="marq-item"><div class="marq-dot"></div>Radix UI</div>
+            <div class="marq-item"><div class="marq-dot"></div>Next.js</div>
+            <div class="marq-item"><div class="marq-dot"></div>Vercel</div>
+            <div class="marq-item"><div class="marq-dot"></div>TypeScript</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Infinite Marquee</div>
+          <div class="cdesc">コンテンツを複製して CSS animation: translateX でループさせる無限スクロールバナー。ロゴウォールやテック系スタックの紹介によく使われる。</div>
+        </div>
+      </div>
+
+      <!-- 28. Border Beam -->
+      <div class="ecard" id="beam" data-name="border beam glow trace グロー ボーダー アニメーション">
+        <div class="demo d-beam">
+          <div class="beam-c">
+            <div class="beam-body">
+              <div class="beam-t">Border Beam</div>
+              <div class="beam-s">光が境界を走る</div>
+            </div>
+          </div>
+          <div class="beam-c" style="--accentb:#f59e0b;--accent2:#ef4444">
+            <div class="beam-body">
+              <div class="beam-t">Glow Trace</div>
+              <div class="beam-s">カスタムカラー</div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Border Beam / Glow Trace</div>
+          <div class="cdesc">conic-gradient をカードの後ろで回転させ、縁に光が走るアニメーション。::before / ::after の clip-path や mask を駆使した CSS テクニック。</div>
+        </div>
+      </div>
+
+      <!-- 31. Shared Element Transition -->
+      <div class="ecard" id="set" data-name="shared element transition ビュートランジション アニメーション">
+        <div class="demo d-set">
+          <div class="set-list">
+            <div class="set-item active" data-set="0">
+              <div class="set-thumb" style="background:linear-gradient(135deg,#7c3aed,#2563eb)"></div>
+              <span class="set-name">Violet</span>
+            </div>
+            <div class="set-item" data-set="1">
+              <div class="set-thumb" style="background:linear-gradient(135deg,#0ea5e9,#10b981)"></div>
+              <span class="set-name">Ocean</span>
+            </div>
+            <div class="set-item" data-set="2">
+              <div class="set-thumb" style="background:linear-gradient(135deg,#f59e0b,#ef4444)"></div>
+              <span class="set-name">Sunset</span>
+            </div>
+          </div>
+          <div class="set-arr">→</div>
+          <div class="set-detail" id="setDetail">
+            <div class="set-d-img" id="setImg" style="background:linear-gradient(135deg,#7c3aed,#2563eb)"></div>
+            <div class="set-d-info" id="setName">Violet</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Shared Element Transition</div>
+          <div class="cdesc">リスト → 詳細画面の遷移で、共通要素（画像やタイトル）が自然に変形・移動する View Transitions API。ページ間の文脈維持でナビゲーションが直感的になる。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== VISUAL ======================== -->
+  <section class="cat-section" id="visual-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Visual & UI</div>
+      <div class="cat-title">ビジュアル・UIコンポーネント</div>
+    </div>
+    <div class="grid">
+
+      <!-- 32. Transparent Borders -->
+      <div class="ecard" id="tb" data-name="transparent borders 透明 ボーダー rgba">
+        <div class="demo d-tb">
+          <div class="tb tb1"><div class="tb-l">Default</div><div class="tb-o">rgba(255,255,255,0.08)</div></div>
+          <div class="tb tb2"><div class="tb-l">Accent</div><div class="tb-o">rgba(109,40,217,0.45)</div></div>
+          <div class="tb tb3"><div class="tb-l">Info</div><div class="tb-o">rgba(6,182,212,0.45)</div></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Transparent Borders</div>
+          <div class="cdesc">border に rgba() や hsla() で透明度付きの色を使う技法。背景との融合が自然で、ライト/ダークどちらでも破綻しない。テーマ対応しやすい。</div>
+        </div>
+      </div>
+
+      <!-- 33. Unified Iconography -->
+      <div class="ecard" id="icons" data-name="unified iconography アイコン 統一 デザイン">
+        <div class="demo d-icons">
+          <div class="ico-item">⊞</div>
+          <div class="ico-item">◎</div>
+          <div class="ico-item">▷</div>
+          <div class="ico-item">⟳</div>
+          <div class="ico-item">⚙</div>
+          <div class="ico-item">✦</div>
+          <div class="ico-item">◈</div>
+          <div class="ico-item">⊕</div>
+          <div class="ico-item">⌥</div>
+          <div class="ico-item">⌘</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Unified Iconography</div>
+          <div class="cdesc">アイコンのスタイル（線の太さ、角丸、サイズ）を統一して使うデザイン原則。Lucide, Heroicons, Phosphor など一つのセットに絞ることで一貫性が保たれる。</div>
+        </div>
+      </div>
+
+      <!-- 34. Layered Shadows -->
+      <div class="ecard" id="shadows" data-name="layered shadows 多層シャドウ 立体感 box-shadow">
+        <div class="demo d-shadows">
+          <div class="sh-col">
+            <div class="sh-box sh1"><span>Flat</span></div>
+            <div class="sh-l">1 layer</div>
+          </div>
+          <div class="sh-col">
+            <div class="sh-box sh2"><span>Soft</span></div>
+            <div class="sh-l">3 layers</div>
+          </div>
+          <div class="sh-col">
+            <div class="sh-box sh3"><span>Deep</span></div>
+            <div class="sh-l">5 layers</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Layered Shadows</div>
+          <div class="cdesc">box-shadow を複数重ねて自然な影を表現する技法。単一の影より柔らかく立体的。Emily Liu の手法では5層の shadow を用いてリアルな浮遊感を実現。</div>
+        </div>
+      </div>
+
+      <!-- 35. Skeleton UI -->
+      <div class="ecard" id="skel" data-name="skeleton ui スケルトン ローディング シマー">
+        <div class="demo d-skel">
+          <div class="skel-card">
+            <div class="sk sk-av"></div>
+            <div class="sk-lines">
+              <div class="sk sk-l1"></div>
+              <div class="sk sk-l2"></div>
+              <div class="sk sk-l3"></div>
+            </div>
+          </div>
+          <div class="skel-card">
+            <div class="sk sk-av"></div>
+            <div class="sk-lines">
+              <div class="sk sk-l1"></div>
+              <div class="sk sk-l2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Skeleton UI</div>
+          <div class="cdesc">コンテンツ読み込み中にプレースホルダーとなるグレーのシルエットを表示。shimmer アニメーションで「読み込んでいる感」を演出。スピナーより体感速度が速い。</div>
+        </div>
+      </div>
+
+      <!-- 36. Stacked Toast -->
+      <div class="ecard" id="toast" data-name="stacked toast notification トースト 通知 スタック">
+        <div class="demo d-toast">
+          <div class="toast-stack" id="toastStack">
+            <div class="toast t1">
+              <span class="t-ico">✅</span>
+              <div class="t-body">
+                <div class="t-title">デプロイ完了</div>
+                <div class="t-sub">Production へ正常にデプロイされました</div>
+              </div>
+              <span class="t-close" id="toastClose">✕</span>
+            </div>
+            <div class="toast t2">
+              <span class="t-ico">🔔</span>
+              <div class="t-body"><div class="t-title">新しいコメント</div></div>
+            </div>
+            <div class="toast t3">
+              <span class="t-ico">⚡</span>
+              <div class="t-body"><div class="t-title">ビルド開始</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Stacked Toast Notifications</div>
+          <div class="cdesc">複数の通知を奥に重ねて表示するスタックUI。最新が手前に来てスケールで奥行きを表現。Sonner や Radix Toast が有名実装。dismiss すると展開される。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== TEXT ANIMATIONS ======================== -->
+  <section class="cat-section" id="text-anim-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Text Animations</div>
+      <div class="cat-title">テキストアニメーション</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" id="scramble" data-name="scramble text スクランブル 暗号 ランダム">
+        <div class="demo d-scramble">
+          <div class="scramble-out" id="scrambleOut">Loading...</div>
+          <button class="scramble-btn" id="scrambleBtn">▶ Scramble</button>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Scramble Text</div>
+          <div class="cdesc">テキストがランダムな記号・文字でぐるぐると混乱した後、本来の文字列へ解読されていくエフェクト。ハッカー感・SF感を演出。ホバーやページロード時に発動させることが多い。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="wordflip" data-name="word flip rotating text ワード フリップ ローテーション">
+        <div class="demo d-wordflip">
+          <div class="wf-line">
+            <span style="color:var(--text)">We&nbsp;</span>
+            <div class="wf-wrap">
+              <div class="wf-inner" id="wfInner">
+                <span class="wf-item">Design.</span>
+                <span class="wf-item">Build.</span>
+                <span class="wf-item">Ship.</span>
+                <span class="wf-item">Scale.</span>
+                <span class="wf-item">Design.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Word Flip / Rotating Text</div>
+          <div class="cdesc">複数のキーワードが縦方向にフリップしながら次々と切り替わるアニメーション。Vercel・Linear の Hero コピーで多用。1行のコピーで多くのメッセージを伝えられる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="splitchar" data-name="split char stagger 文字 分割 スタガー バウンス">
+        <div class="demo d-split">
+          <div class="split-txt" id="splitTxt"></div>
+          <div class="split-hint">クリックで再生</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Split Char Stagger</div>
+          <div class="cdesc">テキストを1文字ずつ span に分解し、それぞれが時間差でスライドイン・フェードインするアニメーション。GSAP や Framer Motion の stagger 機能で実装されることが多い。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="gradflow" data-name="gradient text shine flow グラデーション シャイン テキスト">
+        <div class="demo d-gradtxt">
+          <div class="grad-txt">Gradient Shine</div>
+          <div class="grad-sub">background-clip: text + position アニメーション</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Gradient Text Shine</div>
+          <div class="cdesc">background-clip: text でテキストにグラデーションを適用し、background-position をアニメーションさせて光が流れるシャイン効果。Hero タイトルや価格表示に映える。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="blurreveal" data-name="blur reveal ブラー フォーカス ぼかし シャープ">
+        <div class="demo d-blur">
+          <div class="blur-txt">Into Focus.</div>
+          <div class="blur-sub">filter: blur() → 0 でフォーカスイン</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Text Blur Reveal</div>
+          <div class="cdesc">テキストが強いぼかし状態からシャープにフォーカスインする演出。filter: blur() の変化で実現。映画オープニングやローディング完了時に使うと印象的。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="glitch" data-name="glitch text グリッチ サイバーパンク バグ rgb">
+        <div class="demo d-glitch">
+          <div class="glitch" data-text="GLITCH.EXE">GLITCH.EXE</div>
+          <div class="glitch-sub">::before / ::after で RGB チャンネルずらし</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Glitch Text</div>
+          <div class="cdesc">::before / ::after 疑似要素を赤・青にオフセットして RGB ずれを再現するサイバーパンク風テキスト。clip-path でランダムに断片を切り替えることでバグっぽさを演出。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="wavetext" data-name="wave text ウェーブ 波 テキスト バウンス sin">
+        <div class="demo d-wave">
+          <div class="wave-txt" id="waveTxt"></div>
+          <div class="wave-sub">各文字が animation-delay をずらして上下に波打つ</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Wave Text</div>
+          <div class="cdesc">テキストを1文字ずつ span に分割して animation-delay をずらし、正弦波状に上下するアニメーション。フレンドリー・ポップな印象で、ゲームや子供向け UI に多い。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="countup" data-name="count up number counter 数字 カウントアップ 統計">
+        <div class="demo d-count">
+          <div class="cu-item">
+            <div class="cu-num" id="cu1">0</div>
+            <div class="cu-lbl">⭐ Stars</div>
+          </div>
+          <div class="cu-item">
+            <div class="cu-num" id="cu2">0</div>
+            <div class="cu-lbl">👤 Users</div>
+          </div>
+          <div class="cu-item">
+            <div class="cu-num" id="cu3">0</div>
+            <div class="cu-lbl">🚀 Deploys</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Count Up Numbers</div>
+          <div class="cdesc">0 からターゲット値まで ease-out カーブでカウントアップする演出。Landing Page の実績数値に使うと説得力が増す。IntersectionObserver でスクロール時に自動発動。クリックで再生。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="highlight" data-name="highlight sweep ハイライト マーカー テキスト 蛍光">
+        <div class="demo d-hl">
+          <div class="hl-line">
+            <span class="hl-word" id="hlW1">モダンで</span>&nbsp;
+            <span class="hl-word" id="hlW2">洗練された</span>&nbsp;
+            <span class="hl-word" id="hlW3">UIを</span>
+          </div>
+          <div class="hl-line">
+            <span class="hl-word" id="hlW4">シンプルに</span>&nbsp;
+            <span class="hl-word" id="hlW5">実装する</span>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Highlight Sweep</div>
+          <div class="cdesc">蛍光マーカーで引いたようにハイライト背景が左から右へとアニメーションで広がる演出。スクロールに連動させて重要テキストを順番に強調する手法。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="slidestack" data-name="slide stack word rotate テキスト スライド 切り替え">
+        <div class="demo d-slidestack">
+          <div class="ss-line">
+            We&nbsp;<div class="ss-wrap"><div class="ss-track" id="ssTrack">
+              <span class="ss-word">Ship Fast.</span>
+              <span class="ss-word">Scale Up.</span>
+              <span class="ss-word">Stay Lean.</span>
+              <span class="ss-word">Win Big.</span>
+            </div></div>
+          </div>
+          <div class="ss-sub">上方向スライドで次のフレーズへ切り替え</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Slide Up Stack</div>
+          <div class="cdesc">単語・フレーズが上方向へスライドしながら次のものと入れ替わるテキストアニメーション。SaaS の Hero コピーでよく見られるダイナミックなメッセージ切り替え演出。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== JS INTERACTIVE ======================== -->
+  <section class="cat-section" id="js-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">JS Interactive</div>
+      <div class="cat-title">JSインタラクション</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" id="particles" data-name="particle field パーティクル キャンバス canvas インタラクティブ">
+        <div class="demo d-particle">
+          <canvas class="particle-canvas" id="particleCanvas"></canvas>
+          <div class="particle-txt">マウスで粒子を弾く</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Particle Field</div>
+          <div class="cdesc">Canvas API で多数のパーティクルを描画し、近い粒子同士を線で繋ぎ、マウスに反発させるインタラクティブ背景。WebGL を使うとさらに高品質な表現が可能。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="customcursor" data-name="custom cursor カスタム カーソル フォロワー リング">
+        <div class="demo d-cursor-demo" id="cursorDemo">
+          <div class="csr-f" id="csrF"></div>
+          <div class="csr-d" id="csrD"></div>
+          <div class="cursor-area">
+            <div class="cursor-lbl">Custom Cursor</div>
+            <div class="cursor-hint-txt">このエリアにマウスを移動</div>
+            <button class="cursor-btn" id="cursorBtn2">Hover Me ✦</button>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Custom Cursor</div>
+          <div class="cdesc">デフォルトカーソルを非表示にして CSS + JS 製のカスタムインジケーターに置き換える。遅延付きのリングと即時ドットの組み合わせが定番。ボタンホバーでリングが拡大。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="ripple" data-name="ripple effect リップル マテリアル クリック 波紋">
+        <div class="demo d-ripple">
+          <button class="rpl-btn" id="rplBtn1">Click Ripple</button>
+          <button class="rpl-btn outlined" id="rplBtn2">Outlined</button>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Ripple Effect</div>
+          <div class="cdesc">クリック地点から円形の波紋が広がる Material Design の代表的エフェクト。動的に span を生成して scale + opacity をアニメーション後に削除。クリックのたびに発生。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="confetti" data-name="confetti 紙吹雪 セレブレーション celebration 花火">
+        <div class="demo d-confetti">
+          <canvas class="confetti-canvas" id="confettiCanvas"></canvas>
+          <button class="confetti-btn" id="confettiBtn">🎉 Celebrate!</button>
+          <div class="confetti-hint">クリックで紙吹雪を発射</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Confetti Burst</div>
+          <div class="cdesc">Canvas で重力付きの紙吹雪をシミュレーション。購入完了・目標達成・フォーム送信成功などの祝福シーンに使用。canvas-confetti ライブラリを使うと手軽に実装できる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="mousefollower" data-name="mouse follower フォロワー スムース ラグ 遅延">
+        <div class="demo d-follower" id="followerDemo">
+          <div class="follow-el" id="followEl">
+            <div class="follow-el-inner"></div>
+          </div>
+          <div class="follow-c">
+            <div class="follow-t">Smooth Follower</div>
+            <div class="follow-s">マウスをゆっくり追う要素</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Mouse Follower</div>
+          <div class="cdesc">CSS transition の delay でマウスをわずかに遅れて追う要素を配置。lerp（線形補間）でさらに滑らかな追従も可能。カーソル演出の一種として Portfolio サイトで多用。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="springdrag" data-name="spring drag ドラッグ スプリング 物理 bounce">
+        <div class="demo d-spring" id="springDemo">
+          <div class="spring-card" id="springCard">
+            <div class="spring-card-t">✦ Drag Me</div>
+            <div class="spring-card-s">離すと弾んで戻る</div>
+          </div>
+          <div class="spring-hint">ドラッグして離してみて</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Spring Physics Drag</div>
+          <div class="cdesc">要素をドラッグでき、離すとスプリング物理演算で元の位置に弾みながら戻るエフェクト。Framer Motion の useSpring で簡単実装。操作感に生命感が宿る。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== A: MOTION & ANIMATION ======================== -->
+  <section class="cat-section" id="motion-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Motion & Animation</div>
+      <div class="cat-title">モーション・アニメーション</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" id="kinetic" data-name="kinetic typography キネティック タイポグラフィ 文字 アニメーション">
+        <div class="demo d-kinetic">
+          <div class="kt-wrap">
+            <span class="kt-c">K</span><span class="kt-c">I</span><span class="kt-c">N</span><span class="kt-c">E</span><span class="kt-c">T</span><span class="kt-c">I</span><span class="kt-c">C</span>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Kinetic Typography</div>
+          <div class="cdesc">文字が単なるテキストではなく、動くビジュアル要素になる表現。各文字に波・回転・スケールのアニメーションを付与し、見出しをインパクトあるビジュアルに変える。MV・LP・ブランドサイトで効果的。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="liquid" data-name="liquid motion 液体 モーフィング ぬるっと">
+        <div class="demo d-liquid">
+          <div class="liq-blob"></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Liquid Motion</div>
+          <div class="cdesc">液体のようにぬるっと変形・遷移するエフェクト。border-radius の複数値アニメーションでBlobが有機的に変形。SVGフィルターや Framer Motion の keyframes でさらに液体感を強調できる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="morphshape" data-name="morphing shapes モーフィング 形状変化 blob">
+        <div class="demo d-morphshape">
+          <div class="ms-shape"></div>
+          <div class="ms-shape"></div>
+          <div class="ms-shape"></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Morphing Shapes</div>
+          <div class="cdesc">円・Blob・カードなどが滑らかに形状変化するアニメーション。clip-path や border-radius の補間で図形が変形。CSS @keyframes + cubic-bezier で物理感のある変化を表現できる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="elastic" data-name="elastic hover エラスティック ゴム 伸縮 ホバー">
+        <div class="demo d-elastic">
+          <button class="el-btn">Elastic ✦</button>
+          <button class="el-btn" style="background:linear-gradient(135deg,var(--accent2),var(--green))">Stretch</button>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Elastic Hover</div>
+          <div class="cdesc">ホバー時に要素がゴムのように伸縮するエフェクト。scaleX・scaleY を異なる値にして引き伸ばし感を演出。cubic-bezier(.34,1.56,.64,1) のスプリングイージングで自然な弾性を表現。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="springease" data-name="spring easing スプリング バネ 物理 イージング">
+        <div class="demo d-springease">
+          <div class="spe-track">
+            <div class="spe-thumb" id="speThumb"></div>
+          </div>
+          <div class="spe-label">← hover でスプリング移動 →</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Spring Easing</div>
+          <div class="cdesc">物理的なバネ感のあるイージング。cubic-bezier(.34,1.56,.64,1) で目標値を超えてから戻る挙動を再現。Framer Motion の spring 設定（stiffness/damping）でさらに精密な物理挙動も実装可能。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="overshoot" data-name="overshoot animation オーバーシュート 行き過ぎ bounce">
+        <div class="demo d-overshoot">
+          <div class="ovr-box"></div>
+          <div class="ovr-box"></div>
+          <div class="ovr-box"></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Overshoot Animation</div>
+          <div class="cdesc">目的位置を少し超えてから戻る、気持ちいい動き。scale(1.2) まで膨らんでから scale(1) に着地させる @keyframes で実現。クリック反応・モーダル出現など「確かな操作感」を演出するのに有効。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="staggerrev" data-name="staggered reveal スタガー 時間差 登場 リスト">
+        <div class="demo d-staggerrev">
+          <div class="sgr-list">
+            <div class="sgr-item"><span class="sgr-dot"></span>Design System</div>
+            <div class="sgr-item"><span class="sgr-dot"></span>Components</div>
+            <div class="sgr-item"><span class="sgr-dot"></span>Motion Library</div>
+            <div class="sgr-item"><span class="sgr-dot"></span>Dark Mode</div>
+            <div class="sgr-item"><span class="sgr-dot"></span>API Docs</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Staggered Reveal</div>
+          <div class="cdesc">複数要素が時間差で登場するアニメーション。nth-child に animation-delay を設定するだけで実装可能。Framer Motion の staggerChildren を使うとより簡潔。リスト・グリッド・カードの一覧表示に必須テクニック。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="ambient" data-name="ambient motion アンビエント 常時 背景 装飾 フロート">
+        <div class="demo d-ambient">
+          <div class="amb-orb"></div>
+          <div class="amb-orb"></div>
+          <div class="amb-orb"></div>
+          <div class="amb-label">Ambient World</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Ambient Motion</div>
+          <div class="cdesc">常時ゆっくり動く背景や装飾。LPの世界観づくりに強い。フィルターブラーを掛けたBlobを translateX/Y でゆっくり動かすだけで、生命感のある空間を生成。パフォーマンスには will-change を付与。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="sectionwipe" data-name="section wipe ワイプ セクション 切り替え transition">
+        <div class="demo d-sectionwipe">
+          <div class="sw-back">Before</div>
+          <div class="sw-front">After ✦</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Section Wipe</div>
+          <div class="cdesc">セクション全体がワイプで切り替わるトランジション。clip-path: inset(0 X% 0 0) の値をアニメーションすることで横方向のワイプを実現。スライドショー・ビフォーアフター表示に活用。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== B: SCROLL & PARALLAX ======================== -->
+  <section class="cat-section" id="scroll-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Scroll & Parallax</div>
+      <div class="cat-title">スクロール・パララックス</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" id="scrollstory" data-name="scroll storytelling スクロール ストーリー 物語 展開">
+        <div class="demo d-scrollstory">
+          <div class="ss-frame">
+            <div class="ss-layer sl1">Layer 1 — BG</div>
+            <div class="ss-layer sl2">Layer 2 — Mid</div>
+            <div class="ss-layer sl3">Layer 3 — FG</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Scroll Storytelling</div>
+          <div class="cdesc">スクロールに合わせて物語的に情報が展開される演出。IntersectionObserver でスクロール位置を検知し、各要素の opacity・transform を段階的に変化させる。gsap ScrollTrigger が定番。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="parallax" data-name="parallax depth layers パララックス 奥行き 視差 背景">
+        <div class="demo d-parallax" id="parallaxDemo">
+          <div class="par-layer pl1" id="parL1"></div>
+          <div class="par-layer pl2" id="parL2">Middle</div>
+          <div class="par-layer pl3" id="parL3">Focus ✦</div>
+          <div class="par-hint">マウスを動かして</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Parallax Depth Layers</div>
+          <div class="cdesc">背景・中景・前景が別速度で動き、奥行きが出る視差効果。mousemove イベントでマウス座標を取得し、各レイヤーに異なる係数を掛けて transform: translate を適用。自然な3D空間感を演出。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="stickyscroll" data-name="sticky scroll panels 固定 スクロール パネル">
+        <div class="demo d-stickyscroll">
+          <div class="sts-aside">Sticky</div>
+          <div class="sts-content">
+            <div class="sts-panel"><span class="sts-num">01</span><span class="sts-txt">サイドバーが固定されたまま、コンテンツが縦にスクロールする</span></div>
+            <div class="sts-panel"><span class="sts-num">02</span><span class="sts-txt">各ステップが切り替わる度に右側のビジュアルが変化する</span></div>
+            <div class="sts-panel"><span class="sts-num">03</span><span class="sts-txt">SaaSのLPや機能説明ページで多用される実装パターン</span></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Sticky Scroll Panels</div>
+          <div class="cdesc">セクションが固定され、横や縦に内容が切り替わるレイアウト。position: sticky + IntersectionObserver で各パネルのアクティブ状態を制御。Apple の製品ページ・Stripe・Linearが代表例。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="hscroll" data-name="horizontal scroll 横スクロール カード 水平">
+        <div class="demo d-hscroll">
+          <div class="hs-label">→ Drag to scroll</div>
+          <div class="hs-track">
+            <div class="hs-card"><div class="hs-card-n">01</div>Violet</div>
+            <div class="hs-card"><div class="hs-card-n">02</div>Cyan</div>
+            <div class="hs-card"><div class="hs-card-n">03</div>Emerald</div>
+            <div class="hs-card"><div class="hs-card-n">04</div>Amber</div>
+            <div class="hs-card"><div class="hs-card-n">05</div>Rose</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Horizontal Scroll Section</div>
+          <div class="cdesc">縦スクロール中に横方向へコンテンツが流れるセクション。overflow-x: auto + scroll-snap-type: x mandatory でスナップ付き横スクロールを実装。カード一覧・タイムライン・ポートフォリオに最適。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="snapscroll" data-name="scroll snap sections スクロールスナップ 吸着 セクション">
+        <div class="demo d-snapscroll">
+          <div class="snap-wrap">
+            <div class="snap-sec"><div class="snap-n">01</div><div class="snap-t">SECTION ONE</div></div>
+            <div class="snap-sec"><div class="snap-n">02</div><div class="snap-t">SECTION TWO</div></div>
+            <div class="snap-sec"><div class="snap-n">03</div><div class="snap-t">SECTION THREE</div></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Scroll Snap Sections</div>
+          <div class="cdesc">各セクションにカチッと吸着するスクロール挙動。scroll-snap-type: y mandatory と scroll-snap-align: start を設定するだけで実装可能。ページネーションライクな体験をCSS単体で実現。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== C: GRADIENTS & GLOW ======================== -->
+  <section class="cat-section" id="gradient-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Gradients & Glow</div>
+      <div class="cat-title">グラデーション・発光</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" id="blobgrad" data-name="blob gradient ブロブ グラデーション 有機的 背景">
+        <div class="demo d-blobgrad">
+          <div class="bg-orb"></div>
+          <div class="bg-orb"></div>
+          <div class="bg-orb"></div>
+          <div class="bg-label">Blob Gradient</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Blob Gradient</div>
+          <div class="cdesc">有機的なBlob形状のグラデーション背景。ぼかした円形グラデーションをゆっくり移動させるだけで生命感ある背景が完成。Aurora Backgroundの簡易版として、Hero・CTA・カード背景に使用。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="fluidgrad" data-name="fluid gradient animation 流体 グラデーション アニメーション">
+        <div class="demo d-fluidgrad">
+          <div class="fg-bg"></div>
+          <div class="fg-txt">Fluid Gradient</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Fluid Gradient Animation</div>
+          <div class="cdesc">グラデーションが液体のように流動する背景。background-position を background-size 400% の範囲でアニメーションさせることで色が流れる表現を実現。疑似的な動的グラデーション。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="lightsweep" data-name="light sweep 光 ハイライト スイープ 高級感">
+        <div class="demo d-lightsweep">
+          <div class="ls-box">Light Sweep ✦</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Light Sweep</div>
+          <div class="cdesc">光が斜めにスッと走る高級感あるハイライト演出。::after 疑似要素にグラデーションを設定し、translateX(-100%) → (200%) をアニメーション。ボタン・バナー・プレミアムカードの質感向上に有効。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="bloom" data-name="soft bloom glow ブルーム グロー 光 にじみ">
+        <div class="demo d-bloom">
+          <div class="bloom-t">✦ BLOOM</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Soft Bloom Glow</div>
+          <div class="cdesc">輪郭や光源が柔らかくにじむ演出。text-shadow や box-shadow に大きなぼかし半径を複数重ねることで光のにじみを表現。ゲーム・NFT・ダーク系デザインのアクセントカラーに効果的。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="depthblur" data-name="depth blur layer ブラー 奥行き ぼかし レイヤー">
+        <div class="demo d-depthblur">
+          <div class="db-layer dl1">Far Layer</div>
+          <div class="db-layer dl2">Mid Layer</div>
+          <div class="db-layer dl3">Near ✦</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Depth Blur / Layer Blur</div>
+          <div class="cdesc">前後のレイヤーにぼかし差をつけて空間感を出す手法。filter: blur() を各レイヤーに段階的に適用。映像的な被写界深度をUIに持ち込むことで、主役の要素を自然に強調できる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="iridescent" data-name="iridescent gradient 玉虫色 偏光 虹 グラデーション">
+        <div class="demo d-iridescent">
+          <div class="irid-box"></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Iridescent Gradient</div>
+          <div class="cdesc">玉虫色・偏光っぽい高級感のあるグラデーション。hue-rotate アニメーションで色相を回転させ、プリズム・オーロラ・シャボン玉のような多色変化を表現。Apple・Nike等のプレミアム系デザインで頻出。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="chrome" data-name="chrome metallic ui クローム 金属 メタリック 質感">
+        <div class="demo d-chrome">
+          <div class="chrome-box">CHROME UI</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Chrome / Metallic UI</div>
+          <div class="cdesc">金属・クローム質感のボタンや見出し。明度差の大きいグレー系グラデーションを縦方向に配置することで、スチール・アルミのような光沢を表現。ハードウェア系・カーUI・高級サービスに合う。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="shader" data-name="shader gradient シェーダー WebGL グラデーション 高品質">
+        <div class="demo d-shader">
+          <div class="shd-bg"></div>
+          <div class="shd-txt">Shader ✦</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Shader Gradient</div>
+          <div class="cdesc">CSSではなくShader/WebGLで作る高品質グラデーション。conic-gradient + blur + rotate アニメーションで近似的なシェーダー感を表現。本格実装は Three.js / GLSL Fragment Shader で行う。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== D: REVEAL & TRANSITION ======================== -->
+  <section class="cat-section" id="reveal-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Reveal & Transition</div>
+      <div class="cat-title">リビール・トランジション</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" id="maskreveal" data-name="mask reveal マスク リビール 表示 アニメーション">
+        <div class="demo d-maskreveal" id="maskRevealDemo">
+          <div class="mr-box" id="mrBox">REVEAL</div>
+          <div class="mr-hint">クリックして</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Mask Reveal</div>
+          <div class="cdesc">画像や文字がマスク越しに見えてくる演出。clip-path: inset(0 100% 0 0) → inset(0 0% 0 0) をアニメーションさせることでワイプ状にテキストが現れる。スクロールトリガーと組み合わせると強力。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="cliptrans" data-name="clip-path transition クリップパス 変形 マスク 図形">
+        <div class="demo d-cliptrans">
+          <button class="ct-btn">▲</button>
+          <button class="ct-btn">●</button>
+          <button class="ct-btn">⬡</button>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Clip-path Transition</div>
+          <div class="cdesc">図形マスクで画面・要素を切り替えるトランジション。hover で clip-path の形状を変化させ、三角→矩形、円→全表示などの変形を演出。MDN polygon / circle / inset 関数で幅広い形状が作れる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="pagetrans" data-name="page transition overlay ページ 遷移 オーバーレイ アニメーション">
+        <div class="demo d-pagetrans" id="pageTransDemo">
+          <div class="pt-p pt-p1">Page A — クリックして遷移</div>
+          <div class="pt-p pt-p2">Page B ✦ 新しいページ</div>
+          <div class="pt-ov"></div>
+          <div class="pt-hint">click to transition</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Page Transition Overlay</div>
+          <div class="cdesc">ページ遷移時に黒/グラデーション/図形レイヤーが被さる演出。translateX でオーバーレイを右から左へスライドさせて旧ページを隠し、新ページを露出する。Next.js の Router Events と組み合わせて実装。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="tilt3d" data-name="3d tilt perspective hover 3D 傾き パースペクティブ">
+        <div class="demo d-tilt3d" id="tilt3dDemo">
+          <div class="tilt-card" id="tiltCard">
+            <div class="tilt-icon">✦</div>
+            <div class="tilt-lbl">3D Tilt Card</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">3D Tilt / Perspective Hover</div>
+          <div class="cdesc">カードや画像がマウス位置に応じて立体的に傾く演出。mousemove で要素内の相対座標を取得し、rotateX/rotateY を計算して適用。perspective: 600px + transform-style: preserve-3d が必須。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="cinematic" data-name="cinematic fade sequence 映画 シネマティック フェード 暗転">
+        <div class="demo d-cinematic">
+          <div class="cin-bar cb1"></div>
+          <div class="cin-bar cb2"></div>
+          <div class="cin-txt">CINEMATIC</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Cinematic Fade Sequence</div>
+          <div class="cdesc">映画のように暗転・フェード・ズームを組み合わせる演出。上下に黒帯（レターボックス）を配置し、中のコンテンツをフェードとレタースペーシングアニメーションで登場させる映画的な見せ方。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== E: CURSOR & SPATIAL ======================== -->
+  <section class="cat-section" id="cursor-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Cursor & Spatial</div>
+      <div class="cat-title">カーソル・空間UI</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" id="cursorspot" data-name="cursor spotlight カーソル スポットライト 光 マウス">
+        <div class="demo d-cursorspot" id="cursorSpotDemo">
+          <div class="cs-dots" id="csDots"></div>
+          <div class="cs-mask" id="csMask"></div>
+          <div class="cs-hint">マウスで光を動かす</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Cursor Spotlight</div>
+          <div class="cdesc">カーソル周辺だけ光が当たり、背景が見える演出。radial-gradient のマスクをカーソル座標と連動して動かすことで実現。ダーク系サイトの Hero で背景テクスチャを際立たせる手法として人気。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="noisedisp" data-name="noise displacement ノイズ 歪み テクスチャ グレイン">
+        <div class="demo d-noisedisp">
+          <canvas class="nd-canvas" id="noiseCanvas"></canvas>
+          <div class="nd-txt">Noise ///</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Noise Displacement</div>
+          <div class="cdesc">ノイズで画像や背景を歪ませるWebGL系表現。Canvas API の Perlin Noise または SVG feTurbulence フィルターで動的なノイズを生成し、テクスチャ感・有機的なゆらぎをUIに追加する。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="maggrid" data-name="magnetic grid マグネット 磁力 グリッド 引き寄せ">
+        <div class="demo d-maggrid" id="magGridDemo">
+          <div class="mg-grid" id="mgGrid"></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Magnetic Grid</div>
+          <div class="cdesc">カードや要素がマウスに軽く引き寄せられるグリッド。mousemove で各セルとの距離を計算し、近いセルほど大きく translate・scale させる。クリエイティブなギャラリー・ポートフォリオで映える。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="radialmenu" data-name="radial menu ラジアル 円形 メニュー 展開">
+        <div class="demo d-radialmenu">
+          <div class="rm-wrap" id="rmWrap">
+            <div class="rm-center" id="rmCenter">✦</div>
+            <div class="rm-item">🎨</div>
+            <div class="rm-item">📁</div>
+            <div class="rm-item">⭐</div>
+            <div class="rm-item">🔗</div>
+            <div class="rm-item">📤</div>
+            <div class="rm-item">🗑️</div>
+            <div class="rm-item">⚙️</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Radial Menu</div>
+          <div class="cdesc">円形に広がるメニュー。AI/クリエイティブ系で映える右クリックメニューの代替。中央ボタンクリックで周囲にアイテムが扇形に展開。transform: translate + scale でスプリングアニメーション付きで表示。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="floattoolbar" data-name="floating toolbar フローティング ツールバー 編集 選択">
+        <div class="demo d-floattoolbar">
+          <div class="ftb">
+            <button class="ftb-btn" title="Bold">𝐁</button>
+            <button class="ftb-btn" title="Italic">𝐼</button>
+            <button class="ftb-btn" title="Link">🔗</button>
+            <div class="ftb-sep"></div>
+            <button class="ftb-btn" title="Color">🎨</button>
+            <button class="ftb-btn" title="Comment">💬</button>
+            <div class="ftb-sep"></div>
+            <button class="ftb-btn" title="AI">✦</button>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Floating Toolbar</div>
+          <div class="cdesc">選択時だけ出る小さな編集ツールバー。テキスト選択や要素クリック時に getSelection() の Rect を取得してツールバーを配置。Notion・Linear・Figmaのインライン編集UIの核となるパターン。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="spatnav" data-name="spatial navigation 空間 ナビゲーション 移動 フォーカス">
+        <div class="demo d-spatnav" id="spatNavDemo">
+          <div class="spn-grid" id="spnGrid">
+            <div class="spn-cell spn-focus" data-idx="0">Home</div>
+            <div class="spn-cell" data-idx="1">Work</div>
+            <div class="spn-cell" data-idx="2">About</div>
+            <div class="spn-cell" data-idx="3">Lab</div>
+            <div class="spn-cell" data-idx="4">Blog</div>
+            <div class="spn-cell" data-idx="5">Contact</div>
+          </div>
+          <div class="spn-hint">hover で空間移動感</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Spatial Navigation</div>
+          <div class="cdesc">2Dページではなく空間内を移動するような導線設計。フォーカスが移動するたびにアニメーション付きで強調することで、キーボード・ゲームパッドナビゲーションに生命感が宿る。TV/キオスク UI にも有効。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== F: AI & DATA UI ======================== -->
+  <section class="cat-section" id="ai-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">AI & Data UI</div>
+      <div class="cat-title">AI・データUI</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" id="aicopilot" data-name="ai copilot panel AIコパイロット アシスタント チャット">
+        <div class="demo d-aicopilot">
+          <div class="acp-hdr">
+            <div class="acp-av">✦</div>
+            <div style="display:flex;flex-direction:column;gap:1px">
+              <div class="acp-name">AI Copilot</div>
+              <div class="acp-st">● online</div>
+            </div>
+          </div>
+          <div class="acp-body">
+            <div class="acp-msg u">デザインを改善して</div>
+            <div class="acp-msg a">コントラストを上げてアクセシビリティを向上させることをお勧めします。</div>
+            <div class="acp-typing"><div class="acp-td"></div><div class="acp-td"></div><div class="acp-td"></div></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">AI Copilot Panel</div>
+          <div class="cdesc">右側/下部にAIアシスタント的な操作パネルを置くプロダクトUI感。チャット形式のメッセージバブルと、AI思考中のドットアニメーションで構成。Copilot・Claude・Geminiが普及させたUIパターン。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="dataglow" data-name="data glow visualization データ 発光 チャート 可視化">
+        <div class="demo d-dataglow">
+          <div class="dg-wrap"><div class="dg-bar"></div><div class="dg-lbl">MON</div></div>
+          <div class="dg-wrap"><div class="dg-bar"></div><div class="dg-lbl">TUE</div></div>
+          <div class="dg-wrap"><div class="dg-bar"></div><div class="dg-lbl">WED</div></div>
+          <div class="dg-wrap"><div class="dg-bar"></div><div class="dg-lbl">THU</div></div>
+          <div class="dg-wrap"><div class="dg-bar"></div><div class="dg-lbl">FRI</div></div>
+          <div class="dg-wrap"><div class="dg-bar"></div><div class="dg-lbl">SAT</div></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Data Glow Visualization</div>
+          <div class="cdesc">チャートや数値に発光・パルスを入れてデータ感を出す表現。棒グラフの上端に box-shadow + animation でグロー効果を付与。ダッシュボード・メトリクス画面でデータを「生きているもの」として見せる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="livefeed" data-name="live activity feed ライブ フィード リアルタイム 更新 ログ">
+        <div class="demo d-livefeed">
+          <div class="lf-hdr">
+            <div class="lf-dot"></div>
+            <div class="lf-ttl">Live Activity</div>
+            <div class="lf-count" id="lfCount">3 events</div>
+          </div>
+          <div class="lf-body" id="lfBody">
+            <div class="lf-item"><div class="lf-av" style="background:linear-gradient(135deg,#6d28d9,#0ea5e9)">A</div><div><div class="lf-who">Alex</div><div class="lf-what">edited Homepage.tsx</div></div></div>
+            <div class="lf-item"><div class="lf-av" style="background:linear-gradient(135deg,#10b981,#f59e0b)">S</div><div><div class="lf-who">Sara</div><div class="lf-what">deployed to prod</div></div></div>
+            <div class="lf-item"><div class="lf-av" style="background:linear-gradient(135deg,#ef4444,#6d28d9)">K</div><div><div class="lf-who">Kai</div><div class="lf-what">opened PR #42</div></div></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Live Activity Feed</div>
+          <div class="cdesc">リアルタイムに更新されるログ/通知/処理状況の表示。新しいアイテムをDOMの先頭に prepend し、CSS アニメーションで滑らかに挿入する。WebSocket/SSE と組み合わせてリアルタイム性を演出。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="aithink" data-name="ai thinking state AI 思考中 ローディング ドット 波形">
+        <div class="demo d-aithink">
+          <div class="ath-dots">
+            <div class="ath-dot"></div>
+            <div class="ath-dot"></div>
+            <div class="ath-dot"></div>
+            <div class="ath-dot"></div>
+          </div>
+          <div class="ath-bar"><div class="ath-prog"></div></div>
+          <div class="ath-lbl">AI は考えています...</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">AI Thinking State</div>
+          <div class="cdesc">AIが考えているようなドット・波形・生成中アニメーション。カラフルなドットの上下ジャンプと横スキャンするプログレスバーを組み合わせ、「処理中」を退屈させずに伝える。LLMのストリーミング表示前の演出。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="cmdcenter" data-name="command center layout コマンド センター ダッシュボード 密度">
+        <div class="demo d-cmdcenter">
+          <div class="cc-topbar">
+            <div class="cc-dot cc-dot-r"></div><div class="cc-dot cc-dot-y"></div><div class="cc-dot cc-dot-g"></div>
+            <div class="cc-ttl">Command Center</div>
+          </div>
+          <div class="cc-body">
+            <div class="cc-panel">
+              <div class="cc-pt">System</div>
+              <div class="cc-row"><span class="cc-ri">⚡</span>CPU<span class="cc-badge">42%</span></div>
+              <div class="cc-row"><span class="cc-ri">💾</span>Memory<span class="cc-badge">68%</span></div>
+              <div class="cc-row"><span class="cc-ri">🌐</span>Network<span class="cc-badge">OK</span></div>
+            </div>
+            <div class="cc-panel">
+              <div class="cc-pt">Deploy</div>
+              <div class="cc-row"><span class="cc-ri">✅</span>Production</div>
+              <div class="cc-row"><span class="cc-ri">🔄</span>Staging<span class="cc-badge">build</span></div>
+              <div class="cc-row"><span class="cc-ri">📦</span>v2.4.1</div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Command Center Layout</div>
+          <div class="cdesc">ダッシュボードを"司令室"っぽく見せる密度高めのUI。暗い背景に細かいメトリクス・ステータス情報を整然と並べることで、テクニカルな信頼感を演出。DevOps・監視ツール・管理画面に最適。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="presence" data-name="realtime presence リアルタイム プレゼンス ユーザー カーソル">
+        <div class="demo d-presence">
+          <div class="prs-avs">
+            <div class="prs-av">A<div class="prs-st"></div></div>
+            <div class="prs-av">S<div class="prs-st"></div></div>
+            <div class="prs-av">K<div class="prs-st"></div></div>
+            <div class="prs-av">M<div class="prs-st"></div></div>
+            <div class="prs-av">+3</div>
+          </div>
+          <div class="prs-lbl"><span class="prs-n">2名</span> が今編集中</div>
+          <div class="prs-cursors">
+            <div class="prs-cur">▸ Alex</div>
+            <div class="prs-cur">▸ Sara</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Realtime Presence</div>
+          <div class="cdesc">他ユーザーのカーソルや編集状態を表示するリアルタイム共同編集UI。アバタースタックとアクティブユーザーの数を表示し、他者の存在を感じさせる。Figma・Notion・Vercelが採用するコラボUI。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="emptystate" data-name="animated empty state 空 アニメーション データなし エンプティ">
+        <div class="demo d-emptystate">
+          <div class="es-ico">📭</div>
+          <div class="es-ttl">Nothing here yet</div>
+          <div class="es-sub">最初のアイテムを作成して、ここに表示しましょう</div>
+          <button class="es-cta">+ 作成する</button>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Animated Empty State</div>
+          <div class="cdesc">データなし画面に小さなアニメーションを入れてポジティブな体験にする手法。浮遊するイラスト・アイコンとコピーライティングで「まだ何もない」を前向きに演出。Airbnb・Slackなどが実践するデザイン哲学。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="lottie" data-name="lottie micro animation マイクロ アニメーション SVG アイコン">
+        <div class="demo d-lottie">
+          <div class="lt-ic" id="ltLike" title="click me">❤️</div>
+          <div class="lt-ic" id="ltCheck" title="click me">✅</div>
+          <div class="lt-ic" id="ltStar" title="click me">⭐</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Lottie Micro Animation</div>
+          <div class="cdesc">軽量なSVG/JSONアニメーションで状態を表現するマイクロインタラクション。クリック時にアイコンが弾んだり回転することで操作の確かな手応えを提供。Lottie Files・Rive がデファクト。CSS のみでも近似実装可能。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== G: PRODUCT UI ======================== -->
+  <section class="cat-section" id="product-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Product UI Patterns</div>
+      <div class="cat-title">プロダクトUIパターン</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" id="progdisc" data-name="progressive disclosure プログレッシブ 段階的 開示 アコーディオン">
+        <div class="demo d-progdisc">
+          <div class="pd-wrap" id="pdWrap">
+            <div class="pd-trigger" id="pdTrigger">
+              <span>詳細設定を表示</span>
+              <span class="pd-arrow">▼</span>
+            </div>
+            <div class="pd-body">
+              <div class="pd-inner">
+                <div class="pd-item">アニメーション速度</div>
+                <div class="pd-item">カスタムイージング</div>
+                <div class="pd-item">遅延タイミング</div>
+                <div class="pd-item">リピート回数</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Progressive Disclosure</div>
+          <div class="cdesc">最初はシンプル、操作に応じて詳細が段階的に開くUI。max-height アニメーションでスムーズな開閉を実現。情報過多を防ぎつつ、必要な人には全情報を提供するUX原則。設定画面・FAQに必須。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="expbento" data-name="expandable bento 拡張 ベント グリッド カード 展開">
+        <div class="demo d-expbento">
+          <div class="eb-grid" id="ebGrid">
+            <div class="eb-cell" data-eb="0"><div class="eb-ico">🎨</div><div>Design</div><div class="eb-desc">UIデザインシステムの構築とコンポーネント管理</div></div>
+            <div class="eb-cell" data-eb="1"><div class="eb-ico">⚡</div><div>Speed</div><div class="eb-desc">高速なビルドパイプライン</div></div>
+            <div class="eb-cell" data-eb="2"><div class="eb-ico">🔒</div><div>Security</div><div class="eb-desc">エンタープライズセキュリティ</div></div>
+            <div class="eb-cell" data-eb="3"><div class="eb-ico">✦</div><div>AI</div><div class="eb-desc">AI駆動の自動化とインサイト</div></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Expandable Bento</div>
+          <div class="cdesc">Bentoカードがクリックで拡張し、詳細UIに変化する。grid-column: span 2 と max-height の組み合わせで、Bento グリッドのセルが展開するアニメーションを実現。Landing page の機能紹介に最適。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="inspector" data-name="docked inspector panel インスペクター パネル プロパティ Figma">
+        <div class="demo d-inspector">
+          <div class="insp-main">
+            <div class="insp-card">📐 Frame — 1440×900</div>
+            <div class="insp-card">🎨 Button / Primary</div>
+            <div class="insp-card">Aa Typography / H1</div>
+          </div>
+          <div class="insp-side">
+            <div class="insp-lbl">Width</div><div class="insp-val">240px</div>
+            <div class="insp-lbl">Height</div><div class="insp-val">48px</div>
+            <div class="insp-lbl">Radius</div><div class="insp-val">8px</div>
+            <div class="insp-lbl">Fill</div><div class="insp-swatch"></div>
+            <div class="insp-lbl">Opacity</div><div class="insp-val">100%</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Docked Inspector Panel</div>
+          <div class="cdesc">Figma/Notion/Linear風の右側プロパティパネル。左にコンテンツ一覧、右に選択アイテムの詳細プロパティを並べるUIパターン。CSS Grid で2カラム分割し、右パネルを overflow-y: auto にするのが定番。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="adaptcard" data-name="adaptive cards アダプティブ カード 適応 状態変化">
+        <div class="demo d-adaptcard">
+          <div class="adc adc-sm"><div class="adc-ico">📁</div><div class="adc-n">Files</div></div>
+          <div class="adc adc-lg">
+            <div class="adc-thumb"></div>
+            <div class="adc-body">
+              <div class="adc-t">Design System v2</div>
+              <div class="adc-m">Updated 2h ago · 42 files</div>
+            </div>
+          </div>
+          <div class="adc adc-sm"><div class="adc-ico">⭐</div><div class="adc-n">Stars</div></div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Adaptive Cards</div>
+          <div class="cdesc">状態やユーザー行動に応じてカード内容や見た目が変わるUI。コンパクト表示と詳細表示を transition で切り替える。Microsoft Adaptive Cards や Vercel の Activity Card が参考になる実装パターン。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="pillnav" data-name="pill navigation ピル ナビゲーション カプセル タブ">
+        <div class="demo d-pillnav">
+          <div class="pnav" id="pnavWrap">
+            <div class="pnav-pill" id="pnavPill"></div>
+            <div class="pnav-item pnav-active" data-pnav="0">All</div>
+            <div class="pnav-item" data-pnav="1">Design</div>
+            <div class="pnav-item" data-pnav="2">Code</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Pill Navigation</div>
+          <div class="cdesc">角丸カプセル型のナビゲーション。アクティブなタブの下にスライドするピル（インジケーター）を absolute 配置し、getBoundingClientRect() でアニメーション先の座標を計算して滑らかに移動させる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="segment" data-name="segmented control セグメント コントロール iOS 切り替え スイッチ">
+        <div class="demo d-segment">
+          <div class="seg-ctrl" id="segCtrl">
+            <div class="seg-slider" id="segSlider"></div>
+            <div class="seg-opt seg-sel" data-seg="0">月払い</div>
+            <div class="seg-opt" data-seg="1">年払い</div>
+            <div class="seg-opt" data-seg="2">企業</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Segmented Control</div>
+          <div class="cdesc">iOS風の切り替えUI。SaaS/ダッシュボード向き。アクティブオプションの後ろにスライダーを absolute 配置し、クリック時に left・width を transition させる。料金プラン切り替えに最もよく使われる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="inlineedit" data-name="inline editing インライン 編集 クリック 直接">
+        <div class="demo d-inlineedit">
+          <div class="ie-wrap">
+            <div class="ie-field" id="ieField">
+              <div class="ie-val" id="ieVal">Modern UI Library ✏️</div>
+              <input class="ie-inp" id="ieInp" type="text" value="Modern UI Library">
+              <div class="ie-hint" id="ieHint">クリックして編集</div>
+              <div class="ie-actions" id="ieActions">
+                <button class="ie-save" id="ieSave">保存</button>
+                <button class="ie-cancel" id="ieCancel">キャンセル</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Inline Editing</div>
+          <div class="cdesc">クリックした場所で直接編集できるUI。表示テキストをクリックで input に切り替え、保存・キャンセルのアクションボタンを表示する。Notion・Airtable・Linearが採用する「その場で編集」パターン。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="optimistic" data-name="optimistic ui オプティミスティック 楽観的 即時反映 ローディング">
+        <div class="demo d-optimistic">
+          <button class="opt-btn opt-idle" id="optBtn">✦ いいね！する</button>
+          <div class="opt-toast" id="optToast">✅ 反映されました</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Optimistic UI</div>
+          <div class="cdesc">操作後すぐ成功したように見せ、裏側で同期するUIパターン。ボタンを即座に成功状態に切り替えてUX上の待ち時間をゼロにし、APIが失敗したときだけ元に戻す。React Query の optimisticUpdates が代表実装。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="ctxbar" data-name="contextual action bar コンテキスト アクション バー 選択 出現">
+        <div class="demo d-ctxbar">
+          <div class="ctx-item" id="ctxItem1">📄 ドキュメント — Q4 Report</div>
+          <div class="ctx-bar ctx-hidden" id="ctxBar">
+            <button class="ctx-act">編集</button>
+            <button class="ctx-act">共有</button>
+            <button class="ctx-act">複製</button>
+            <button class="ctx-act" style="color:var(--red)">削除</button>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Contextual Action Bar</div>
+          <div class="cdesc">選択中の要素に応じて操作バーがふわっと出るUI。選択状態の変化を検知して opacity + translateY のアニメーションでツールバーを表示。Figma の下部ツールバー・Notionの選択メニューが代表例。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="sharedlayout" data-name="shared layout animation 共有 レイアウト アニメーション 遷移">
+        <div class="demo d-sharedlayout">
+          <div class="shl-chips" id="shlChips">
+            <div class="shl-chip shl-on" data-shl="0">All</div>
+            <div class="shl-chip" data-shl="1">Design</div>
+            <div class="shl-chip" data-shl="2">Motion</div>
+            <div class="shl-chip" data-shl="3">Typography</div>
+            <div class="shl-chip" data-shl="4">Color</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Shared Layout Animation</div>
+          <div class="cdesc">一覧カードから詳細ページへ、同じ要素が連続的に移動するアニメーション。Framer Motion の layoutId で自動的に補間されるのが最も簡単。filter chips・タブ切替でもこの「要素が形を変えながら移動する」体験が活きる。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== H: DESIGN STYLES ======================== -->
+  <section class="cat-section" id="design-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Design Styles</div>
+      <div class="cat-title">デザインスタイル</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" id="tactile" data-name="tactile ui タクタイル 触感 紙 布 金属 ラバー">
+        <div class="demo d-tactile">
+          <button class="tact-btn tb-dark">Press Me</button>
+          <button class="tact-btn tb-acc">✦ Action</button>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Tactile UI</div>
+          <div class="cdesc">紙・布・ラバー・金属など、触感を感じるUI。ボタンに bottom-shadow（box-shadow下方向のみ）を付け、:active 時に translateY + shadow縮小で本物のボタンが押し込まれるような3D感を演出。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="editorial" data-name="editorial layout エディトリアル 雑誌 余白 大きい文字 非対称">
+        <div class="demo d-editorial">
+          <div class="ed-main">
+            <div class="ed-tag">Issue No. 42</div>
+            <div class="ed-head">The Future of Interface Design</div>
+            <div class="ed-meta">May 2026 · 12 min read</div>
+          </div>
+          <div class="ed-side">
+            <div class="ed-thumb"></div>
+            <div class="ed-cap">写真：Future Lab / グリッド設計：非対称3カラム</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Editorial Layout</div>
+          <div class="cdesc">雑誌的な余白、巨大タイポ、非対称グリッドで構成するレイアウト。Space Grotesk や Playfair Display などの表情豊かなフォントと、意図的な余白の差・グリッドの破りを組み合わせる。ブランドサイトの質感向上に有効。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="brutalist" data-name="brutalist accent ブルータリスト 荒い 罫線 無骨 大きい文字">
+        <div class="demo d-brutalist">
+          <div class="brut-h">BRUTAL</div>
+          <div class="brut-sub">NO COMPROMISES — EST. 2026</div>
+          <div class="brut-row">
+            <div class="brut-cell"><span class="brut-n">42</span>Projects</div>
+            <div class="brut-cell"><span class="brut-n">∞</span>Ideas</div>
+            <div class="brut-cell"><span class="brut-n">01</span>Goal</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Brutalist Accent</div>
+          <div class="cdesc">あえて荒い罫線・大きい文字・無骨な構成をアクセントにするデザインスタイル。ビビッドな背景色（黄・白）に黒の太い罫線と大きなサンセリフで構成。既存のおしゃれ系に疲れたブランドが差別化に使う。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="neomin" data-name="neo minimalism ネオ ミニマリズム 余白 高級 シンプル">
+        <div class="demo d-neomin">
+          <div class="nm-card">
+            <div class="nm-row"><span class="nm-k">Project</span><span class="nm-v nm-acc">Aurora</span></div>
+            <div class="nm-line"></div>
+            <div class="nm-row"><span class="nm-k">Status</span><span class="nm-v">Active</span></div>
+            <div class="nm-row"><span class="nm-k">Sprint</span><span class="nm-v">14</span></div>
+            <div class="nm-row"><span class="nm-k">Velocity</span><span class="nm-v nm-acc">92 pts</span></div>
+            <div class="nm-line"></div>
+            <div class="nm-row"><span class="nm-k">Updated</span><span class="nm-v">2h ago</span></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Neo-Minimalism</div>
+          <div class="cdesc">余白多め、要素少なめ、でもタイポと動きで高級感を出すスタイル。1px のボーダーと小さなキャプション文字、アクセントカラーを1〜2色に限定。情報密度を意図的に下げつつも、ブランド価値を高める現代のミニマリズム。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="neumorphism" data-name="neumorphism soft ui ニューモーフィズム ソフトUI 浮き沈み">
+        <div class="demo d-neumorphism">
+          <div class="neu-card"><div class="neu-ico">🔊</div>Volume</div>
+          <div style="display:flex;flex-direction:column;gap:10px;align-items:center">
+            <div class="neu-card" style="width:80px;height:60px"><div class="neu-ico">🎵</div></div>
+            <button class="neu-btn">Play</button>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Soft UI / Neumorphism 2.0</div>
+          <div class="cdesc">旧来のニューモーフィズムより控えめな浮き沈み表現。明暗2方向のbox-shadowで要素が浮いているように見せ、:active で inset にして押し込みを表現。過度な適用を避け、ウィジェット・カードのアクセントとして使うのが現代的。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="diagonal" data-name="diagonal split layout 斜め 分割 レイアウト クリップパス">
+        <div class="demo d-diagonal">
+          <div class="diag-b"></div>
+          <div class="diag-a"></div>
+          <div class="diag-c"></div>
+          <div class="diag-txt">Diagonal ✦</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Diagonal Split Layout</div>
+          <div class="cdesc">斜め分割で構成するレイアウト。clip-path: polygon() を使い、画面を左斜め・右斜めに分割して2色・2コンテンツを対比させる。Landing page の Hero・価格比較・ビフォーアフターに使うと視覚的インパクトが強い。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="layeredstack" data-name="layered card stack レイヤー カード スタック 重なり 奥行き">
+        <div class="demo d-layeredstack" id="layeredStackDemo">
+          <div class="ls-stack">
+            <div class="ls-card">✦ Top Card</div>
+            <div class="ls-card">Second</div>
+            <div class="ls-card">Third</div>
+          </div>
+          <div class="ls-hint">クリックして入れ替え</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Layered Card Stack</div>
+          <div class="cdesc">カードを重ねて奥行きと情報量を出すUI。z-index・translate・filter: brightness を組み合わせて奥行きを表現。クリックで上のカードを下に送ることで、スタックをめくる体験が作れる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="cmduux" data-name="command menu ux コマンド メニュー 検索 操作 統合">
+        <div class="demo d-cmduux">
+          <div class="cmu-iw">
+            <span class="cmu-kbd">⌘K</span>
+            <input class="cmu-inp" id="cmuInp" placeholder="Search or ask anything..." readonly>
+          </div>
+          <div class="cmu-results" id="cmuResults">
+            <div class="cmu-row cmu-focus"><span class="cmu-ri">📄</span><span class="cmu-rn">New Document</span><span class="cmu-rm"><span class="cmu-rk">⌘N</span></span></div>
+            <div class="cmu-row"><span class="cmu-ri">🎨</span><span class="cmu-rn">Open Design System</span><span class="cmu-rm"><span class="cmu-rk">⌘D</span></span></div>
+            <div class="cmu-row"><span class="cmu-ri">✦</span><span class="cmu-rn">Ask AI...</span><span class="cmu-rm"><span class="cmu-rk">⌘/</span></span></div>
+            <div class="cmu-row"><span class="cmu-ri">⚙️</span><span class="cmu-rn">Settings</span><span class="cmu-rm"><span class="cmu-rk">⌘,</span></span></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Command Menu UX</div>
+          <div class="cdesc">⌘K より広義のコマンドメニュー。検索・操作・ナビゲーションを統合するUXパターン。キーボードファーストで設計され、全機能に素早くアクセスできる。Linear・Vercel・Notionのパワーユーザー向け機能の核。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== MODAL & OVERLAY ======================== -->
+  <section class="cat-section" id="modal-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Modal & Overlay</div>
+      <div class="cat-title">モーダル・オーバーレイ</div>
+    </div>
+    <div class="grid">
+
+      <!-- Scale In Modal -->
+      <div class="ecard" id="modal-scale" data-name="scale in modal スケール モーダル ダイアログ">
+        <div class="demo d-modal-base">
+          <button class="md-trigger" id="ms1Trigger">開く ✦</button>
+          <div class="md-overlay md-scale" id="ms1Overlay">
+            <div class="md-box">
+              <div class="md-hd">Scale In <button class="md-close" data-close="ms1Overlay">✕</button></div>
+              <div class="md-bd">中央からスケールアップして現れる、最も汎用的なモーダルアニメーション。cubic-bezier のスプリングで少し弾む。</div>
+              <div class="md-ft">
+                <button class="md-btn-p" data-close="ms1Overlay">確定</button>
+                <button class="md-btn-s" data-close="ms1Overlay">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Scale In Modal</div>
+          <div class="cdesc">中央から scale(0.8→1) でポップインするモーダル。最も汎用的で「確かな出現感」を与える。opacity と transform を同時に transition させ、cubic-bezier(.34,1.56,.64,1) で少しオーバーシュートさせるのが現代的。</div>
+        </div>
+      </div>
+
+      <!-- Slide Up Modal -->
+      <div class="ecard" id="modal-slide" data-name="slide up modal スライドアップ モーダル 下から 上に">
+        <div class="demo d-modal-base">
+          <button class="md-trigger" id="ms2Trigger">スライドアップ</button>
+          <div class="md-overlay md-slideup" id="ms2Overlay">
+            <div class="md-box">
+              <div class="md-hd">Slide Up <button class="md-close" data-close="ms2Overlay">✕</button></div>
+              <div class="md-bd">下から上にスライドして登場するモーダル。モバイルのボトムシートと異なり、中央に配置される。確認ダイアログ・フォームに適している。</div>
+              <div class="md-ft">
+                <button class="md-btn-p" data-close="ms2Overlay">送信</button>
+                <button class="md-btn-s" data-close="ms2Overlay">キャンセル</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Slide Up Modal</div>
+          <div class="cdesc">translateY(50px→0) + opacity でモーダルが下から浮かび上がるアニメーション。重力感があり「画面から生まれた」印象を与える。オーバーレイは blur + opacity のみで処理し、モーダル本体だけ動かすのがポイント。</div>
+        </div>
+      </div>
+
+      <!-- Elastic Pop Modal -->
+      <div class="ecard" id="modal-elastic" data-name="elastic pop modal エラスティック スプリング ポップ">
+        <div class="demo d-modal-base">
+          <button class="md-trigger" id="ms3Trigger">Elastic Pop 🎯</button>
+          <div class="md-overlay md-elastic" id="ms3Overlay">
+            <div class="md-box">
+              <div class="md-hd">Elastic Pop! <button class="md-close" data-close="ms3Overlay">✕</button></div>
+              <div class="md-bd">scale(0) + rotate(-8deg) から弾むように登場。通知・バッジ・アラートなど「注目させたい」モーダルに最適なアニメーション。</div>
+              <div class="md-ft">
+                <button class="md-btn-p" data-close="ms3Overlay">Got it!</button>
+                <button class="md-btn-s" data-close="ms3Overlay">後で</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Elastic Pop Modal</div>
+          <div class="cdesc">scale(0) rotate(-8deg) から .55s cubic-bezier(.34,1.56,.64,1) で弾み出すモーダル。ゲーミフィケーション・アチーブメント・エラー通知など、感情的インパクトが必要な場面で使う。Framer Motion の spring type に相当。</div>
+        </div>
+      </div>
+
+      <!-- Blur Reveal Modal -->
+      <div class="ecard" id="modal-blur" data-name="blur reveal modal ブラー フェード 高級感 フロスト">
+        <div class="demo d-modal-base">
+          <button class="md-trigger" id="ms4Trigger">Blur Reveal ✧</button>
+          <div class="md-overlay md-blurrev" id="ms4Overlay">
+            <div class="md-box">
+              <div class="md-hd">Blur Reveal <button class="md-close" data-close="ms4Overlay">✕</button></div>
+              <div class="md-bd">filter:blur(12px) → blur(0) + scale(.92→1) で霧から現れるような高級感のある登場演出。</div>
+              <div class="md-ft">
+                <button class="md-btn-p" data-close="ms4Overlay">続ける</button>
+                <button class="md-btn-s" data-close="ms4Overlay">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Blur Reveal Modal</div>
+          <div class="cdesc">filter: blur(12px→0) と scale(.92→1) を同時に transition させ、霧の中から浮かび上がる高級感ある演出。Apple のシステムモーダルが近い。backdrop-filter: blur() でオーバーレイ自体もすりガラスに仕上げるとさらに映える。</div>
+        </div>
+      </div>
+
+      <!-- Side Drawer -->
+      <div class="ecard" id="modal-drawer" data-name="side drawer サイドドロワー パネル 右から スライド">
+        <div class="demo d-modal-base">
+          <button class="md-trigger" id="ms5Trigger">Drawer →</button>
+          <div class="md-overlay md-drawer" id="ms5Overlay">
+            <div class="md-box">
+              <div class="md-hd" style="margin-bottom:10px">
+                <span style="font-size:11px;font-weight:800;color:var(--text)">Inspector</span>
+                <button class="md-close" data-close="ms5Overlay">✕</button>
+              </div>
+              <div class="mdr-prop">
+                <div class="mdr-row"><div class="mdr-lbl">Width</div><div class="mdr-val">320px</div></div>
+                <div class="mdr-row"><div class="mdr-lbl">Fill</div><div class="mdr-swatch"></div></div>
+                <div class="mdr-row"><div class="mdr-lbl">Radius</div><div class="mdr-val">12px</div></div>
+                <div class="mdr-row"><div class="mdr-lbl">Opacity</div><div class="mdr-val">100%</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Side Drawer</div>
+          <div class="cdesc">右端から translateX(100%→0) でスライドインするパネル。モーダルより「作業を継続させながら情報を見せる」用途に適する。Figma のプロパティパネル・各種 SaaS の設定画面が代表例。overlay を薄めにして背景操作を可能にするパターンも多い。</div>
+        </div>
+      </div>
+
+      <!-- Bottom Sheet -->
+      <div class="ecard" id="modal-sheet" data-name="bottom sheet ボトムシート モバイル 下から スワイプ">
+        <div class="demo d-modal-base">
+          <button class="md-trigger" id="ms6Trigger">↑ Sheet</button>
+          <div class="md-overlay md-sheet" id="ms6Overlay">
+            <div class="md-box">
+              <div class="mds-handle"></div>
+              <div class="md-hd">アクションを選択 <button class="md-close" data-close="ms6Overlay">✕</button></div>
+              <div class="mds-pills" id="mds6Pills">
+                <div class="mds-pill on">全員</div>
+                <div class="mds-pill">チーム</div>
+                <div class="mds-pill">自分</div>
+              </div>
+              <div class="md-ft">
+                <button class="md-btn-p" data-close="ms6Overlay">適用</button>
+                <button class="md-btn-s" data-close="ms6Overlay">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Bottom Sheet</div>
+          <div class="cdesc">画面下から translateY(100%→0) で登場するモバイル定番パターン。上部のドラッグハンドルでスワイプダウンして閉じるUXが標準。iOS の ActionSheet・Android の ModalBottomSheet に相当。Web では overscroll-behavior: contain と組み合わせる。</div>
+        </div>
+      </div>
+
+      <!-- Flip Card Modal -->
+      <div class="ecard" id="modal-flip" data-name="flip card modal フリップ カード 3D 反転">
+        <div class="demo d-modal-flip" id="mflDemo">
+          <div class="mfl-card" id="mflCard">
+            <div class="mfl-face mfl-front">
+              <div class="mfl-ico">✦</div>
+              <div class="mfl-lbl">Click to Reveal</div>
+              <div class="mfl-sub">クリックして裏面へ</div>
+            </div>
+            <div class="mfl-face mfl-back">
+              <div class="mfl-ico">🎉</div>
+              <div class="mfl-lbl">Hidden Content</div>
+              <div class="mfl-sub">もう一度クリックで戻る</div>
+            </div>
+          </div>
+          <div class="mfl-hint">click to flip</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Flip Card Modal</div>
+          <div class="cdesc">rotateY(0→180deg) で3D フリップするカードモーダル。transform-style: preserve-3d + backface-visibility: hidden が基本構成。表面に要約・裏面に詳細という情報設計で、カード型UIをインタラクティブに昇華させる。</div>
+        </div>
+      </div>
+
+      <!-- Stacked Modals -->
+      <div class="ecard" id="modal-stack" data-name="stacked modals スタック モーダル 重なり レイヤー">
+        <div class="demo d-modal-stack">
+          <button class="mst-trigger" id="mstTrigger">Stack Open ⧉</button>
+          <div class="mst-wrap" id="mstWrap">
+            <div class="mst-bg" id="mstBg"></div>
+            <div class="mst-cards">
+              <div class="mst-card">
+                <div class="mst-hd"><span style="font-size:10px;color:var(--text3)">Card 3 — Background</span></div>
+                <div class="mst-bd">最背面のカード</div>
+              </div>
+              <div class="mst-card">
+                <div class="mst-hd"><span style="font-size:10px;color:var(--text3)">Card 2 — Middle</span></div>
+                <div class="mst-bd">中間のカード</div>
+              </div>
+              <div class="mst-card">
+                <div class="mst-hd">確認 <button class="mst-close" id="mstClose">✕</button></div>
+                <div class="mst-bd">複数のモーダルが重なってレイヤー感を演出します。</div>
+                <div class="mst-ft">
+                  <button class="mst-btn mst-btn-p" id="mstOk">OK</button>
+                  <button class="mst-btn mst-btn-s" id="mstCancel">閉じる</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Stacked Modals</div>
+          <div class="cdesc">複数のモーダルカードが奥行きを持って重なる演出。先に開いたモーダルを scale(.95)+translateY(6px)+brightness(.82) で奥に押し込み、新しいモーダルを手前に表示。iOS の NavigationStack や Apple Card のUIが参考になる。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===== FORMS & INPUT ===== -->
+  <section class="cat-section" id="forms-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Forms & Input</div>
+      <div class="cat-title">フォーム & インプット</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" id="float-label" data-name="float label floating input フローティングラベル アニメーション">
+        <div class="demo d-float-label">
+          <div class="fl-group">
+            <input class="fl-input" type="text" placeholder=" " id="fl1">
+            <label class="fl-label" for="fl1">メールアドレス</label>
+          </div>
+          <div class="fl-group">
+            <input class="fl-input" type="text" placeholder=" " id="fl2">
+            <label class="fl-label" for="fl2">ユーザー名</label>
+          </div>
+          <div class="fl-group">
+            <input class="fl-input" type="password" placeholder=" " id="fl3">
+            <label class="fl-label" for="fl3">パスワード</label>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Floating Label Input</div>
+          <div class="cdesc">入力フォーカス時にラベルが上にアニメーションするモダンなフォームUI。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="input-valid" data-name="validation input error success warning バリデーション フォーム">
+        <div class="demo d-input-valid">
+          <div class="iv-wrap">
+            <div class="iv-group">
+              <input class="iv-input iv-ok" type="text" value="goto@example.com" readonly>
+              <span class="iv-ico">✓</span>
+              <span class="iv-msg iv-ok">有効なメールアドレスです</span>
+            </div>
+            <div class="iv-group">
+              <input class="iv-input iv-err" type="text" value="password123" readonly>
+              <span class="iv-ico">✕</span>
+              <span class="iv-msg iv-err">大文字と記号を含めてください</span>
+            </div>
+            <div class="iv-group">
+              <input class="iv-input iv-warn" type="text" value="goto_user" readonly>
+              <span class="iv-ico">!</span>
+              <span class="iv-msg iv-warn">このユーザー名は既に使われています</span>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Input Validation States</div>
+          <div class="cdesc">成功・エラー・警告の3状態をカラーとアイコンで明確に示すバリデーションUI。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="toggle-sw" data-name="toggle switch on off トグル スイッチ">
+        <div class="demo d-toggle-sw">
+          <div class="tg-list">
+            <div class="tg-row">
+              <span class="tg-lbl">通知を受け取る</span>
+              <label class="tg-sw"><input type="checkbox" checked><span class="tg-track"></span></label>
+            </div>
+            <div class="tg-row">
+              <span class="tg-lbl">ダークモード</span>
+              <label class="tg-sw"><input type="checkbox"><span class="tg-track"></span></label>
+            </div>
+            <div class="tg-row">
+              <span class="tg-lbl">マーケティングメール</span>
+              <label class="tg-sw"><input type="checkbox" checked><span class="tg-track"></span></label>
+            </div>
+            <div class="tg-row">
+              <span class="tg-lbl">二段階認証</span>
+              <label class="tg-sw"><input type="checkbox"><span class="tg-track"></span></label>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Toggle Switch</div>
+          <div class="cdesc">スムーズなアニメーションで設定のON/OFFを切り替えるトグルスイッチ。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="range-slider" data-name="range slider input スライダー 音量 価格">
+        <div class="demo d-range-slider">
+          <div class="rs-wrap">
+            <div class="rs-header">
+              <span class="rs-title">音量</span>
+              <span class="rs-val" id="rsVal1">72</span>
+            </div>
+            <input type="range" class="rs-track" id="rsTrack1" min="0" max="100" value="72">
+            <div class="rs-labels"><span>0</span><span>50</span><span>100</span></div>
+          </div>
+          <div class="rs-wrap">
+            <div class="rs-header">
+              <span class="rs-title">価格帯</span>
+              <span class="rs-val" id="rsVal2">¥45,000</span>
+            </div>
+            <input type="range" class="rs-track" id="rsTrack2" min="0" max="100" value="45">
+            <div class="rs-labels"><span>¥0</span><span>¥50,000</span><span>¥100,000</span></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Range Slider</div>
+          <div class="cdesc">ドラッグで値を直感的に調整できる、グラデーション付きカスタムスライダー。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="otp-input" data-name="otp one time password 認証 ワンタイムパスワード コード">
+        <div class="demo d-otp-input">
+          <div class="otp-wrap">
+            <div style="font-size:12px;color:var(--text2);margin-bottom:10px">確認コードを入力</div>
+            <div style="display:flex;gap:8px">
+              <input class="otp-d" maxlength="1" type="text" inputmode="numeric">
+              <input class="otp-d" maxlength="1" type="text" inputmode="numeric">
+              <input class="otp-d" maxlength="1" type="text" inputmode="numeric">
+              <input class="otp-d" maxlength="1" type="text" inputmode="numeric">
+              <input class="otp-d" maxlength="1" type="text" inputmode="numeric">
+              <input class="otp-d" maxlength="1" type="text" inputmode="numeric">
+            </div>
+            <div class="otp-status" id="otpStatus">6桁のコードを入力してください</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">OTP / Code Input</div>
+          <div class="cdesc">数字入力で自動的に次のフィールドへ移動するワンタイムパスワード入力UI。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="checkbox-anim" data-name="checkbox radio animated チェックボックス ラジオ アニメーション">
+        <div class="demo d-checkbox-anim">
+          <div class="cba-list">
+            <label class="cba-item">
+              <input type="checkbox" checked>
+              <span class="cba-box"><svg class="cba-check" viewBox="0 0 12 10"><polyline points="1.5,5.5 4.5,8.5 10.5,1.5"/></svg></span>
+              <span class="cba-lbl">デザインシステム構築</span>
+            </label>
+            <label class="cba-item">
+              <input type="checkbox">
+              <span class="cba-box"><svg class="cba-check" viewBox="0 0 12 10"><polyline points="1.5,5.5 4.5,8.5 10.5,1.5"/></svg></span>
+              <span class="cba-lbl">コンポーネント作成</span>
+            </label>
+            <label class="cba-item">
+              <input type="checkbox" checked>
+              <span class="cba-box"><svg class="cba-check" viewBox="0 0 12 10"><polyline points="1.5,5.5 4.5,8.5 10.5,1.5"/></svg></span>
+              <span class="cba-lbl">レスポンシブ対応</span>
+            </label>
+            <label class="cba-item cba-radio">
+              <input type="radio" name="cba-r" checked>
+              <span class="cba-box"></span>
+              <span class="cba-lbl">月額プラン</span>
+            </label>
+            <label class="cba-item cba-radio">
+              <input type="radio" name="cba-r">
+              <span class="cba-box"></span>
+              <span class="cba-lbl">年額プラン（20%オフ）</span>
+            </label>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Animated Checkbox & Radio</div>
+          <div class="cdesc">チェックマークが描かれるアニメーションと滑らかなラジオボタン切り替え。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="multi-tag" data-name="tag chip multi input タグ チップ マルチ 入力">
+        <div class="demo d-multi-tag">
+          <div class="mt-wrap" id="mtWrap">
+            <div class="mt-chip">React <button class="mt-rm" data-tag="React">×</button></div>
+            <div class="mt-chip">TypeScript <button class="mt-rm" data-tag="TypeScript">×</button></div>
+            <div class="mt-chip">Tailwind <button class="mt-rm" data-tag="Tailwind">×</button></div>
+            <input class="mt-inp" id="mtInput" type="text" placeholder="タグを追加...">
+          </div>
+          <div class="mt-hint">Enterキーでタグを追加</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Multi-Tag Input</div>
+          <div class="cdesc">Enterキーでタグを追加し、×で削除できるマルチタグ入力コンポーネント。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="pw-strength" data-name="password strength meter パスワード 強度 セキュリティ">
+        <div class="demo d-pw-strength">
+          <div class="pw-wrap">
+            <div class="pw-field">
+              <input class="pw-inp" id="pwInp" type="password" placeholder="パスワードを入力...">
+              <button class="pw-eye" id="pwEye" type="button">👁</button>
+            </div>
+            <div class="pw-bars">
+              <div class="pw-bar" id="pwB1"></div>
+              <div class="pw-bar" id="pwB2"></div>
+              <div class="pw-bar" id="pwB3"></div>
+              <div class="pw-bar" id="pwB4"></div>
+            </div>
+            <div class="pw-row">
+              <span class="pw-lbl" id="pwLbl">パスワードを入力してください</span>
+            </div>
+            <div class="pw-reqs">
+              <span class="pw-req" id="pwR1">8文字以上</span>
+              <span class="pw-req" id="pwR2">大文字含む</span>
+              <span class="pw-req" id="pwR3">数字含む</span>
+              <span class="pw-req" id="pwR4">記号含む</span>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Password Strength Meter</div>
+          <div class="cdesc">入力に応じてリアルタイムで強度を可視化するパスワードメーター。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="file-drop" data-name="file upload drag drop ファイル アップロード ドラッグ">
+        <div class="demo d-file-drop">
+          <div class="fd-zone" id="fdZone">
+            <div class="fd-ico">📁</div>
+            <div class="fd-title">ファイルをドロップ</div>
+            <div class="fd-sub">または <span style="color:var(--accentb);cursor:pointer" id="fdBrowse">クリックして選択</span></div>
+            <div class="fd-badge" id="fdBadge" style="display:none"></div>
+          </div>
+          <input type="file" id="fdInput" style="display:none" multiple>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Drag & Drop File Zone</div>
+          <div class="cdesc">ファイルをドラッグ&ドロップまたはクリックで選択できるアップロードUI。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== PRICING & CTA ===== -->
+  <section class="cat-section" id="pricing-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Pricing & CTA</div>
+      <div class="cat-title">料金 & CTA</div>
+    </div>
+    <div class="grid wide">
+
+      <div class="ecard" id="pricing-card" data-name="pricing card plan 料金 プラン カード">
+        <div class="demo d-pricing-card">
+          <div class="pc">
+            <div class="pc-plan">Starter</div>
+            <div class="pc-price">¥0<span>/月</span></div>
+            <ul class="pc-feats">
+              <li>✓ 3プロジェクト</li>
+              <li>✓ 1GBストレージ</li>
+              <li>✗ チーム機能</li>
+            </ul>
+            <button class="pc-btn">無料で開始</button>
+          </div>
+          <div class="pc pc-pop">
+            <div class="pc-badge">人気</div>
+            <div class="pc-plan">Pro</div>
+            <div class="pc-price">¥2,980<span>/月</span></div>
+            <ul class="pc-feats">
+              <li>✓ 無制限プロジェクト</li>
+              <li>✓ 50GBストレージ</li>
+              <li>✓ チーム機能</li>
+            </ul>
+            <button class="pc-btn">今すぐ開始</button>
+          </div>
+          <div class="pc">
+            <div class="pc-plan">Enterprise</div>
+            <div class="pc-price">要相談<span></span></div>
+            <ul class="pc-feats">
+              <li>✓ 専用サーバー</li>
+              <li>✓ 無制限ストレージ</li>
+              <li>✓ SLAサポート</li>
+            </ul>
+            <button class="pc-btn">お問い合わせ</button>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Pricing Cards</div>
+          <div class="cdesc">人気プランをハイライトした3カラムの料金プランカード。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="pricing-toggle" data-name="pricing billing toggle monthly yearly 月額 年額 割引">
+        <div class="demo d-pricing-toggle">
+          <div class="prt-toggle">
+            <span class="prt-opt" id="prtMonthly">月額</span>
+            <label class="prt-sw" id="prtSw">
+              <input type="checkbox" id="prtChk">
+              <span class="prt-track"><span class="prt-thumb"></span></span>
+            </label>
+            <span class="prt-opt" id="prtYearly">年額</span>
+            <span class="prt-save">20% OFF</span>
+          </div>
+          <div class="prt-prices">
+            <div class="prt-item">
+              <div style="font-size:11px;color:var(--text2)">Starter</div>
+              <div style="font-size:22px;font-weight:800" id="prtP1">¥980</div>
+              <div style="font-size:10px;color:var(--text3)" id="prtS1">/月</div>
+            </div>
+            <div class="prt-item">
+              <div style="font-size:11px;color:var(--text2)">Pro</div>
+              <div style="font-size:22px;font-weight:800;color:var(--accentb)" id="prtP2">¥2,980</div>
+              <div style="font-size:10px;color:var(--text3)" id="prtS2">/月</div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Pricing Toggle (月額/年額)</div>
+          <div class="cdesc">月額・年額を切り替えると価格がアニメーションで変わる料金トグル。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="cta-variants" data-name="cta button call to action ボタン バリエーション">
+        <div class="demo d-cta-variants">
+          <div class="cta-row">
+            <button class="ctav ctav-primary">今すぐ始める</button>
+            <button class="ctav ctav-ghost">詳細を見る</button>
+          </div>
+          <div class="cta-row">
+            <button class="ctav ctav-glow">✦ プレミアム</button>
+            <button class="ctav ctav-soft">無料トライアル</button>
+          </div>
+          <div class="cta-row">
+            <button class="ctav ctav-outline-grad">グラデーション枠</button>
+            <button class="ctav ctav-dark">→ 詳しく見る</button>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">CTA Button Variants</div>
+          <div class="cdesc">6種類のCTAボタンスタイル。Glow・Gradient・Softなどのバリエーション。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="social-proof" data-name="social proof avatar stars review 社会的証明 レビュー 評価">
+        <div class="demo d-social-proof">
+          <div class="sp-top">
+            <div class="sp-avs">
+              <div class="sp-av" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">A</div>
+              <div class="sp-av" style="background:linear-gradient(135deg,#10b981,#0ea5e9)">B</div>
+              <div class="sp-av" style="background:linear-gradient(135deg,#6d28d9,#ec4899)">C</div>
+              <div class="sp-av" style="background:linear-gradient(135deg,#0ea5e9,#6d28d9)">D</div>
+              <div class="sp-av" style="background:linear-gradient(135deg,#ef4444,#f59e0b)">E</div>
+            </div>
+            <div class="sp-info">
+              <div class="sp-stars">★★★★★</div>
+              <div class="sp-meta"><span class="sp-n">2,400+</span> 人のユーザーが利用中</div>
+            </div>
+          </div>
+          <div class="sp-logos">
+            <span>Google</span><span>Notion</span><span>Figma</span><span>Linear</span>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Social Proof Block</div>
+          <div class="cdesc">アバター・星評価・ロゴで信頼性を視覚的に訴えるソーシャルプルーフUI。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="testimonial" data-name="testimonial review quote 推薦 口コミ レビュー">
+        <div class="demo d-testimonial">
+          <div class="tst-card">
+            <div class="tst-q">"</div>
+            <div class="tst-text">このUIライブラリのおかげでプロダクト開発のスピードが3倍になりました。デザインの質も格段に向上しています。</div>
+            <div class="tst-author">
+              <div class="tst-av" style="background:linear-gradient(135deg,#6d28d9,#0ea5e9)">G</div>
+              <div class="tst-info">
+                <div style="font-size:12px;font-weight:700">goto_ さん</div>
+                <div style="font-size:10px;color:var(--text2)">フルスタック開発者</div>
+              </div>
+              <div class="tst-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Testimonial Card</div>
+          <div class="cdesc">ユーザーの声を美しく表示する引用スタイルの推薦コメントカード。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="countdown" data-name="countdown timer limited offer カウントダウン タイマー 期間限定">
+        <div class="demo d-countdown">
+          <div class="cd-label">⚡ 期間限定オファー終了まで</div>
+          <div class="cd-units">
+            <div class="cd-unit"><div class="cd-num" id="cdH">02</div><div class="cd-sub">時間</div></div>
+            <div class="cd-colon">:</div>
+            <div class="cd-unit"><div class="cd-num" id="cdM">45</div><div class="cd-sub">分</div></div>
+            <div class="cd-colon">:</div>
+            <div class="cd-unit"><div class="cd-num" id="cdS">30</div><div class="cd-sub">秒</div></div>
+          </div>
+          <button class="cd-cta">今すぐ50%OFFで購入 →</button>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Countdown Timer</div>
+          <div class="cdesc">緊急性を演出するリアルタイムカウントダウンタイマーで購買意欲を高める。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="trust-badge" data-name="trust badge security ssl money back 信頼 セキュリティ バッジ">
+        <div class="demo d-trust-badge">
+          <div class="trb trb-ssl">
+            <div class="trb-ico">🔒</div>
+            <div><div class="trb-t">SSL暗号化</div><div class="trb-s">256bit保護</div></div>
+          </div>
+          <div class="trb trb-money">
+            <div class="trb-ico">💰</div>
+            <div><div class="trb-t">返金保証</div><div class="trb-s">30日以内</div></div>
+          </div>
+          <div class="trb trb-users">
+            <div class="trb-ico">👥</div>
+            <div><div class="trb-t">2,400+人</div><div class="trb-s">利用中</div></div>
+          </div>
+          <div class="trb trb-award">
+            <div class="trb-ico">🏆</div>
+            <div><div class="trb-t">受賞歴あり</div><div class="trb-s">2024 Best UI</div></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Trust Badges</div>
+          <div class="cdesc">SSL・返金保証・ユーザー数など信頼感を高めるバッジコンポーネント群。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="compare-table" data-name="compare table feature comparison 比較 テーブル 機能">
+        <div class="demo d-compare-table">
+          <table class="cmp-t">
+            <thead>
+              <tr>
+                <th>機能</th>
+                <th>Free</th>
+                <th class="cmp-h-pop">Pro</th>
+                <th>Enterprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>プロジェクト数</td>
+                <td>3</td>
+                <td class="cmp-pop">無制限</td>
+                <td>無制限</td>
+              </tr>
+              <tr>
+                <td>チーム機能</td>
+                <td><span class="cmp-no">✕</span></td>
+                <td class="cmp-pop"><span class="cmp-ck">✓</span></td>
+                <td><span class="cmp-ck">✓</span></td>
+              </tr>
+              <tr>
+                <td>APIアクセス</td>
+                <td><span class="cmp-no">✕</span></td>
+                <td class="cmp-pop"><span class="cmp-ck">✓</span></td>
+                <td><span class="cmp-ck">✓</span></td>
+              </tr>
+              <tr>
+                <td>サポート</td>
+                <td>メール</td>
+                <td class="cmp-pop">優先</td>
+                <td>専任</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Feature Comparison Table</div>
+          <div class="cdesc">プランごとの機能差をひと目で確認できる比較テーブル。人気プランをハイライト。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FEEDBACK & STATUS ===== -->
+  <section class="cat-section" id="feedback-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Feedback & Status</div>
+      <div class="cat-title">フィードバック & ステータス</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" id="alert-banner" data-name="alert banner notification message アラート バナー 通知">
+        <div class="demo d-alert-banner">
+          <div class="alr alr-info">
+            <span class="alr-ico">ℹ</span>
+            <div class="alr-body"><div class="alr-title">新機能がリリースされました</div>ダッシュボードから今すぐ確認できます。</div>
+          </div>
+          <div class="alr alr-ok">
+            <span class="alr-ico">✓</span>
+            <div class="alr-body"><div class="alr-title">保存しました</div>変更が正常に保存されました。</div>
+          </div>
+          <div class="alr alr-warn">
+            <span class="alr-ico">⚠</span>
+            <div class="alr-body"><div class="alr-title">ストレージ残量が少ない</div>90%使用中です。プランのアップグレードを検討してください。</div>
+          </div>
+          <div class="alr alr-err">
+            <span class="alr-ico">✕</span>
+            <div class="alr-body"><div class="alr-title">エラーが発生しました</div>もう一度お試しいただくか、サポートにご連絡ください。</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Alert / Banner</div>
+          <div class="cdesc">Info・Success・Warning・Errorの4種類のアラートバナーコンポーネント。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="tooltip-ui" data-name="tooltip hover popup ツールチップ ホバー">
+        <div class="demo d-tooltip-ui">
+          <div class="tp-wrap tp-top">
+            <button class="tp-btn">上に表示 ↑</button>
+            <div class="tp-tip">上方向のツールチップ</div>
+          </div>
+          <div class="tp-wrap tp-bot">
+            <button class="tp-btn">下に表示 ↓</button>
+            <div class="tp-tip">下方向のツールチップ</div>
+          </div>
+          <div class="tp-wrap tp-left">
+            <button class="tp-btn">左に表示 ←</button>
+            <div class="tp-tip">左方向のツールチップ</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Tooltip (3方向)</div>
+          <div class="cdesc">上・下・左の3方向に表示できるホバーで出現するツールチップ。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="notif-badge" data-name="notification badge counter dot バッジ 通知 カウント">
+        <div class="demo d-notif-badge">
+          <div class="nb-item">
+            <div class="nb-icon">🔔</div>
+            <span class="nb-badge nb-num">12</span>
+            <span style="font-size:11px;color:var(--text2)">通知</span>
+          </div>
+          <div class="nb-item">
+            <div class="nb-icon">✉</div>
+            <span class="nb-badge nb-dot"></span>
+            <span style="font-size:11px;color:var(--text2)">メッセージ</span>
+          </div>
+          <div class="nb-item">
+            <div class="nb-icon">🛒</div>
+            <span class="nb-badge nb-green">3</span>
+            <span style="font-size:11px;color:var(--text2)">カート</span>
+          </div>
+          <div class="nb-item">
+            <div class="nb-icon">⚙</div>
+            <span class="nb-badge nb-accent">NEW</span>
+            <span style="font-size:11px;color:var(--text2)">設定</span>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Notification Badge</div>
+          <div class="cdesc">アイコンに重ねる数値・ドット・カラーバリエーション付きの通知バッジ。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="status-dot" data-name="status indicator online offline busy away ステータス オンライン">
+        <div class="demo d-status-dot">
+          <div class="std-list">
+            <div class="std-item">
+              <div class="std-d d-online"></div>
+              <div>
+                <div class="std-name">goto_ さん</div>
+                <div class="std-status">オンライン</div>
+              </div>
+            </div>
+            <div class="std-item">
+              <div class="std-d d-away"></div>
+              <div>
+                <div class="std-name">田中さん</div>
+                <div class="std-status">離席中</div>
+              </div>
+            </div>
+            <div class="std-item">
+              <div class="std-d d-busy"></div>
+              <div>
+                <div class="std-name">鈴木さん</div>
+                <div class="std-status">取り込み中</div>
+              </div>
+            </div>
+            <div class="std-item">
+              <div class="std-d d-offline"></div>
+              <div>
+                <div class="std-name">佐藤さん</div>
+                <div class="std-status">オフライン</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Status Indicator</div>
+          <div class="cdesc">オンライン・離席・取込中・オフラインを色付きドットで表現するステータスUI。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="announce-bar" data-name="announcement bar banner promo アナウンス バー プロモ">
+        <div class="demo d-announce-bar">
+          <div class="ab-strip ab-promo">
+            <span class="ab-ico">🎉</span>
+            <span class="ab-txt">年末セール開催中！全プラン <strong>50% OFF</strong></span>
+            <a class="ab-lnk">今すぐ確認 →</a>
+            <button class="ab-x">×</button>
+          </div>
+          <div class="ab-strip ab-info">
+            <span class="ab-ico">📢</span>
+            <span class="ab-txt">v2.0がリリースされました。新機能を確認してください。</span>
+            <a class="ab-lnk">リリースノート</a>
+            <button class="ab-x">×</button>
+          </div>
+          <div class="ab-strip ab-warn">
+            <span class="ab-ico">⚠</span>
+            <span class="ab-txt">メンテナンス予定: 6/1 AM2:00〜4:00</span>
+            <a class="ab-lnk">詳細</a>
+            <button class="ab-x">×</button>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Announcement Bar</div>
+          <div class="cdesc">プロモ・情報・警告の3タイプ、×ボタンで非表示にできるアナウンスバー。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="cookie-ui" data-name="cookie consent gdpr クッキー 同意 gdpr バナー">
+        <div class="demo d-cookie-ui">
+          <div class="ck-panel">
+            <div class="ck-ico">🍪</div>
+            <div class="ck-text">
+              当サイトではクッキーを使用しています。より良い体験のために、<a class="ck-link">プライバシーポリシー</a>をご確認ください。
+            </div>
+            <div class="ck-btns">
+              <button class="ck-no" id="ckDecline">拒否</button>
+              <button class="ck-ok" id="ckAccept">すべて許可</button>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Cookie Consent UI</div>
+          <div class="cdesc">GDPR対応のクッキー同意バナー。承認・拒否ボタン付きのコンプライアンスUI。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== LOADING & PROGRESS ===== -->
+  <section class="cat-section" id="loading-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Loading & Progress</div>
+      <div class="cat-title">ローディング & プログレス</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" id="progress-bar" data-name="progress bar loading プログレスバー ローディング 進捗">
+        <div class="demo d-progress-bar">
+          <div class="pb-wrap">
+            <div class="pb-hd"><span>ダウンロード</span><span>72%</span></div>
+            <div class="pb-track"><div class="pb-fill pb-accent" style="width:72%"></div></div>
+          </div>
+          <div class="pb-wrap">
+            <div class="pb-hd"><span>インストール</span><span>100%</span></div>
+            <div class="pb-track"><div class="pb-fill pb-green" style="width:100%"></div></div>
+          </div>
+          <div class="pb-wrap">
+            <div class="pb-hd"><span>アップロード</span><span>45%</span></div>
+            <div class="pb-track"><div class="pb-fill pb-warn" style="width:45%"></div></div>
+          </div>
+          <div class="pb-wrap">
+            <div class="pb-hd"><span>不定形プログレス</span><span></span></div>
+            <div class="pb-track"><div class="pb-fill pb-indet"></div></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Progress Bar</div>
+          <div class="cdesc">色・パーセント表示付きのプログレスバー。不定形（インジケーター）タイプも含む。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="spinner" data-name="spinner loading indicator スピナー ローディング くるくる">
+        <div class="demo d-spinner">
+          <div class="spr-ring"></div>
+          <div class="spr-dots">
+            <div class="spr-d"></div>
+            <div class="spr-d"></div>
+            <div class="spr-d"></div>
+          </div>
+          <div class="spr-pulse"></div>
+          <div class="spr-bars">
+            <div class="spr-bar"></div>
+            <div class="spr-bar"></div>
+            <div class="spr-bar"></div>
+            <div class="spr-bar"></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Loading Spinners</div>
+          <div class="cdesc">リング・ドット・パルス・バーの4種類のローディングインジケーター。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="step-wizard" data-name="step wizard progress stepper ステップ ウィザード 手順">
+        <div class="demo d-step-wizard">
+          <div class="swz-steps" id="swzSteps">
+            <div class="swz-step swz-done">
+              <div class="swz-circle">✓</div>
+              <div class="swz-lbl">アカウント</div>
+            </div>
+            <div class="swz-step swz-active">
+              <div class="swz-circle">2</div>
+              <div class="swz-lbl">プロフィール</div>
+            </div>
+            <div class="swz-step swz-todo">
+              <div class="swz-circle">3</div>
+              <div class="swz-lbl">確認</div>
+            </div>
+            <div class="swz-step swz-todo">
+              <div class="swz-circle">4</div>
+              <div class="swz-lbl">完了</div>
+            </div>
+          </div>
+          <div class="swz-content" id="swzContent">ステップ 2: プロフィール情報を入力してください。</div>
+          <div class="swz-btns">
+            <button class="swz-back" id="swzBack">← 戻る</button>
+            <button class="swz-next" id="swzNext">次へ →</button>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Step Wizard</div>
+          <div class="cdesc">複数ステップのフォームや登録フローを視覚化するステップウィザード。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="upload-prog" data-name="upload progress file アップロード 進捗 ファイル">
+        <div class="demo d-upload-prog">
+          <div class="up-list">
+            <div class="up-item">
+              <div class="up-fico">📄</div>
+              <div class="up-info">
+                <div class="up-name">design-system.fig</div>
+                <div class="up-bar-wrap"><div class="up-bar" id="upBar1" style="width:78%"></div></div>
+                <div class="up-meta"><span class="up-pct">78%</span><span class="up-status">アップロード中...</span></div>
+              </div>
+            </div>
+            <div class="up-item">
+              <div class="up-fico">🖼</div>
+              <div class="up-info">
+                <div class="up-name">hero-image.png</div>
+                <div class="up-bar-wrap"><div class="up-bar" id="upBar2" style="width:100%"></div></div>
+                <div class="up-meta"><span class="up-pct">100%</span><span class="up-status" style="color:var(--green)">✓ 完了</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Upload Progress</div>
+          <div class="cdesc">ファイルごとのアップロード進捗を視覚化するプログレスバー付きファイルリスト。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== INTERACTIONS ===== -->
+  <section class="cat-section" id="interactions-section">
+    <div class="cat-hdr">
+      <div class="cat-tag">Interactions</div>
+      <div class="cat-title">インタラクション</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" id="copy-clip" data-name="copy clipboard コピー クリップボード コード スニペット">
+        <div class="demo d-copy-clip">
+          <div class="ccl-row">
+            <code class="ccl-code">npm install @ui-lib/core</code>
+            <button class="ccl-btn" id="cclBtn1" data-copy="npm install @ui-lib/core">コピー</button>
+          </div>
+          <div class="ccl-row">
+            <code class="ccl-code">npx create-next-app@latest</code>
+            <button class="ccl-btn" id="cclBtn2" data-copy="npx create-next-app@latest">コピー</button>
+          </div>
+          <div class="ccl-variants">
+            <button class="ccl-vbtn" id="cclBtn3" data-copy="const ui = require('ui-lib')">📋 コピー</button>
+            <button class="ccl-vbtn" id="cclBtn4" data-copy="import { Button } from 'ui-lib'">📋 コピー</button>
+            <button class="ccl-vbtn" id="cclBtn5" data-copy="yarn add @ui-lib/core">📋 コピー</button>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Copy to Clipboard</div>
+          <div class="cdesc">ボタンクリックでコードをクリップボードにコピー。確認フィードバック付き。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="hover-card" data-name="hover card popup preview ホバーカード ポップアップ プレビュー">
+        <div class="demo d-hover-card">
+          <div class="hvc-trigger">
+            <div class="hvc-av" style="background:linear-gradient(135deg,#6d28d9,#0ea5e9)">G</div>
+            <div class="hvc-name">@goto_</div>
+            <div class="hvc-popup">
+              <div class="hvc-pop-top">
+                <div class="hvc-av" style="background:linear-gradient(135deg,#6d28d9,#0ea5e9);width:44px;height:44px;font-size:18px">G</div>
+                <div>
+                  <div style="font-weight:700;font-size:13px">goto_</div>
+                  <div style="font-size:11px;color:var(--text2)">フルスタック開発者</div>
+                </div>
+              </div>
+              <div class="hvc-stats">
+                <div><div style="font-weight:800">128</div><div style="font-size:10px;color:var(--text2)">フォロー</div></div>
+                <div><div style="font-weight:800">2.4K</div><div style="font-size:10px;color:var(--text2)">フォロワー</div></div>
+                <div><div style="font-weight:800">48</div><div style="font-size:10px;color:var(--text2)">投稿</div></div>
+              </div>
+              <button class="hvc-follow">フォロー</button>
+            </div>
+          </div>
+          <div class="hvc-trigger">
+            <div class="hvc-av" style="background:linear-gradient(135deg,#10b981,#f59e0b)">T</div>
+            <div class="hvc-name">@tanaka</div>
+            <div class="hvc-popup">
+              <div class="hvc-pop-top">
+                <div class="hvc-av" style="background:linear-gradient(135deg,#10b981,#f59e0b);width:44px;height:44px;font-size:18px">T</div>
+                <div>
+                  <div style="font-weight:700;font-size:13px">田中 裕介</div>
+                  <div style="font-size:11px;color:var(--text2)">UIデザイナー</div>
+                </div>
+              </div>
+              <div class="hvc-stats">
+                <div><div style="font-weight:800">340</div><div style="font-size:10px;color:var(--text2)">フォロー</div></div>
+                <div><div style="font-weight:800">5.1K</div><div style="font-size:10px;color:var(--text2)">フォロワー</div></div>
+                <div><div style="font-weight:800">92</div><div style="font-size:10px;color:var(--text2)">投稿</div></div>
+              </div>
+              <button class="hvc-follow">フォロー</button>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Hover Card</div>
+          <div class="cdesc">ユーザー名にホバーするとプロフィールポップアップが表示されるホバーカード。</div>
+        </div>
+      </div>
+
+      <div class="ecard" id="drag-drop" data-name="drag drop reorder sortable ドラッグ 並び替え ソート">
+        <div class="demo d-drag-drop">
+          <div class="dd-list" id="ddList">
+            <div class="dd-item" draggable="true" data-id="1">
+              <span class="dd-handle">⋮⋮</span>
+              <span class="dd-ico">🎨</span>
+              <span>デザインシステム構築</span>
+            </div>
+            <div class="dd-item" draggable="true" data-id="2">
+              <span class="dd-handle">⋮⋮</span>
+              <span class="dd-ico">⚡</span>
+              <span>パフォーマンス最適化</span>
+            </div>
+            <div class="dd-item" draggable="true" data-id="3">
+              <span class="dd-handle">⋮⋮</span>
+              <span class="dd-ico">🚀</span>
+              <span>デプロイ設定</span>
+            </div>
+            <div class="dd-item" draggable="true" data-id="4">
+              <span class="dd-handle">⋮⋮</span>
+              <span class="dd-ico">✅</span>
+              <span>テスト完了</span>
+            </div>
+            <div class="dd-item" draggable="true" data-id="5">
+              <span class="dd-handle">⋮⋮</span>
+              <span class="dd-ico">📝</span>
+              <span>ドキュメント作成</span>
+            </div>
+          </div>
+          <div class="dd-hint">ドラッグして並び替え</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Drag & Drop Reorder</div>
+          <div class="cdesc">HTML5 Drag & Drop APIでリストアイテムを直感的に並び替えるインタラクション。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
