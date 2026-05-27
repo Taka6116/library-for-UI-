@@ -3260,3 +3260,187 @@ mark{background:rgba(139,92,246,.28);color:var(--accentb);border-radius:2px;padd
 .ca24-btn{padding:12px 30px;border-radius:12px;background:linear-gradient(180deg,#9b6dff 0%,#7c3aed 100%);border:none;color:white;font-family:var(--font);font-size:12.5px;font-weight:700;cursor:pointer;box-shadow:0 1px 0 rgba(255,255,255,.15) inset,0 -1px 0 rgba(0,0,0,.3) inset,0 4px 0 #3d1f7a,0 6px 0 #2d1660,0 8px 20px rgba(109,40,217,.5);transform:translateY(-4px);transition:transform .1s,box-shadow .1s;letter-spacing:-.2px}
 .ca24-sub{font-size:9px;color:rgba(255,255,255,.25);font-family:var(--font-mono)}
 .ca24-hint{font-size:8px;color:rgba(255,255,255,.15);font-family:var(--font-mono)}
+
+/* =====================================================================
+   CTA READABILITY FIXES
+   ===================================================================== */
+
+/* 笏笏 1. CTA demo height: 140px 竊・190px 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.main.view-grid #cta-rich .demo,
+.main.view-grid #cta-pop .demo,
+.main.view-grid #cta-textured .demo,
+.main.view-grid #cta-chic .demo {
+  height: 190px !important;
+}
+
+/* 笏笏 2. Fix light-background CTAs 竊・dark wrapper, component as island 笏笏 */
+
+/* CA7 Brutalist: dark outer, yellow btn still pops */
+.d-ca7 { background: #0c0b14; }
+.d-ca7 .ca7-sub { color: rgba(255,255,255,.35); font-size: 9.5px; }
+
+/* CA9 Sticker: dark outer, orange+black still readable */
+.d-ca9 { background: #0c0b14; }
+.d-ca9 .ca9-decor { color: rgba(255,255,255,.8); }
+
+/* 笏笏 3. CA1 Shimmer: better spacing 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca1 { gap: 12px; padding: 18px; }
+.ca1-btn { font-size: 13px; padding: 12px 30px; border-radius: 10px; }
+.d-ca1 .ca1-sub { font-size: 9.5px; }
+
+/* 笏笏 4. CA2 Pulse rings: center properly 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca2 { padding: 18px; gap: 12px; }
+.ca2-btn { font-size: 13px; padding: 12px 28px; }
+.d-ca2 .ca2-hint { font-size: 9.5px; }
+
+/* 笏笏 5. CA3 Gold: cleaner spacing 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca3 { gap: 10px; padding: 18px; }
+.ca3-btn { font-size: 13px; padding: 12px 30px; }
+.ca3-eyebrow { font-size: 9px; letter-spacing: 1.5px; }
+
+/* 笏笏 6. CA4 Aurora: larger text 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca4 { gap: 12px; }
+.ca4-btn { font-size: 13px; padding: 12px 28px; }
+.ca4-badge { font-size: 9.5px; }
+
+/* 笏笏 7. CA5 Glass card: more padding 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca5 { padding: 16px; }
+.ca5-h { font-size: 13px; font-weight: 700; }
+.ca5-btn { font-size: 12px; padding: 9px 22px; }
+.ca5-sub { font-size: 9px; }
+.ca5-card { padding: 14px 20px; gap: 9px; }
+
+/* 笏笏 8. CA6 Gradient border: bigger inner 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca6 { gap: 12px; }
+.ca6-btn-txt { font-size: 13px; }
+.ca6-inner { padding: 11px 26px; }
+.d-ca6 .ca6-h { font-size: 11px; color: rgba(255,255,255,.45); }
+
+/* 笏笏 9. CA7 Brutalist: bigger button 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.ca7-btn { font-size: 13px; padding: 12px 26px; }
+
+/* 笏笏 10. CA8 Y2K: bigger/cleaner 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca8 { gap: 10px; padding: 18px; }
+.ca8-btn { font-size: 13px; padding: 12px 28px; }
+.d-ca8 .ca8-stars { font-size: 16px; letter-spacing: 6px; color: rgba(255,180,255,.6); }
+
+/* 笏笏 11. CA9 Sticker: bigger button 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.ca9-btn { font-size: 13px; padding: 12px 24px; }
+.ca9-decor { font-size: 12px; }
+
+/* 笏笏 12. CA10 Neon: more prominent 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca10 { gap: 12px; padding: 18px; }
+.ca10-btn { font-size: 13px; padding: 12px 28px; letter-spacing: 1px; }
+.d-ca10 .ca10-hint { font-size: 9.5px; }
+
+/* 笏笏 13. CA11 3D: larger 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca11 { gap: 12px; padding: 18px; }
+.ca11-btn { font-size: 13px; padding: 12px 28px; }
+.d-ca11 .ca11-sub { font-size: 9.5px; }
+
+/* 笏笏 14. CA12 Grain: cleaner layout 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca12 { gap: 10px; padding: 18px; }
+.ca12-btn { font-size: 13px; padding: 12px 28px; }
+.d-ca12 .ca12-sub { font-size: 9.5px; }
+.d-ca12 .ca12-stars { font-size: 11px; }
+.ca12-star { font-size: 11px; }
+
+/* 笏笏 15. CA13 Minimal: more breathing room 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca13 { gap: 8px; padding: 20px; align-items: flex-start; }
+.ca13-h { font-size: 18px; }
+.ca13-link { font-size: 13px; }
+.ca13-eyebrow { font-size: 9px; }
+
+/* 笏笏 16. CA14 Terminal: bigger text 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca14 { padding: 18px; gap: 0; }
+.ca14-line { font-size: 10.5px; }
+.ca14-btn { font-size: 10.5px; padding: 5px 14px; margin-top: 5px; }
+
+/* 笏笏 17. CA15 Split: bigger text 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca15 { gap: 10px; padding: 20px; }
+.ca15-left, .ca15-right { font-size: 13px; padding: 11px 22px; }
+.ca15-divider-label { font-size: 9px; }
+
+/* 笏笏 18. CA16 Magnetic: bigger 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca16 { gap: 12px; padding: 18px; }
+.ca16-btn { font-size: 13px; padding: 12px 30px; }
+.d-ca16 .ca16-h { font-size: 11px; }
+.ca16-badge { font-size: 9px; padding: 4px 9px; }
+
+/* 笏笏 19. CA17 Banner: tighter layout 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca17 { padding: 0; }
+.ca17-h { font-size: 17px; letter-spacing: -.5px; }
+.ca17-primary { font-size: 12px; padding: 9px 18px; }
+.ca17-secondary { font-size: 12px; padding: 9px 14px; }
+.ca17-eyebrow { font-size: 8.5px; }
+
+/* 笏笏 20. CA18 Social proof: adjust spacing 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca18 { gap: 8px; padding: 16px; }
+.ca18-h { font-size: 12.5px; }
+.ca18-btn { font-size: 12px; padding: 9px 24px; }
+.ca18-trust { font-size: 8.5px; }
+.ca18-av { width: 24px; height: 24px; font-size: 10px; }
+
+/* 笏笏 21. CA19 Multi: adjust sizes 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca19 { gap: 6px; padding: 16px; }
+.ca19-primary, .ca19-secondary { font-size: 12px; padding: 9px 0; }
+.ca19-ghost { font-size: 11px; }
+.ca19-label { font-size: 8px; }
+
+/* 笏笏 22. CA20 Spring: bigger 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca20 { gap: 12px; }
+.ca20-btn { font-size: 14px; padding: 13px 30px; }
+.d-ca20 .ca20-sub { font-size: 9.5px; }
+
+/* 笏笏 23. CA21 Typewriter: larger 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca21 { gap: 12px; padding: 18px; }
+.ca21-headline { font-size: 15px; }
+.ca21-btn { font-size: 12px; padding: 10px 24px; }
+
+/* 笏笏 24. CA22 Split pill: bigger 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca22 { gap: 12px; }
+.ca22-icon { width: 44px; font-size: 16px; }
+.ca22-text { font-size: 13px; padding: 11px 20px; }
+.d-ca22 .ca22-sub { font-size: 9.5px; }
+
+/* 笏笏 25. CA23 Countdown: adjust layout 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca23 { gap: 8px; padding: 16px; }
+.ca23-num { font-size: 22px; }
+.ca23-sep { font-size: 18px; }
+.ca23-btn { font-size: 12px; padding: 9px 20px; }
+.d-ca23 .ca23-h { font-size: 11px; }
+
+/* 笏笏 26. CA24 Layered: bigger button 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+.d-ca24 { gap: 12px; }
+.ca24-btn { font-size: 13px; padding: 13px 30px; }
+.d-ca24 .ca24-sub { font-size: 9.5px; }
+.d-ca24 .ca24-hint { font-size: 9px; }
+
+/* 笏笏 Drawer: CTA demos get taller slot 笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏笏 */
+#cta-rich .drawer-demo-slot .demo,
+#cta-pop .drawer-demo-slot .demo,
+#cta-textured .drawer-demo-slot .demo,
+#cta-chic .drawer-demo-slot .demo {
+  height: 280px !important;
+}
+
+/* CTA grid: slightly wider min so cards breathe */
+#cta-rich .grid,
+#cta-pop .grid,
+#cta-textured .grid,
+#cta-chic .grid {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* In list view, CTA demo thumbnail height fix */
+.main.view-list #cta-rich .demo,
+.main.view-list #cta-pop .demo,
+.main.view-list #cta-textured .demo,
+.main.view-list #cta-chic .demo {
+  height: 56px;
+}
+
+/* Ensure all CTA demo backgrounds are opaque (no surface bleed) */
+.demo[class*="d-ca"] {
+  background: var(--surface2);
+}
