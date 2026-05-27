@@ -1,5 +1,4 @@
-﻿<script>
-// ==================== THEME ====================
+﻿// ==================== THEME ====================
 const themeBtn = document.getElementById('themeBtn');
 const html = document.documentElement;
 themeBtn.addEventListener('click', () => {
@@ -1322,3 +1321,4 @@ searchEl.oninput = () => {
     if(match) vis++;
   });
   countEl.textContent = q ? `${vis} / ${_totalCards} エフェクト` : `${_totalCards} エフェクト`;
+};
