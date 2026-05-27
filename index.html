@@ -263,6 +263,13 @@
     <a class="sb-link" href="#responsive-tips"><span class="sb-link-dot"></span>Responsive / Device</a>
     <a class="sb-link" href="#designsystem-tips"><span class="sb-link-dot"></span>Design System</a>
   </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">Design Tips · Extra</div>
+    <a class="sb-link" href="#hero-extra"><span class="sb-link-dot"></span>Hero Advanced</a>
+    <a class="sb-link" href="#layout-extra"><span class="sb-link-dot"></span>Layout Advanced</a>
+    <a class="sb-link" href="#texture-extra"><span class="sb-link-dot"></span>Texture Advanced</a>
+    <a class="sb-link" href="#color-extra"><span class="sb-link-dot"></span>Color Advanced</a>
+  </div>
 </nav>
 
 <main class="main">
@@ -280,14 +287,14 @@
   <!-- DASHBOARD STATS -->
   <div class="dash-stats">
     <div class="dash-stat">
-      <div class="dash-num" id="stat-total">236</div>
+      <div class="dash-num" id="stat-total">269</div>
       <div class="dash-lbl">Total Components</div>
-      <div class="dash-delta up">↑ +87 tips</div>
+      <div class="dash-delta up">↑ +120 tips</div>
     </div>
     <div class="dash-stat">
-      <div class="dash-num">34</div>
+      <div class="dash-num">38</div>
       <div class="dash-lbl">Categories</div>
-      <div class="dash-delta up">↑ +10 new</div>
+      <div class="dash-delta up">↑ +14 new</div>
     </div>
     <div class="dash-stat">
       <div class="dash-num">100%</div>
@@ -318,6 +325,10 @@
     <a class="chip" href="#ux-tips">UX Patterns</a>
     <a class="chip" href="#responsive-tips">Responsive</a>
     <a class="chip" href="#designsystem-tips">Design System</a>
+    <a class="chip" href="#hero-extra">Hero+</a>
+    <a class="chip" href="#layout-extra">Layout+</a>
+    <a class="chip" href="#texture-extra">Texture+</a>
+    <a class="chip" href="#color-extra">Color+</a>
   </div>
 
   <!-- ======================== BACKGROUNDS ======================== -->
@@ -5027,6 +5038,715 @@
         <div class="cinfo">
           <div class="cname">8pt Grid System（8の倍数ルール）</div>
           <div class="cdesc">余白・サイズをすべて4か8の倍数に統一する。「なんかズレてる感」がなくなり、デバイス間でもpixel-perfectに揃う。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== HERO SECTION EXTRA TIPS ======================== -->
+  <section class="cat-section tip-section" id="hero-extra">
+    <div class="cat-hdr">
+      <div class="cat-tag ht-tag">Design Tips · Hero Advanced</div>
+      <div class="cat-title">ヒーローセクション 応用 Tips</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" data-name="hero typography dominant large font display statement bold">
+        <div class="demo d-ht21">
+          <div class="ht21-eyebrow">Introducing</div>
+          <div class="ht21-word">Build<br><span class="accent">Fast.</span></div>
+          <div class="ht21-sub">フォントだけで世界観を作る</div>
+          <div class="ht21-cta">Learn more →</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">タイポグラフィ主体ヒーロー</div>
+          <div class="cdesc">巨大なディスプレイフォントだけで世界観を作る。Appleが多用する手法。装飾ゼロで高級感が増す。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero floating 3D elements depth cards perspective rotated">
+        <div class="demo d-ht22">
+          <div class="fl-card fl1">📊</div>
+          <div class="fl-card fl2">⚡</div>
+          <div class="fl-card fl3">🔒</div>
+          <div class="fl-content">
+            <div class="fl-h">3D Floating</div>
+            <div class="fl-s">Depth through layering</div>
+            <div class="fl-btn">Get Started</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">浮遊する3D要素</div>
+          <div class="cdesc">カードを微妙に傾けてanimation:translateYで浮遊させる。奥行きと動きで視覚的な豊かさを演出。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero live counter animated metrics number realtime users">
+        <div class="demo d-ht23">
+          <div class="lc-live">
+            <div class="lc-dot"></div>
+            <div class="lc-tag">LIVE</div>
+          </div>
+          <div class="lc-h">現在のアクティブユーザー</div>
+          <div class="lc-num"><span class="lc-accent">24,</span>891</div>
+          <div class="lc-sub">↑ 1,203 in last hour</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ライブカウンター付きヒーロー</div>
+          <div class="cdesc">リアルタイム数値はFOMOを生む最強の社会的証明。カウントアップアニメで視線を引き付ける。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero terminal code CLI developer aesthetic monospace dark">
+        <div class="demo d-ht24">
+          <div class="term-bar">
+            <div class="term-dot td-r"></div>
+            <div class="term-dot td-y"></div>
+            <div class="term-dot td-g"></div>
+            <div class="term-title">terminal</div>
+          </div>
+          <div class="term-body">
+            <div class="term-line"><span class="tl-prompt">$ </span><span class="tl-cmd">npx create-app my-project</span></div>
+            <div class="term-line"><span class="tl-out">✓ Installing dependencies...</span></div>
+            <div class="term-line"><span class="tl-out">✓ Project ready in 3s</span></div>
+            <div class="term-line"><span class="tl-dim">───────────────</span></div>
+            <div class="term-line"><span class="tl-prompt">$ </span><span class="tl-cur">▌</span></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ターミナル・コード美学</div>
+          <div class="cdesc">デベロッパー向け製品のヒーローに有効。CLI操作を見せることで「使ってみたい」気持ちを即喚起。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero glassmorphism card product blur gradient overlay">
+        <div class="demo d-ht25">
+          <div class="hg-blob1"></div>
+          <div class="hg-blob2"></div>
+          <div class="hg-card">
+            <div class="hg-h">One platform,<br>every workflow.</div>
+            <div class="hg-s">Ship 10× faster with AI.</div>
+            <div class="hg-btn">Start Free →</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">グラスカード + グラデ背景</div>
+          <div class="cdesc">グラデBG + glassmorphism カードの組み合わせ。カードが背景から浮き上がり立体的な奥行きが生まれる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero multi CTA primary secondary free tier pricing">
+        <div class="demo d-ht26">
+          <div class="mc-h">Start Building<br>in Minutes</div>
+          <div class="mc-s">No credit card required.</div>
+          <div class="mc-primary">Get Started Free</div>
+          <div class="mc-divider">or</div>
+          <div class="mc-secondary">View Pricing</div>
+          <div class="mc-price-hint">Free plan · $0/mo · No expiry</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">マルチCTA + 価格ヒント</div>
+          <div class="cdesc">Primary CTA → or → Secondary の構造に加え「無料」を明示する価格ヒントを置く。不安を除去する強力なパターン。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero floating toast notification badge achievement success">
+        <div class="demo d-ht27">
+          <div class="hero-toast">
+            <div class="ht-toast-icon">🎉</div>
+            <div class="ht-toast-txt">
+              <div class="ht-toast-title">New signup!</div>
+              <div class="ht-toast-sub">John just joined from Tokyo</div>
+            </div>
+          </div>
+          <div class="toast-hero-h">People love<br>our platform</div>
+          <div class="toast-hero-s">Join 50,000+ teams</div>
+          <div class="toast-hero-btn">Join Free</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">フローティング通知トースト</div>
+          <div class="cdesc">ヒーロー右上に「今まさに誰かがサインアップした」トーストを浮かせる。リアルタイム感で信頼感を演出。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero gradient underline headline decoration line accent">
+        <div class="demo d-ht28">
+          <div class="gu-eyebrow">The new standard</div>
+          <div>
+            <div class="gu-word">Design</div>
+          </div>
+          <div class="gu-h2">without limits.</div>
+          <div class="gu-s">Drag-and-drop components. Ship in hours.</div>
+          <div class="gu-btn">Explore →</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">グラデアンダーライン見出し</div>
+          <div class="cdesc">::after で下線にグラデを引く。全文にグラデを当てるより控えめで上品。強調したい1語に使う。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero icon grid background pattern texture subtle overlay">
+        <div class="demo d-ht29">
+          <div class="icon-grid">
+            <div class="ig-cell">⚡</div><div class="ig-cell">◈</div><div class="ig-cell">⊞</div><div class="ig-cell">◎</div>
+            <div class="ig-cell">▲</div><div class="ig-cell">⚡</div><div class="ig-cell">◈</div><div class="ig-cell">⊞</div>
+            <div class="ig-cell">◎</div><div class="ig-cell">▲</div><div class="ig-cell">⚡</div><div class="ig-cell">◈</div>
+            <div class="ig-cell">⊞</div><div class="ig-cell">◎</div><div class="ig-cell">▲</div><div class="ig-cell">⚡</div>
+            <div class="ig-cell">◈</div><div class="ig-cell">⊞</div><div class="ig-cell">◎</div><div class="ig-cell">▲</div>
+            <div class="ig-cell">⚡</div><div class="ig-cell">◈</div><div class="ig-cell">⊞</div><div class="ig-cell">◎</div>
+            <div class="ig-cell">▲</div><div class="ig-cell">⚡</div><div class="ig-cell">◈</div><div class="ig-cell">⊞</div>
+            <div class="ig-cell">◎</div><div class="ig-cell">▲</div><div class="ig-cell">⚡</div><div class="ig-cell">◈</div>
+            <div class="ig-cell">⊞</div><div class="ig-cell">◎</div><div class="ig-cell">▲</div><div class="ig-cell">⚡</div>
+            <div class="ig-cell">◈</div><div class="ig-cell">⊞</div><div class="ig-cell">◎</div><div class="ig-cell">▲</div>
+          </div>
+          <div class="ig-overlay"></div>
+          <div class="ig-h">Icon Pattern BG</div>
+          <div class="ig-s">Subtle repeat builds texture</div>
+          <div class="ig-btn">Discover</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">アイコングリッド背景</div>
+          <div class="cdesc">透明度6%程度のアイコンをグリッドに繰り返し、中央をradial-gradientでフェード。ブランド感のある背景テクスチャになる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="hero dark luxury premium gold minimal refined elegant">
+        <div class="demo d-ht30">
+          <div class="lux-overline">Limited Edition</div>
+          <div class="lux-h">Crafted for<br>the Few.</div>
+          <div class="lux-rule"></div>
+          <div class="lux-s">Handcrafted with precision. For those who demand the extraordinary.</div>
+          <div class="lux-btn">Request Access</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ダーク・ラグジュアリーヒーロー</div>
+          <div class="cdesc">ゴールドアクセント + 極黒背景 + 広い余白でプレミアム感を演出。invite-only / 高単価プロダクトに適した格調のある構成。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== LAYOUT EXTRA TIPS ======================== -->
+  <section class="cat-section tip-section" id="layout-extra">
+    <div class="cat-hdr">
+      <div class="cat-tag lt-tag">Design Tips · Layout Advanced</div>
+      <div class="cat-title">レイアウト・配置 応用 Tips</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" data-name="overlap elements layering depth z-index cards stacking">
+        <div class="demo d-lt8">
+          <div class="ov-base"></div>
+          <div class="ov-mid"></div>
+          <div class="ov-top">Overlay ✦</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">オーバーラップ / レイヤリング</div>
+          <div class="cdesc">要素を重ねることで奥行きと立体感が生まれる。position:absolute + z-index でグリッドを超えた配置が可能に。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="diagonal divider section separator angle clip-path">
+        <div class="demo d-lt9">
+          <div class="diag-top">
+            <div class="diag-top-txt">Section A</div>
+          </div>
+          <div class="diag-divider"></div>
+          <div class="diag-bottom">
+            <div class="diag-bot-txt">Section B</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">斜めセクション区切り</div>
+          <div class="cdesc">水平の区切り線を斜めにする。clip-pathや擬似要素のborderトリックで実装。単調なページに動きが生まれる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="sticky scroll panel step indicator progress sidebar fixed">
+        <div class="demo d-lt10">
+          <div class="sp-sticky">
+            <div class="sp-step">
+              <div class="sp-num">01</div>
+              <div class="sp-lbl">Setup</div>
+            </div>
+            <div class="sp-step active">
+              <div class="sp-num">02</div>
+              <div class="sp-lbl">Configure</div>
+            </div>
+            <div class="sp-step">
+              <div class="sp-num">03</div>
+              <div class="sp-lbl">Deploy</div>
+            </div>
+          </div>
+          <div class="sp-content">
+            <div class="sp-h">Step 02 content</div>
+            <div class="sp-body"></div>
+            <div class="sp-body2"></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Sticky Scroll パネル</div>
+          <div class="cdesc">左に固定ステップナビ、右をスクロールさせる「スクロールストーリーテリング」。ドキュメントや価値訴求に最適。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="fluid typography clamp responsive font size viewport scale">
+        <div class="demo d-lt11">
+          <div class="ft-row"><div class="ft-label">320px</div><div class="ft-text ft-sm">Fluid Type</div></div>
+          <div class="ft-row"><div class="ft-label">768px</div><div class="ft-text ft-md">Fluid Type</div></div>
+          <div class="ft-row"><div class="ft-label">1440px</div><div class="ft-text ft-lg">Fluid Type</div></div>
+          <div class="ft-hint">font-size: clamp(14px, 2vw, 28px)</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Fluid Typography（clamp）</div>
+          <div class="cdesc">clamp(min, preferred, max)でviewport幅に比例してフォントが滑らかに変化。メディアクエリ不要で常に美しいサイズ。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="grid auto-fill auto-fit difference CSS intrinsic layout">
+        <div class="demo d-lt12">
+          <div class="af-label">auto-fill — 空列を残す</div>
+          <div class="af-fill">
+            <div class="af-cell acc"></div>
+            <div class="af-cell acc"></div>
+            <div class="af-cell"></div>
+          </div>
+          <div class="af-label">auto-fit — 要素を広げる</div>
+          <div class="af-fit">
+            <div class="af-cell acc"></div>
+            <div class="af-cell acc"></div>
+            <div class="af-cell"></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">auto-fill vs auto-fit の違い</div>
+          <div class="cdesc">auto-fill は空のトラックを保持、auto-fit は要素を伸ばして埋める。レスポンシブグリッドの挙動が大きく変わる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="full width contained max-width layout edge to edge">
+        <div class="demo d-lt13">
+          <div class="fw-label">Full-width</div>
+          <div class="fw-row">
+            <div class="fw-full">Edge-to-edge ← →</div>
+          </div>
+          <div class="fw-divider"></div>
+          <div class="fw-label">Contained (max-width)</div>
+          <div class="fw-row contained">
+            <div class="fw-contained-box">Centered container</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Full-width vs Contained</div>
+          <div class="cdesc">ヒーローは全幅、コンテンツは max-width でセンタリング。混在させることでリズムと可読性を両立できる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="split sticky scroll two column panel left fixed right scroll">
+        <div class="demo d-lt14">
+          <div class="tps-left">
+            <div class="tps-sticky-lbl">→ sticky</div>
+            <div class="tps-h">Sticky Left<br>Panel</div>
+            <div class="tps-s">左が固定、右をスクロール</div>
+          </div>
+          <div class="tps-right">
+            <div class="tps-scroll-item tps-si-active">
+              <div class="tps-si-txt">Step 01 — Active</div>
+            </div>
+            <div class="tps-scroll-item">
+              <div class="tps-si-txt">Step 02</div>
+            </div>
+            <div class="tps-scroll-item">
+              <div class="tps-si-txt">Step 03</div>
+            </div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">2カラム Sticky Split</div>
+          <div class="cdesc">左カラムを position:sticky にして右をスクロール。製品紹介や機能説明での「読みながら確認する」体験が作れる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="Z pattern landing page flow layout navigation visual scanning">
+        <div class="demo d-lt15">
+          <div class="zp-row">
+            <div class="zp-visual"></div>
+            <div class="zp-content">Logo + Nav</div>
+            <div class="zp-arrow">→</div>
+            <div class="zp-content">CTA Button</div>
+          </div>
+          <div class="zp-divider"></div>
+          <div class="zp-row rev">
+            <div class="zp-content">Feature visual</div>
+            <div class="zp-arrow">↙</div>
+            <div class="zp-content">Headline</div>
+          </div>
+          <div class="zp-divider"></div>
+          <div class="zp-row">
+            <div class="zp-content">Social proof</div>
+            <div class="zp-arrow">→</div>
+            <div class="zp-content">Final CTA</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">Zパターン ページフロー</div>
+          <div class="cdesc">ロゴ→CTA→ビジュアル→メインコピー→最終CTAをZ字に配置。ランディングページで視線を最終行動に誘導する構造。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================== TEXTURE EXTRA TIPS ======================== -->
+  <section class="cat-section tip-section" id="texture-extra">
+    <div class="cat-hdr">
+      <div class="cat-tag tx-tag">Design Tips · Texture Advanced</div>
+      <div class="cat-title">質感・マテリアル 応用 Tips</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" data-name="holographic iridescent rainbow prismatic shiny foil card">
+        <div class="demo d-tx4">
+          <div class="holo-card">
+            <div class="holo-label">Holographic</div>
+          </div>
+          <div class="holo-foil">
+            <div class="holo-label" style="color:rgba(0,0,0,.5)">Foil</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ホログラフィック / 虹彩効果</div>
+          <div class="cdesc">background-size:200% のグラデをanimationでシフト。プレミアムカード・特別版バッジに使うと一気に高級感が出る。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="emboss deboss inset shadow 3D pressed raised material">
+        <div class="demo d-tx5">
+          <div class="em-card em-emboss">
+            <div class="em-icon">⬡</div>
+            <div class="em-label">Emboss</div>
+          </div>
+          <div class="em-card em-deboss">
+            <div class="em-icon">⬡</div>
+            <div class="em-label">Deboss</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">エンボス / デボス</div>
+          <div class="cdesc">エンボス=外側シャドウで浮き出す。デボス=inset shadowで押し込まれた感。トグル・押下状態の切り替えで自然なフィードバックになる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="carbon fiber woven texture pattern CSS repeat background">
+        <div class="demo d-tx6">
+          <div class="tx-panel">
+            <div class="tx-s tx-carbon"></div>
+            <div class="tx-lbl">Carbon</div>
+          </div>
+          <div class="tx-divider"></div>
+          <div class="tx-panel">
+            <div class="tx-s tx-woven"></div>
+            <div class="tx-lbl">Woven</div>
+          </div>
+          <div class="tx-divider"></div>
+          <div class="tx-panel">
+            <div class="tx-s tx-checker"></div>
+            <div class="tx-lbl">Checker</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">カーボンファイバー / 織物パターン</div>
+          <div class="cdesc">repeating-linear-gradientやrepeating-conic-gradientで素材感を表現。100%CSSでライブラリ不要。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="CRT scanline retro monitor vintage screen texture green">
+        <div class="demo d-tx7">
+          <div class="crt-scan"></div>
+          <div class="crt-vignette"></div>
+          <div class="crt-content">
+            <div class="crt-label">System Ready</div>
+            <div class="crt-text">READY_</div>
+            <div class="crt-sub">Press any key to continue</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">スキャンライン / CRT エフェクト</div>
+          <div class="cdesc">repeating-linearで水平線を2px間隔で描く。ゲーム・レトロ・サイバーパンク系プロダクトで独自の世界観を作れる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="bokeh blur circles depth of field light background ambient">
+        <div class="demo d-tx8">
+          <div class="bk bk1"></div>
+          <div class="bk bk2"></div>
+          <div class="bk bk3"></div>
+          <div class="bk bk4"></div>
+          <div class="bk bk5"></div>
+          <div class="bk-content">Bokeh BG</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ボケ / 被写界深度背景</div>
+          <div class="cdesc">filter:blur()した円をposition:absoluteで散らす。写真のボケ感をCSSで再現。コンテンツの後ろに奥行きを作る。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="grain gradient noise combo texture overlay atmospheric depth">
+        <div class="demo d-tx9">
+          <div class="gn-layer"></div>
+          <div class="gn-glow"></div>
+          <div class="gn-h">Grain + Gradient</div>
+          <div class="gn-s">The perfect combo</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">グレイン + グラデーション コンボ</div>
+          <div class="cdesc">グラデ単体は滑らかすぎる。SVGノイズを4〜5%重ねると素材感が生まれ、よりアナログで高品質な印象になる。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== COLOR EXTRA TIPS ======================== -->
+  <section class="cat-section tip-section" id="color-extra">
+    <div class="cat-hdr">
+      <div class="cat-tag ce-tag">Design Tips · Color Advanced</div>
+      <div class="cat-title">カラー 応用 Tips</div>
+    </div>
+    <div class="grid">
+
+      <div class="ecard" data-name="split complementary color harmony three color primary accent">
+        <div class="demo d-ce1">
+          <div class="sc-row">
+            <div class="sc-sw sc-base">主: Purple</div>
+            <div class="sc-sw sc-sp1">副1: Amber</div>
+            <div class="sc-sw sc-sp2">副2: Teal</div>
+          </div>
+          <div class="sc-ui">
+            <div class="sc-btn">Action</div>
+            <div class="sc-badge1">Warning</div>
+            <div class="sc-badge2">Success</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">スプリット補色ハーモニー</div>
+          <div class="cdesc">主色の補色の両隣を使う「分裂補色」。純補色より柔らかい対比で、UIの機能色として自然にはまる。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="muted palette desaturated gray single accent pop focus">
+        <div class="demo d-ce2">
+          <div class="mp-swatches">
+            <div class="mp-sw mp-1"></div>
+            <div class="mp-sw mp-2"></div>
+            <div class="mp-sw mp-3"></div>
+            <div class="mp-sw mp-4"></div>
+            <div class="mp-sw mp-acc"></div>
+          </div>
+          <div class="mp-demo">
+            <div class="mp-icon">📦</div>
+            <div class="mp-text">
+              <div class="mp-t1"></div>
+              <div class="mp-t2"></div>
+            </div>
+            <div class="mp-cta">Deploy</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ミュートパレット + 単一アクセント</div>
+          <div class="cdesc">90%をグレーで構成し、CTAだけに彩度の高いアクセント色を使う。アクセントが際立ち、ユーザーの目が自然にCTAへ向く。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="neon accent near black dark background glow electric vivid">
+        <div class="demo d-ce3">
+          <div class="neon-row">
+            <div class="neon-sw n-p"></div>
+            <div class="neon-txt n-t-p">NEON PURPLE</div>
+          </div>
+          <div class="neon-row">
+            <div class="neon-sw n-b"></div>
+            <div class="neon-txt n-t-b">NEON CYAN</div>
+          </div>
+          <div class="neon-row">
+            <div class="neon-sw n-g"></div>
+            <div class="neon-txt n-t-g">NEON GREEN</div>
+          </div>
+          <div class="neon-row">
+            <div class="neon-sw n-r"></div>
+            <div class="neon-txt n-t-r">NEON ROSE</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ネオンアクセント on 極黒背景</div>
+          <div class="cdesc">背景を #020208 に落としたうえで高彩度ネオン色を使う。text-shadowとbox-shadowに同色を設定すると発光感が出る。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="dark mode glow color roles semantic palette system">
+        <div class="demo d-ce4">
+          <div class="gp-item">
+            <div class="gp-dot gp-dot-p"></div>
+            <div class="gp-name gp-n-p">Brand</div>
+            <div class="gp-use">CTA · Focus · Active</div>
+          </div>
+          <div class="gp-item">
+            <div class="gp-dot gp-dot-b"></div>
+            <div class="gp-name gp-n-b">Info</div>
+            <div class="gp-use">Links · Notices</div>
+          </div>
+          <div class="gp-item">
+            <div class="gp-dot gp-dot-g"></div>
+            <div class="gp-name gp-n-g">Success</div>
+            <div class="gp-use">Done · Healthy</div>
+          </div>
+          <div class="gp-item">
+            <div class="gp-dot gp-dot-y"></div>
+            <div class="gp-name gp-n-y">Warning</div>
+            <div class="gp-use">Caution · Pending</div>
+          </div>
+          <div class="gp-item">
+            <div class="gp-dot gp-dot-r"></div>
+            <div class="gp-name gp-n-r">Danger</div>
+            <div class="gp-use">Error · Destructive</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">ダークモード グローカラーロール</div>
+          <div class="cdesc">各セマンティックカラーにbox-shadowでグロウを付加するだけで視認性と品質感が上がる。ダークテーマの必須テクニック。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color coded navigation sidebar menu section category">
+        <div class="demo d-ce5">
+          <div class="cn-sidebar">
+            <div class="cn-item cn-p"><div class="cn-dot cn-pd"></div>Dashboard</div>
+            <div class="cn-item cn-b"><div class="cn-dot cn-bd"></div>Analytics</div>
+            <div class="cn-item cn-g"><div class="cn-dot cn-gd"></div>Deployments</div>
+            <div class="cn-item cn-y"><div class="cn-dot cn-yd"></div>Billing</div>
+            <div class="cn-item cn-r"><div class="cn-dot cn-rd"></div>Alerts</div>
+          </div>
+          <div class="cn-content">
+            <div class="cn-ch"></div>
+            <div class="cn-cb"></div>
+            <div class="cn-cb" style="width:60%"></div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">カラーコードナビゲーション</div>
+          <div class="cdesc">各セクションに固有の色を割り当てる。ユーザーが「緑=デプロイ」などを覚えると操作スピードが上がる。ダッシュボードに有効。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="earth tones warm brown ochre tan natural organic dark UI">
+        <div class="demo d-ce6">
+          <div class="et-swatches">
+            <div class="et-sw et1"></div>
+            <div class="et-sw et2"></div>
+            <div class="et-sw et3"></div>
+            <div class="et-sw et4"></div>
+            <div class="et-sw et5"></div>
+          </div>
+          <div class="et-card">
+            <div class="et-ch">Earthy Dark</div>
+            <div class="et-cs">Brown-base UI</div>
+            <div class="et-btn">Explore</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">アーストーン ダークUI</div>
+          <div class="cdesc">黒ベースをやや茶色寄りにシフトするだけで温かみのある独自の世界観になる。自然・食・ウェルネス系のSaaSに向く。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="gradient color harmony analogous split warm cool palette">
+        <div class="demo d-ce7">
+          <div class="gh-label">Analogous gradient</div>
+          <div class="gh-bar gh-analogous">Purple → Blue</div>
+          <div class="gh-label">Split comp gradient</div>
+          <div class="gh-bar gh-split">Purple → Teal → Amber</div>
+          <div class="gh-label">Warm gradient</div>
+          <div class="gh-bar gh-warm">Fire palette</div>
+          <div class="gh-label">Cool gradient</div>
+          <div class="gh-bar gh-cool">Ocean palette</div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">グラデーションカラーハーモニー</div>
+          <div class="cdesc">グラデの始終点を色相環で計算して選ぶ。無作為な2色より「アナログ」や「スプリット補色」に沿ったグラデが美しい。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="data table color contrast zebra stripe status row highlight">
+        <div class="demo d-ce8">
+          <div class="dt-header">
+            <div class="dt-cell dt-head">Name</div>
+            <div class="dt-cell dt-head">Status</div>
+            <div class="dt-cell dt-head">Region</div>
+            <div class="dt-cell dt-head">Score</div>
+          </div>
+          <div class="dt-row">
+            <div class="dt-cell dt-normal">App-01</div>
+            <div class="dt-cell dt-success">● Live</div>
+            <div class="dt-cell dt-normal">Tokyo</div>
+            <div class="dt-cell dt-normal">99.9%</div>
+          </div>
+          <div class="dt-row">
+            <div class="dt-cell dt-zebra">App-02</div>
+            <div class="dt-cell dt-warn">● Pending</div>
+            <div class="dt-cell dt-zebra">NYC</div>
+            <div class="dt-cell dt-zebra">97.1%</div>
+          </div>
+          <div class="dt-row">
+            <div class="dt-cell dt-normal">App-03</div>
+            <div class="dt-cell dt-error">● Error</div>
+            <div class="dt-cell dt-normal">London</div>
+            <div class="dt-cell dt-normal">82.4%</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">データテーブルの色コントラスト</div>
+          <div class="cdesc">ゼブラストライプで行を区別、ステータスセルには色背景。スキャン速度が上がる。背景色の不透明度は10%以下に抑える。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="triadic color three equidistant wheel harmony design">
+        <div class="demo d-ce9">
+          <div class="tri-wrap">
+            <div class="tri-circle tri-p">P</div>
+            <div class="tri-circle tri-b">B</div>
+            <div class="tri-circle tri-g">G</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">トライアディック配色</div>
+          <div class="cdesc">色相環を120°ずつ3分割した色の組み合わせ。mix-blend-mode:screen で重なり部分に合成色が生まれ視覚的に豊か。</div>
+        </div>
+      </div>
+
+      <div class="ecard" data-name="color temperature mood warm cool hero atmosphere brand emotion">
+        <div class="demo d-ce10">
+          <div class="ct-mood cm-warm">
+            <div class="ct-icon">🔥</div>
+            <div class="ct-m-h">Warm</div>
+            <div class="ct-m-s">Energy · Urgency</div>
+            <div class="ct-btn">Act Now</div>
+          </div>
+          <div class="ct-divider"></div>
+          <div class="ct-mood cm-cool">
+            <div class="ct-icon">❄️</div>
+            <div class="ct-m-h">Cool</div>
+            <div class="ct-m-s">Trust · Calm</div>
+            <div class="ct-btn">Learn More</div>
+          </div>
+        </div>
+        <div class="cinfo">
+          <div class="cname">色温度とブランドの感情設計</div>
+          <div class="cdesc">ウォームは行動喚起・緊急性、クールは信頼・落ち着き。ブランドが届けたい感情から背景色のベーストーンを決める。</div>
         </div>
       </div>
 
