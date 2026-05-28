@@ -537,6 +537,67 @@
   background: #eef2f7;
 }
 
+/* ── Live-preview bar (URL + open button) ─────────────────────────────── */
+.lpl-preview-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  background: var(--lpl-surface-filter);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  flex-shrink: 0;
+}
+:root.lpl-dark .lpl-preview-bar {
+  border-bottom-color: rgba(255,255,255,.07);
+}
+.lpl-preview-url-txt {
+  flex: 1 1 0;
+  font-size: 11px;
+  color: var(--lpl-text-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+}
+.lpl-preview-open-btn {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: #1a4c8e;
+  padding: 5px 11px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background .15s;
+  white-space: nowrap;
+}
+.lpl-preview-open-btn:hover { background: #1368d8; }
+:root.lpl-dark .lpl-preview-open-btn { background: #2563eb; }
+:root.lpl-dark .lpl-preview-open-btn:hover { background: #3b82f6; }
+
+/* Live preview iframe — fills remaining height */
+#lplDetailBody .lpl-preview-frame {
+  flex: 1 1 0;
+  min-height: 0;
+}
+
+/* ── Fallback notice when iframe is blocked ──────────────────────────── */
+.lpl-preview-notice {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: rgba(245,166,35,.1);
+  border-top: 1px solid rgba(245,166,35,.25);
+  font-size: 11px;
+  color: var(--lpl-text-2);
+  flex-shrink: 0;
+  line-height: 1.5;
+}
+:root.lpl-dark .lpl-preview-notice {
+  background: rgba(245,166,35,.08);
+}
+
 /* ── Responsive ──────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .lpl-sidebar { display: none; }

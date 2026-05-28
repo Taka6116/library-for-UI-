@@ -312,6 +312,28 @@
 
   LP_HTML_PREVIEWS['lp-cta-companion-support-001'] = '<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>' + _BASE_CSS + '\nbody{background:linear-gradient(135deg,#1a4c8e 0%,#0f4a8f 48%,#1368d8 100%);min-height:100vh;}\n.wrap{padding:56px 32px;text-align:center;}\n.cta-ttl{font-size:1.8rem;font-weight:800;color:#fff;margin-bottom:10px;letter-spacing:-.5px;}\n.cta-sub{font-size:14px;color:rgba(255,255,255,.8);line-height:1.8;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto;}\n.cta-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:600px;margin:0 auto 24px;}\n.cta-card{background:rgba(255,255,255,.97);border-radius:14px;padding:20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;box-shadow:0 8px 32px rgba(0,0,0,.12);}\n.cta-card-ico{width:48px;height:48px;border-radius:50%;background:#EEF6FF;display:flex;align-items:center;justify-content:center;font-size:22px;}\n.cta-card-ttl{font-size:14px;font-weight:700;color:#1a2b3c;}\n.cta-card-body{font-size:11px;color:#4a5568;line-height:1.6;}\n.cta-card-btn{padding:8px 18px;background:#1a4c8e;color:#fff;border-radius:20px;font-size:12px;font-weight:700;margin-top:4px;}\n.cta-note{font-size:11px;color:rgba(255,255,255,.55);}\n@media(max-width:600px){.cta-grid{grid-template-columns:1fr;}}</style></head><body><div class="wrap"><h2 class="cta-ttl">まず、話を聞かせてください。</h2><p class="cta-sub">補助金のことを相談したい。自社が対象かどうか知りたい。それだけで構いません。</p><div class="cta-grid"><div class="cta-card"><div class="cta-card-ico">✉️</div><div class="cta-card-ttl">無料相談</div><div class="cta-card-body">経営課題と補助金の可能性について、まずお話しします。</div><div class="cta-card-btn">相談を予約する ›</div></div><div class="cta-card"><div class="cta-card-ico">🔍</div><div class="cta-card-ttl">補助金診断</div><div class="cta-card-body">会社名・URLを入力するだけで、使える可能性のある補助金をご案内します。</div><div class="cta-card-btn">無料で診断する ›</div></div><div class="cta-card"><div class="cta-card-ico">🤝</div><div class="cta-card-ttl">提携について</div><div class="cta-card-body">税理士・士業・ベンダーの方はパートナープログラムをご覧ください。</div><div class="cta-card-btn">提携ページへ ›</div></div><div class="cta-card"><div class="cta-card-ico">📚</div><div class="cta-card-ttl">補助金情報</div><div class="cta-card-body">現在公募中の補助金一覧を確認できます。</div><div class="cta-card-btn">補助金を検索する ›</div></div></div><p class="cta-note">補助金の活用や制度の整理について、お気軽にご相談ください。</p></div></body></html>';
 
+  /* ─── Live preview URLs ─────────────────────────────────────────────── */
+  var LP_LIVE_URLS = {
+    'lp-hero-nts-purpose-guide-001':    'https://subsidy-consulting-nts.vercel.app/',
+    'lp-filter-nts-guide-001':          'https://subsidy-consulting-nts.vercel.app/',
+    'lp-cardgrid-nts-guide-001':        'https://subsidy-consulting-nts.vercel.app/',
+    'lp-hero-subsidy-detail-001':       'https://subsidy-consulting-nts.vercel.app/check',
+    'lp-summary-grid-001':              'https://subsidy-consulting-nts.vercel.app/',
+    'lp-diagnosis-check-001':           'https://subsidy-consulting-nts.vercel.app/check',
+    'lp-usecase-before-after-001':      'https://subsidy-consulting-nts.vercel.app/',
+    'lp-flow-consultation-001':         'https://subsidy-consulting-nts.vercel.app/',
+    'lp-faq-legal-safe-001':            'https://subsidy-consulting-nts.vercel.app/',
+    'lp-cta-companion-support-001':     'https://subsidy-consulting-nts.vercel.app/',
+    'lp-hero-video-library-001':        'https://subsidy-consulting-nts.vercel.app/',
+    'lp-video-queue-ticker-001':        'https://subsidy-consulting-nts.vercel.app/',
+    'lp-video-card-grid-001':           'https://subsidy-consulting-nts.vercel.app/',
+    'lp-side-category-panel-001':       'https://subsidy-consulting-nts.vercel.app/',
+    'lp-top-news-ticker-001':           'https://subsidy-consulting-nts.vercel.app/',
+    'lp-service-reorder-fv-001':        'https://subsidy-consulting-nts.vercel.app/',
+    'lp-industry-specific-section-001': 'https://subsidy-consulting-nts.vercel.app/partner',
+    'lp-profile-expand-section-001':    'https://subsidy-consulting-nts.vercel.app/partner'
+  };
+
   /* ─── Config ────────────────────────────────────────────────────────── */
   var LP_CAT_LABELS = {
     "all": "すべて",
@@ -540,11 +562,11 @@
   /* ─── Open / Close detail ─────────────────────────────────────────── */
   function openDetail(item) {
     lpState.activeItem = item;
-    lpState.activeTab = LP_HTML_PREVIEWS[item.id] ? 'preview' : 'readme';
+    lpState.activeTab = (LP_LIVE_URLS[item.id] || LP_HTML_PREVIEWS[item.id]) ? 'preview' : 'readme';
     renderCards(); // highlight active card
     // Reset tabs
     var tabsEl = document.getElementById('lplTabs');
-    var defaultTab = LP_HTML_PREVIEWS[item.id] ? 'preview' : 'readme';
+    var defaultTab = (LP_LIVE_URLS[item.id] || LP_HTML_PREVIEWS[item.id]) ? 'preview' : 'readme';
     if (tabsEl) {
       tabsEl.querySelectorAll('.lpl-tab').forEach(function(t){
         t.classList.toggle('active', t.dataset.tab === defaultTab);
@@ -670,10 +692,10 @@
       var bestForStr = item.bestFor.slice(0, 3).map(function(b){
         return '<span class="lpl-tag">' + escHtml(b) + '</span>';
       }).join('');
-      var hasHtml = !!LP_HTML_PREVIEWS[item.id];
+      var hasHtml = !!(LP_HTML_PREVIEWS[item.id] || LP_LIVE_URLS[item.id]);
       var badgeHtml = '';
-      if (item.hasPrompt)          badgeHtml += '<span class="lpl-badge has-prompt">⌥ Prompt</span>';
-      if (item.hasPreview||hasHtml) badgeHtml += '<span class="lpl-badge has-preview">👁 Preview</span>';
+      if (item.hasPrompt)           badgeHtml += '<span class="lpl-badge has-prompt">⌥ Prompt</span>';
+      if (item.hasPreview || hasHtml) badgeHtml += '<span class="lpl-badge has-preview">👁 Preview</span>';
       if (!item.hasPrompt && !item.hasPreview && !hasHtml) badgeHtml += '<span class="lpl-badge no-content">準備中</span>';
       var legalWarn = (item.qa && item.qa.legalCopy === 'check_required')
         ? '<span class="lpl-badge" style="background:rgba(251,191,36,.1);color:#fbbf24;border-color:rgba(251,191,36,.2)">⚠ 法務確認</span>' : '';
@@ -748,9 +770,39 @@
         bodyEl.innerHTML = renderChecklist(item.checks);
       }
     } else if (tab === 'preview') {
+      var liveUrl   = LP_LIVE_URLS[item.id];
       var previewHtml = LP_HTML_PREVIEWS[item.id];
-      if (!previewHtml) {
+      if (!liveUrl && !previewHtml) {
         bodyEl.innerHTML = '<div class="lpl-no-content"><div class="lpl-no-icon">👁</div>プレビューはまだ用意されていません</div>';
+      } else if (liveUrl) {
+        bodyEl.style.padding = '0';
+        bodyEl.style.overflow = 'hidden';
+        bodyEl.style.display = 'flex';
+        bodyEl.style.flexDirection = 'column';
+        bodyEl.innerHTML =
+          '<div class="lpl-preview-bar">' +
+            '<span class="lpl-preview-url-txt">🔗 ' + escHtml(liveUrl) + '</span>' +
+            '<a class="lpl-preview-open-btn" href="' + escHtml(liveUrl) + '" target="_blank" rel="noopener noreferrer">実際のページを開く ↗</a>' +
+          '</div>' +
+          '<iframe class="lpl-preview-frame" src="' + escHtml(liveUrl) + '" id="lplLiveFrame" allow="autoplay" referrerpolicy="no-referrer"></iframe>' +
+          '<div class="lpl-preview-notice" id="lplPreviewNotice">' +
+            '<span>⚠ 外部サイトが埋め込みをブロックしている場合は上の「実際のページを開く ↗」ボタンからご覧ください。</span>' +
+          '</div>';
+        // Attempt to detect load failure; if frame content is unreachable show notice
+        var liveFrame = document.getElementById('lplLiveFrame');
+        var notice    = document.getElementById('lplPreviewNotice');
+        if (liveFrame) {
+          liveFrame.addEventListener('load', function () {
+            try {
+              // If the frame loaded a real page (not blocked), hide the notice
+              // We can't read cross-origin content, but if src matches we assume ok
+              notice.style.display = 'none';
+            } catch (e) { /* cross-origin — keep notice visible */ }
+          });
+          liveFrame.addEventListener('error', function () {
+            notice.style.display = 'flex';
+          });
+        }
       } else {
         bodyEl.style.padding = '0';
         bodyEl.style.overflow = 'hidden';
