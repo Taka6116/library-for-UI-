@@ -288,6 +288,19 @@
     <a class="sb-link" href="#cta-textured"><span class="sb-link-dot"></span>Textured · Layered</a>
     <a class="sb-link" href="#cta-chic"><span class="sb-link-dot"></span>Chic · Cool</a>
   </div>
+  <div class="sb-cat">
+    <div class="sb-cat-title">GSAP &amp; Parallax</div>
+    <a class="sb-link" href="#gsap-section"><span class="sb-link-dot"></span>Scroll Scrub</a>
+    <a class="sb-link" href="#gsap-cascade"><span class="sb-link-dot"></span>Stagger Cascade</a>
+    <a class="sb-link" href="#gsap-float"><span class="sb-link-dot"></span>Float Orbs</a>
+    <a class="sb-link" href="#gsap-mag"><span class="sb-link-dot"></span>Magnetic Cluster</a>
+    <a class="sb-link" href="#gsap-word"><span class="sb-link-dot"></span>Word Reveal</a>
+    <a class="sb-link" href="#gsap-depth"><span class="sb-link-dot"></span>Depth Parallax</a>
+    <a class="sb-link" href="#gsap-spring"><span class="sb-link-dot"></span>Spring Cards</a>
+    <a class="sb-link" href="#gsap-count"><span class="sb-link-dot"></span>Count Morph</a>
+    <a class="sb-link" href="#gsap-clip"><span class="sb-link-dot"></span>Clip Wipe</a>
+    <a class="sb-link" href="#gsap-vel"><span class="sb-link-dot"></span>Velocity Tilt</a>
+  </div>
   <div class="sb-search-wrap">
     <input id="sidebarSearch" class="sb-search" placeholder="カテゴリを絞り込む...">
   </div>
@@ -359,6 +372,7 @@
     <a class="chip" href="#cta-pop">CTA Pop</a>
     <a class="chip" href="#cta-textured">CTA Texture</a>
     <a class="chip" href="#cta-chic">CTA Chic</a>
+    <a class="chip" href="#gsap-section">GSAP / Parallax</a>
   </div>
 
   <!-- SEARCH EMPTY STATE -->
@@ -6587,6 +6601,204 @@
 <!-- ======================== PROGRESS DOTS ======================== -->
 <nav class="progress-dots" id="progressDots" aria-label="セクションナビゲーション"></nav>
 
+<!-- ======================== GSAP & PARALLAX ======================== -->
+<section class="cat-section" id="gsap-section">
+  <div class="cat-hdr">
+    <div class="cat-tag">GSAP &amp; Parallax</div>
+    <div class="cat-title">スクロール・視差・モーション</div>
+  </div>
+  <div class="grid">
+
+    <!-- 1. Scroll Scrub -->
+    <div class="ecard" id="gsap-scrub" data-name="gsap scroll scrub スクロール スクラブ">
+      <div class="demo" style="padding:0;overflow:hidden">
+        <div class="gsap-scrub-demo" style="height:100%">
+          <span class="gsap-scrub-label">0%</span>
+          <div class="gsap-scrub-track">
+            <div class="gsap-scrub-orb"></div>
+          </div>
+          <span class="gsap-scrub-hint">↓ スクロールで動かす</span>
+        </div>
+      </div>
+      <div class="cinfo">
+        <div class="cname">Scroll Scrub</div>
+        <div class="cdesc">スクロール量に比例してオブジェクトが動くGSAPのscrubエフェクト。プログレスバー・タイムラインに最適。</div>
+      </div>
+    </div>
+
+    <!-- 2. Stagger Cascade -->
+    <div class="ecard" id="gsap-cascade" data-name="gsap stagger cascade カード スタガー">
+      <div class="demo" style="padding:0;display:flex;align-items:center;justify-content:center">
+        <div class="gsap-cascade-group" style="width:100%">
+          <div class="gsap-cascade-card"><div class="gsap-cc-icon">🎯</div><div class="gsap-cc-line"></div><div class="gsap-cc-line"></div></div>
+          <div class="gsap-cascade-card"><div class="gsap-cc-icon">⚡</div><div class="gsap-cc-line"></div><div class="gsap-cc-line"></div></div>
+          <div class="gsap-cascade-card"><div class="gsap-cc-icon">✨</div><div class="gsap-cc-line"></div><div class="gsap-cc-line"></div></div>
+          <div class="gsap-cascade-card"><div class="gsap-cc-icon">🚀</div><div class="gsap-cc-line"></div><div class="gsap-cc-line"></div></div>
+          <div class="gsap-cascade-card"><div class="gsap-cc-icon">💫</div><div class="gsap-cc-line"></div><div class="gsap-cc-line"></div></div>
+          <div class="gsap-cascade-card"><div class="gsap-cc-icon">🌟</div><div class="gsap-cc-line"></div><div class="gsap-cc-line"></div></div>
+        </div>
+      </div>
+      <div class="cinfo">
+        <div class="cname">Stagger Cascade</div>
+        <div class="cdesc">スクロールでビューに入った瞬間、カードが順番に弾むように登場するスタガーアニメーション。</div>
+      </div>
+    </div>
+
+    <!-- 3. Float Orbs -->
+    <div class="ecard" id="gsap-float" data-name="gsap float orbs 浮遊 パーティクル">
+      <div class="demo" style="padding:0;overflow:hidden">
+        <div class="gsap-float-stage">
+          <div class="gsap-float-orb" data-phase="0" data-amp="18" data-speed="0.55" style="width:80px;height:80px;background:radial-gradient(circle,#818cf8,#4f46e5);left:15%;top:20%"></div>
+          <div class="gsap-float-orb" data-phase="2.1" data-amp="14" data-speed="0.7" style="width:50px;height:50px;background:radial-gradient(circle,#34d399,#059669);right:20%;top:30%"></div>
+          <div class="gsap-float-orb" data-phase="4.2" data-amp="20" data-speed="0.45" style="width:36px;height:36px;background:radial-gradient(circle,#fb923c,#ea580c);right:30%;bottom:25%"></div>
+          <div class="gsap-float-orb" data-phase="1.3" data-amp="12" data-speed="0.9" style="width:24px;height:24px;background:radial-gradient(circle,#f472b6,#db2777);left:35%;bottom:20%"></div>
+          <div class="gsap-float-orb" data-phase="3.1" data-amp="15" data-speed="0.6" style="width:16px;height:16px;background:radial-gradient(circle,#60a5fa,#2563eb);left:55%;top:50%"></div>
+        </div>
+      </div>
+      <div class="cinfo">
+        <div class="cname">Float Orbs</div>
+        <div class="cdesc">正弦波で揺れ続ける浮遊オブジェクト。各要素の位相・振幅・速度を独立して制御するGSAP的アプローチ。</div>
+      </div>
+    </div>
+
+    <!-- 4. Magnetic Cluster -->
+    <div class="ecard" id="gsap-mag" data-name="gsap magnetic cluster マグネット カーソル">
+      <div class="demo" style="padding:0;overflow:hidden">
+        <div class="gsap-mag-grid">
+          <div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div>
+          <div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div>
+          <div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div>
+          <div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div><div class="gsap-mag-dot"></div>
+        </div>
+      </div>
+      <div class="cinfo">
+        <div class="cname">Magnetic Cluster</div>
+        <div class="cdesc">カーソル周辺のドットが引き寄せられる磁力場エフェクト。マウス位置に応じてリアルタイム変位計算。</div>
+      </div>
+    </div>
+
+    <!-- 5. Word Reveal -->
+    <div class="ecard" id="gsap-word" data-name="gsap word reveal テキスト 単語 ワード">
+      <div class="demo" style="padding:0;overflow:hidden">
+        <div class="gsap-word-reveal-wrap">
+          <p class="gsap-word-reveal">補助金で、経営を動かす。</p>
+          <p class="gsap-word-reveal" style="font-size:15px;opacity:.7;font-weight:600">設備投資から未来へ、一緒に走る。</p>
+          <p class="gsap-word-sub">↓ スクロールでアクティブに</p>
+        </div>
+      </div>
+      <div class="cinfo">
+        <div class="cname">Word-by-Word Reveal</div>
+        <div class="cdesc">単語ごとにblur解除＋translateで登場するGSAP SplitTextスタイルのテキストアニメーション。</div>
+      </div>
+    </div>
+
+    <!-- 6. Depth Parallax -->
+    <div class="ecard" id="gsap-depth" data-name="gsap depth parallax 視差 奥行き">
+      <div class="demo" style="padding:0;overflow:hidden">
+        <div class="gsap-depth-section">
+          <div class="gsap-depth-layer" data-depth="1.4" style="z-index:1">
+            <div style="width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,.3),transparent);blur:4px"></div>
+          </div>
+          <div class="gsap-depth-layer" data-depth="0.7" style="z-index:2">
+            <div style="width:90px;height:90px;border-radius:16px;background:linear-gradient(135deg,rgba(139,92,246,.5),rgba(59,130,246,.4));transform:rotate(20deg)"></div>
+          </div>
+          <div class="gsap-depth-layer" data-depth="0.2" style="z-index:3">
+            <div style="text-align:center;padding:18px 22px;background:rgba(255,255,255,.07);border-radius:12px;border:1px solid rgba(255,255,255,.12)">
+              <div style="font-size:13px;font-weight:700;color:#e0e7ff">Depth Layers</div>
+              <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:4px">↑↓ スクロール</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cinfo">
+        <div class="cname">Depth Parallax</div>
+        <div class="cdesc">奥行き値でスクロール速度を変える視差効果。遠い要素は速く、近い要素はゆっくり動き、距離感を演出。</div>
+      </div>
+    </div>
+
+    <!-- 7. Spring Cards -->
+    <div class="ecard" id="gsap-spring" data-name="gsap spring card 3d tilt スプリング">
+      <div class="demo" style="padding:0;display:flex;align-items:center;justify-content:center;gap:12px;background:#08081e">
+        <div class="gsap-spring-card" style="width:120px;height:90px;background:linear-gradient(135deg,#312e81,#4338ca);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px">
+          <div class="gsap-spring-shine"></div>
+          <div style="font-size:22px">🎯</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.7);font-weight:600">Hover me</div>
+        </div>
+        <div class="gsap-spring-card" style="width:120px;height:90px;background:linear-gradient(135deg,#064e3b,#059669);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px">
+          <div class="gsap-spring-shine"></div>
+          <div style="font-size:22px">⚡</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.7);font-weight:600">Hover me</div>
+        </div>
+      </div>
+      <div class="cinfo">
+        <div class="cname">Spring Cards</div>
+        <div class="cdesc">カーソル位置に応じてperspective rotateするスプリング物理のカードティルト。ハイライトシャインつき。</div>
+      </div>
+    </div>
+
+    <!-- 8. Count Morph -->
+    <div class="ecard" id="gsap-count" data-name="gsap count morph number カウント 数字">
+      <div class="demo" style="padding:0;overflow:hidden">
+        <div class="gsap-countmorph-wrap">
+          <div class="gsap-cm-item">
+            <div class="gsap-countmorph" data-target="1250" data-suffix="万円" data-duration="2200" style="color:#818cf8">0万円</div>
+            <div class="gsap-cm-label">補助上限</div>
+          </div>
+          <div class="gsap-cm-item">
+            <div class="gsap-countmorph" data-target="47" data-suffix="%" data-duration="1800" style="color:#34d399">0%</div>
+            <div class="gsap-cm-label">採択率</div>
+          </div>
+          <div class="gsap-cm-item">
+            <div class="gsap-countmorph" data-target="2" data-suffix="/3" data-decimals="0" data-duration="1200" style="color:#fb923c">0/3</div>
+            <div class="gsap-cm-label">補助率</div>
+          </div>
+        </div>
+      </div>
+      <div class="cinfo">
+        <div class="cname">Count Morph</div>
+        <div class="cdesc">スプリングイージングで弾みながら増加するカウンター。elasticEaseOutで数字が行き過ぎてから落ち着く。</div>
+      </div>
+    </div>
+
+    <!-- 9. Clip Wipe -->
+    <div class="ecard" id="gsap-clip" data-name="gsap clip wipe reveal クリップ ワイプ">
+      <div class="demo" style="padding:0;overflow:hidden">
+        <div class="gsap-clip-wipe" style="height:100%">
+          <div class="gsap-cw-inner" style="height:100%">
+            <div style="text-align:center">
+              <div style="font-size:32px;margin-bottom:10px">✨</div>
+              <div style="font-size:15px;font-weight:800;color:#e0e7ff;margin-bottom:6px">Clip Reveal</div>
+              <div style="font-size:11px;color:rgba(255,255,255,.5)">スクロールでエントリー</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cinfo">
+        <div class="cname">Clip Wipe Reveal</div>
+        <div class="cdesc">clip-pathの円形マスクが0%→150%に広がるリビールアニメーション。コンテンツ登場に深みを出す。</div>
+      </div>
+    </div>
+
+    <!-- 10. Velocity Tilt -->
+    <div class="ecard" id="gsap-vel" data-name="gsap velocity tilt scroll 速度 傾き">
+      <div class="demo" style="padding:0;position:relative">
+        <div class="gsap-vel-stage">
+          <div class="gsap-vel-card">
+            <div class="gsap-vel-icon">🏄</div>
+            <div class="gsap-vel-label">Velocity Tilt</div>
+          </div>
+        </div>
+        <div class="gsap-vel-hint">↑↓ スクロール速度で傾く</div>
+      </div>
+      <div class="cinfo">
+        <div class="cname">Velocity Tilt</div>
+        <div class="cdesc">スクロール速度に応じてカードが前後に傾くエフェクト。lerpで残像感を演出し動きのリアリティを向上。</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- LP Library Overlay -->
 <div id="lpLibOverlay"></div>
 
@@ -6605,6 +6817,7 @@
       <input type="text" id="lpLibSearch" placeholder="セクション名・カテゴリ・タグで検索...">
     </div>
     <span class="lpl-count" id="lpLibCount">20 件</span>
+    <button class="lpl-theme-toggle" id="lpLibThemeToggle" title="ダークモードに切替">🌙</button>
     <button class="lpl-close" id="lpLibClose" title="閉じる">×</button>
   </div>
 
@@ -6634,6 +6847,7 @@
     <button class="lpl-detail-close" id="lpLibDetailClose" title="詳細を閉じる">×</button>
   </div>
   <div class="lpl-tabs" id="lplTabs">
+    <div class="lpl-tab" data-tab="preview">👁 Preview</div>
     <div class="lpl-tab active" data-tab="readme">README</div>
     <div class="lpl-tab" data-tab="prompt">Prompt</div>
     <div class="lpl-tab" data-tab="checks">Checks</div>
@@ -6644,6 +6858,7 @@
 
 <script src="script.js"></script>
 <script src="script-v2.js"></script>
+<script src="script-gsap.js"></script>
 <script src="script-lp-lib.js"></script>
 </body>
 </html>
